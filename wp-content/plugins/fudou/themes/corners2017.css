@@ -1,0 +1,766 @@
+@charset  "utf-8";
+/* = 
+ * Twenty Seventeen
+ * widget_fudo Style
+ * corners2017.css サイトパーツの装飾
+ * @package WordPress 5.9
+ * Version: 5.9.0
+ */
+
+
+/* = widget 
+-------------------------------------------------------------- */
+#primary .widget {
+	font-size: 0.875rem;
+	line-height: 1.6;
+}
+
+.widget:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+
+h2.widget-title {
+	font-size: 1.125rem;
+	font-weight: 300;
+	letter-spacing: 0.1818em;
+	margin: 0 0 0.75em 0;
+}
+
+.widget h3 {
+
+	font-size: 1.125rem;
+	font-weight: 300;
+	letter-spacing: 0.1818em;
+}
+
+.widget ul li{
+	border: medium none !important;
+}
+
+.widget .tagcloud a, 
+.widget.widget_tag_cloud a, 
+.wp_widget_tag_cloud a{
+	border: 1px solid #ddd !important;
+	display: inline-flex;
+	margin: 0 0 3px;
+}
+
+
+
+/* = トップページ 物件表示部分  .grid-content
+---------------------------------------------------------------------- */
+ul.grid-content {
+	margin: 0;
+}
+
+.grid-content > li:after {
+	display: block;
+	clear: both;
+	height: 20px;
+	content: '';
+}
+
+/* 高さ揃え */
+ul.syousai-content,
+ul.grid-content {
+	display:-webkit-box;
+	display:-moz-box;
+	display:-ms-box;
+	display:-webkit-flexbox;
+	display:-moz-flexbox;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:flex;
+	-webkit-box-lines:multiple;
+	-moz-box-lines:multiple;
+	-webkit-flex-wrap:wrap;
+	-moz-flex-wrap:wrap;
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+
+
+/* トップ物件 表示 */
+.grid-content li {
+	display: block;
+	float: left;
+	margin: 0 20px 20px 0  !important;
+	padding: 0  !important;
+	list-style-type: none;
+	width: 100%;
+	border: medium none !important;
+}
+
+/* トップ物件 画像サイズ min*/
+.grid-content li .box1image {
+	display: block;
+	float: left;
+	height: auto;
+	margin: 0 5px 0 0;
+	width: 100px;
+	height: auto;
+}
+
+.top_price {
+	font-weight: 700;
+	color: #c33300;
+}
+
+.top_madori {
+	font-weight: 700;
+}
+
+.top_kaiin{
+	display: block;
+}
+
+
+
+/* = トップスライダー widget_fudo_top_slider
+---------------------------------------------------------------------- */
+/* トップスライダー 打ち消し */
+.carousel_inner {
+	padding: 0 !important;
+}
+
+
+/* メインスライダー 表示サイズ Minimum */
+#primary .carousel > div {
+	width: 100%;
+}
+#primary .carousel_box {
+	max-width: 213px;
+	padding: 0 10px 0 0 ;
+}
+#primary .grid-content .carousel_box li {
+	margin: 0;
+}
+
+
+/* サイトバー スライダー 表示サイズ Minimum */
+#secondary .carousel > div {
+	width: 100%;
+}
+#secondary .carousel_box {
+	max-width: 213px;
+	padding: 0 10px 0 0 ;
+}
+#secondary .grid-content .carousel_box li {
+	margin: 0;
+}
+
+
+/* フッター スライダー 表示サイズ Minimum */
+#colophon .carousel > div{
+	width: 100%;
+}
+#colophon .carousel_box {
+	max-width: 213px;
+	padding: 0 10px 0 0 ;
+}
+
+
+/* 関連物件表示 スライダー 表示サイズ Minimum */
+#syousai_box .carousel_box  {
+	max-width: 260px;
+	padding: 0 10px 0 0 ;
+}
+
+.widget_fudo_top_slider_syousai .carousel,
+.widget_fudo_top_slider .carousel{
+	overflow-x: hidden;
+}
+
+
+
+
+/* = 物件詳細ページ 閲覧履歴
+---------------------------------------------------------------------- */
+
+#syousai_box ul {
+	margin-left: 0;
+}
+
+
+#syousai_box ul:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+#syousai_box ul.syousai-content li {
+	display: block;
+	float: left;
+	margin: 0 20px 20px 0;
+	padding: 0;
+	list-style-type: none;
+	border: medium none !important;
+	width: 100%;
+}
+
+#syousai_box ul.syousai-content li .box2image {
+	display: block;
+	float: left;
+	height: auto;
+	margin: 0 5px 0 0;
+	width: 120px;
+	height: auto;
+}
+
+
+
+/* = new_mark
+-------------------------------------------------------------- */
+.grid-content li {
+	position: relative;
+}
+
+#syousai_box ul.syousai-content li {
+	position: relative;
+}
+
+.up_mark,.new_mark {
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 10px;
+	font-weight: 700;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	display: block;
+	width: auto !important;
+	padding: 2px 5px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	background: #900;
+	text-shadow: 1px 1px 0 #900;
+}
+
+/* 物件リスト・詳細 */
+.entry-title .new_mark {
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 1.4rem !important;
+	font-weight: 700;
+	position: static !important;
+	display: inline;
+	display: inline !important;
+	padding: 0 10px !important;
+	text-align: center;
+	text-transform: uppercase;
+	color: #c00 !important;
+	background: none !important;
+}
+
+
+
+/* = 閲覧履歴 widget_fudou_single_history
+---------------------------------------------------------------------- */
+.cl_botton,.cl_botton2 {
+	float: right;
+}
+
+
+
+/* = 会員 widget widget_fudo_kaiin
+---------------------------------------------------------------------- */
+
+.widget_fudo_kaiin .kaiin_login .kaiin_register{
+	margin: 8px 0;
+}
+
+/* maching mail botton */
+.widget_fudo_kaiin #maching_mail a {
+	background: #ce6166 none repeat scroll 0 0;
+	border-radius: 2px;
+	color: #fff;
+	display: block;
+	font-weight: 700;
+	margin: 20px 0;
+	padding: 8px;
+	text-align: center;
+	text-decoration: none;
+	width: 15em;
+}
+.widget_fudo_kaiin ul {
+	margin: 0;
+}
+
+.widget_fudo_kaiin .kaiin_login p{
+	margin:10px 0 5px;
+}
+
+
+/* = 条件検索
+-------------------------------------------------------------- */
+.widget_fudo_b_k_bus input,
+.widget_fudo_b_k input {
+	margin-top: 8px;
+}
+
+.widget-container select,
+.widget_fudo_b_k_bus_m select,
+.widget_fudo_b_k_bus select,
+.widget_fudo_b_k_m select,
+.widget_fudo_b_k select {
+	width: 98%;
+	margin: 2px 0;
+	padding: 3px;
+}
+
+#searchitem_m div,
+#searchitem div{
+	margin: 0 0 10px;
+}
+
+.widget_fudo_b_k_bus input[type='checkbox'],
+.widget_fudo_b_k_m input[type='checkbox'],
+.widget_fudo_b_k input[type='checkbox'] {
+	margin: 0 2px 0 0;
+}
+
+.widget_fudo_b_k_bus label,
+.widget_fudo_b_k_m label,
+.widget_fudo_b_k label {
+	margin: 0 5px 0 0;
+}
+
+.widget_fudo_b_k_m select.half_size,
+.widget_fudo_b_k_m #senyumenseki select,
+.widget_fudo_b_k_m #tochimenseki select,
+.widget_fudo_b_k_m #tsubotanka select,
+.widget_fudo_b_k_m #memseki select,
+.widget_fudo_b_k_m #kakaku_c select,
+.widget_fudo_b_k_m #kakaku_b select,
+.widget_fudo_b_k select.half_size,
+.widget_fudo_b_k #senyumenseki select,
+.widget_fudo_b_k #tochimenseki select,
+.widget_fudo_b_k #tsubotanka select,
+.widget_fudo_b_k #memseki select,
+.widget_fudo_b_k #kakaku_c select,
+.widget_fudo_b_k #kakaku_b select {
+	width:46.5% !important;
+}
+
+.widget_fudo_b_k_bus .jsearch_caution1,
+.widget_fudo_b_k_bus .jsearch_caution2,
+.widget_fudo_b_k_m .jsearch_caution1,
+.widget_fudo_b_k_m .jsearch_caution2,
+.widget_fudo_b_k .jsearch_caution1,
+.widget_fudo_b_k .jsearch_caution2 {
+/*	font-size: 11.5px; */
+}
+
+.widget_fudo_b_k_bus .jsearch_caution2,
+.widget_fudo_b_k .jsearch_caution2 {
+	margin: 10px 0;
+}
+
+.widget_fudo_b_k_bus .madori_cb label,
+.widget_fudo_b_k_bus .setsubi_cb label,
+.widget_fudo_b_k_m .madori_cb label,
+.widget_fudo_b_k_m .setsubi_cb label,
+.widget_fudo_b_k .madori_cb label,
+.widget_fudo_b_k .setsubi_cb label {
+	padding: 0 8px 0 2px;
+}
+
+.widget_fudo_b_k .category_cb li,
+.widget_fudo_b_k .category_cb ul{
+	list-style: none !important;
+}
+.widget_fudo_b_k .category_cb ul.bukken_cat_parent{
+	padding: 0;
+        margin-left: 0;
+}
+
+
+/* = 最近の投稿記事 widget_fudo_toukou_top
+-------------------------------------------------------------- */
+.widget_fudo_toukou_top ul {
+	margin: 0;
+}
+.widget_fudo_toukou_top ul,
+.widget_fudo_toukou_top li {
+	list-style: none;
+}
+
+.widget_fudo_toukou_top ul.toukou_top_post_excerpt li{
+	padding-left: 0 !important;
+}
+
+.widget_fudo_toukou_top li > ul,
+.widget_fudo_toukou_top li > ol {
+	margin: 0;
+}
+
+.widget_fudo_toukou_top li:after {
+	display: block;
+	clear: both;
+	height: 0px;
+	content: '';
+}
+
+.widget_fudo_toukou_top .toukou_top_post_title {
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+.widget_fudo_toukou_top .toukou_top_post_thumbnail img {
+	float: left;
+	width: 120px;
+	height: auto;
+	padding: 0 20px 0 0;
+}
+
+
+
+/* = widget_fudo_search
+-------------------------------------------------------------- */
+#searchform {
+	position: relative;
+}
+
+#searchform #searchsubmit {
+	bottom: 3px;
+	padding: 0.5em 1.0em;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+}
+
+/*
+#searchform #searchsubmit:before {
+	content: "\f400";
+	font-size: 24px;
+	font-size: 1.5rem;
+
+	display: inline-block;
+	font-family: "Genericons";
+	font-size: 1em;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	speak: none;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: auto;
+}
+*/
+
+
+
+/* = Twitter
+-------------------------------------------------------------- */
+#primary .widget_fudo_twitter2 .tw_date{
+
+}
+
+#primary .widget_fudo_twitter2 .tw_status{
+	float: right;
+	width: calc( 100% - 100px );
+}
+
+#primary .widget_fudo_twitter2 #twitter_update_list li:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+}
+
+
+
+/* = SNS Icon
+-------------------------------------------------------------- */
+#snscomm a {
+	box-shadow: 0 0 0 0 currentcolor;
+}
+
+
+
+/* カテゴリ ウィジェット ul/li リスト
+---------------------------------------*/
+.wp-block-categories ul,
+.widget_fudo_b_c_choumei ul,
+.widget_fudo_r_c_choumei ul,
+.widget_fudo_b_kouku_shougaku ul,
+.widget_fudo_b_kouku_chuugaku ul,
+.widget_fudo_c_kouku_shougaku ul,
+.widget_fudo_c_kouku_chuugaku ul,
+
+.widget_fudo_cat ul,
+.widget_fudo_b_c ul,
+.widget_fudo_r_c ul,
+.widget_fudo_r_r ul,
+.widget_fudo_b_r ul {
+	margin-left: 0 !important;
+	padding-left: 1.0em !important;
+	list-style-type: disc;
+}
+
+.wp-block-categories a,
+.widget_fudo_b_c_choumei a,
+.widget_fudo_r_c_choumei a,
+.widget_fudo_b_kouku_shougaku a,
+.widget_fudo_b_kouku_chuugaku a,
+.widget_fudo_c_kouku_shougaku a,
+.widget_fudo_c_kouku_chuugaku a,
+.widget_fudo_cat a,
+.widget_fudo_b_c a,
+.widget_fudo_r_c a,
+.widget_fudo_r_r a,
+.widget_fudo_b_r a {
+	color: #000;
+	text-decoration: none;
+}
+
+
+.widget_fudo_b_r_choumei ul li ul li ul li,
+.widget_fudo_b_c_choumei ul li ul li ul li,
+.widget_fudo_r_r_choumei ul li ul li ul li,
+.widget_fudo_r_c_choumei ul li ul li ul li,
+.widget_fudo_b_r ul li ul li,
+.widget_fudo_b_c ul li ul li,
+.widget_fudo_r_r ul li ul li,
+.widget_fudo_r_c ul li ul li {
+	display: inline-flex;
+	margin: 0 10px;
+	padding: 0;
+
+}
+
+.widget_fudo_cat ul ul,
+.widget_fudo_b_kouku_shougaku ul ul,
+.widget_fudo_b_kouku_chuugaku ul ul,
+.widget_fudo_c_kouku_shougaku ul ul,
+.widget_fudo_c_kouku_chuugaku ul ul,
+.widget_fudo_b_c_choumei ul ul.children_1,
+.widget_fudo_r_c_choumei ul ul.children_2{
+	list-style-position: inside;
+	list-style-type: disc;
+}
+
+.widget_fudo_cat ul li ul li,
+.widget_fudo_b_kouku_shougaku ul li ul li ,
+.widget_fudo_b_kouku_chuugaku ul li ul li ,
+.widget_fudo_c_kouku_shougaku ul li ul li ,
+.widget_fudo_c_kouku_chuugaku ul li ul li ,
+.widget_fudo_b_r_choumei ul li ul li ,
+.widget_fudo_b_c_choumei ul li ul li ,
+.widget_fudo_r_r_choumei ul li ul li ,
+.widget_fudo_r_c_choumei ul li ul li {
+	padding: 0;
+	margin: 0 10px 3px !important;
+}
+
+
+/*--------------------------------------------------------------
+## Media Queries
+--------------------------------------------------------------*/
+
+/* 480px ～ 768px */
+@media screen and (min-width: 30em) {
+
+	/* スライダー 表示サイズ */
+	#primary .carousel_box ,
+	#secondary .carousel_box{
+		max-width: 365px ;
+		width: 365px ;
+		padding: 0 10px 0 0 ;
+	}
+	#colophon .carousel_box {
+		max-width: 367px ;
+		width: 367px ;
+		padding: 0 10px 0 0 ;
+	}
+
+
+
+	/* 関連物件 サイズ*/
+	#syousai_box ul.syousai-content>li{
+		max-width: 100%;
+	}
+
+	/* 関連物件 画像サイズ*/
+	#syousai_box ul.syousai-content li .box2image {
+		width: 120px;
+		height: auto;
+	}
+
+
+
+	/* 物件リストページ */
+	#list_simplepage .list_simple_box .list_picsam {
+		float: left;
+		margin: 0;
+		padding: 0 20px 0 0;
+		max-width: 40%;
+	}
+
+
+
+	/* 物件詳細 画像 */
+	#list_simplepage2 .list_picsam img,
+	#list_simplepage2 #second_img img {
+		width: 22%;
+		height: auto;
+	}
+}
+
+/* 768px ～ 880px 2カラム */
+@media screen and (min-width: 48em) {
+
+	/* Layout #primary */
+	.has-sidebar:not(.error404) #primary {
+		float: left;
+		width: calc( 100% - 310px );
+
+	}
+	/* Layout #secondary */
+	.has-sidebar #secondary {
+		float: right;
+		width: 260px;
+	}
+
+	/* Layout 固定ページ */
+	article.page .entry-header {
+		width: 30% !important;
+		float: left;
+	}
+
+	article.page .entry-content {
+		max-width: 680px;
+		width: 70% !important;
+	}
+
+	/* スライダー 表示サイズ */
+	#primary .carousel_box{
+		width: 355px;
+		padding: 0 10px 0 0;
+	}
+	/* サイド スライダー 表示サイズ */
+	#secondary .carousel_box{
+		width: 270px;
+		padding: 0 10px 0 0;
+	}
+
+	/* フッター スライダー 表示サイズ */
+	#colophon .carousel_box {
+		width: 255px;
+		padding: 0 10px 0 0;
+	}
+
+
+
+	/* 物件リストページ */
+	#list_simplepage .list_simple_box .list_picsam {
+		max-width: 140px;
+	}
+
+
+
+	/* 物件詳細 画像 */
+	#list_simplepage2 .list_picsam img,
+	#list_simplepage2 #second_img img {
+		width: 30%;
+		height: auto;
+	}
+
+}
+
+/* 880px ～ 1072px */
+@media screen and ( min-width: 55em ) {
+
+	/* Layout */
+	.has-sidebar:not(.error404) #primary {
+		float: left;
+		width: calc( 100% - 310px );
+
+	}
+
+	/* トップ物件 表示サイズ */
+	#primary .grid-content > li {
+		max-width: 47.8%;
+	}
+
+	#primary .grid-content > li:nth-child(even){
+		margin: 0 0 20px 0  !important;
+	}
+
+	/* スライダー 表示サイズ */
+	#primary .carousel_box{
+		width: 238px;
+		padding: 0 20px 0 0;
+	}
+
+	/* フッター スライダー 表示サイズ */
+	#colophon .carousel_box {
+		width: 340px;
+		padding: 0 10px 0 0;
+	}
+
+
+	/* 物件リストページ */
+	#list_simplepage .list_simple_box .list_picsam {
+		max-width: 270px;
+	}
+
+	/* 物件詳細 画像 */
+	#list_simplepage2 .list_picsam img,
+	#list_simplepage2 #second_img img {
+		width: 22.8%;
+		height: auto;
+	}
+
+
+	/* 関連物件 表示サイズ*/
+	#syousai_box ul.syousai-content>li{
+		max-width: 46%;
+	}
+	#syousai_box ul.syousai-content > li:nth-child(even){
+		margin: 0 0 20px 0  !important;
+	}
+
+	/* 関連物件 画像サイズ*/
+	#syousai_box ul.syousai-content li .box2image {
+		width: 120px;
+		height: auto;
+	}
+
+
+
+
+}
+
+/* 1072px ～ 1264px */
+@media screen and ( min-width: 67em ) {
+
+	/* トップ物件 画像サイズ */
+	.grid-content li .box1image {
+		width: 120px;
+		height: auto;
+	}
+
+	/* トップスライダー 表示サイズ */
+	#primary .carousel_box {
+		width: 305px;
+		max-width: 305px ;
+		padding: 0 20px 0 0 ;
+	}
+
+}
+
+/* 1264px ～ */
+@media screen and ( min-width: 79em ) {
+
+}
+
+
+
+/* */

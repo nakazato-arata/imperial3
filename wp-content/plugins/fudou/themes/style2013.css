@@ -1,0 +1,2122 @@
+@charset "utf-8";
+/* = 
+ * Twenty Thirteen
+ * widget_fudo Style
+ * style2013.css サイト基本の装飾
+ * @package WordPress 5.9
+ * Version: 5.9.0
+-------------------------------------------------------------- */
+
+/* 基本サイズ */
+.site-main {
+	max-width:980px;
+	margin:0 auto;
+}
+
+.site-content {
+	width:70.8%!important;
+	max-width:696px;
+	margin:0 0 0 5px;
+}
+
+.site-content .widget {
+	padding:20px 0 0;
+}
+
+.site-main .widget-area {
+	margin-right:0;
+}
+
+.site-main .sidebar-container {
+	top:19px;
+}
+
+#tertiary .widget-area {
+	width:240px!important;
+}
+
+@media screen and (max-width: 999px) {
+	.site-main .sidebar-container {
+		position:absolute;
+		z-index:1;
+		top:40px;
+		width:100%;
+		max-width:1020px;
+		height:0;
+	}
+
+	.site-main .widget-area {
+		float:right;
+		margin:0;
+	}
+}
+
+@media screen and (max-width: 873px) {
+	#list_simplepage2 .list_simple_box .list_detail,
+	#list_simplepage2 .list_picsam {
+		width: 100%!important;
+	}
+}
+
+@media screen and (max-width: 820px) {
+	.site-main .sidebar-container {
+		position:relative;
+		top:20px;
+		height:auto;
+		margin:0 auto;
+	}
+
+	.site-main .widget-area {
+		float:none;
+		width:100%;
+		margin:0;
+	}
+
+	#tertiary .widget-area {
+		width:auto!important;
+	}
+
+	.site-content {
+		width:95%!important;
+		max-width:696px;
+		margin:0 auto;
+	}
+}
+
+/* Minimum width of 500 pixels. 500px以下の場合 */
+@media screen and (max-width: 500px) {
+
+
+	#list_simplepage .list_simple_box .list_picsam{
+		float:none !important;
+		width:98%  !important;
+	}
+
+	#list_simplepage .list_simple_box .list_picsam img{
+		width: calc(50% - 7px) !important;
+		height: auto;
+	}
+
+	#list_simplepage .list_simple_box .list_details_button{
+		width:99%  !important;
+	}
+	#list_simplepage .list_simple_box .list_picsam {
+		float:none !important;
+	}
+
+	#list_simplepage .list_simple_box .list_detail {
+		float:none !important;
+		width:98% !important;
+		margin:20px 0 !important;
+	}
+}
+
+
+
+
+
+
+
+
+
+/* サイズ調整 */
+.sidebar .entry-header,.sidebar .entry-content,.sidebar .entry-summary,.sidebar .entry-meta {
+	padding:0!important;
+}
+
+.sidebar .comments-title,.sidebar .comment-list,.sidebar .must-log-in,.sidebar #reply-title,.sidebar .comment-navigation,.sidebar #respond #commentform {
+	padding-right:0!important;
+}
+
+/* content image alignright */
+.entry-content img.alignright,.entry-content .wp-caption.alignright {
+	margin-right:auto;
+}
+
+.entry-content img.alignleft,.entry-content .wp-caption.alignleft {
+	margin-left:auto;
+}
+
+#commentform label {
+	width:150px!important;
+}
+
+#commentform textarea {
+	width:60%!important;
+}
+
+table {
+	margin:0;
+}
+
+/* main navi */
+.nav-menu .current_page_item > a,.nav-menu .current_page_ancestor > a,.nav-menu .current-menu-item > a,.nav-menu .current-menu-ancestor > a {
+	font-style:normal;
+}
+
+input[type='radio'],input[type='checkbox'] {
+	border:none;
+}
+
+label {
+	white-space:nowrap;
+}
+
+.error404 .page-title {
+	width:1050px;
+}
+
+.error404 .site-content {
+	width:auto!important;
+	max-width:1040px!important;
+}
+
+.error404 .page-content {
+	max-width:700px!important;
+}
+
+/* = title
+-------------------------------------------------------------- */
+h3 {
+	padding:0 0 5px;
+	border-bottom:3px solid #bc360a;
+}
+.page-title {
+	padding:0;
+	margin:40px 0;
+}
+
+.in-map h1.entry-title{
+	padding:0;
+	margin:40px 0;
+}
+
+h2.entry-title {
+	padding:0 0 5px;
+	border-bottom:3px solid #bc360a;
+}
+
+/* = widget
+-------------------------------------------------------------- */
+#tertiary .widget {
+	margin:0;
+}
+
+#content .widget {
+	background-color:transparent;
+}
+
+.widget ul {
+	padding:0 0 0 15px;
+	list-style-type:circle;
+}
+
+.widget_fudo_kaiin .kaiin_login p{
+	margin:10px 0 5px;
+}
+
+.widget li > ul,
+.widget li > ol{
+	margin-left: 0;
+}
+
+
+
+/* 3= 汎用css
+---------------------------------------------------------------------- */
+.dpoint1 {
+	font-size:26px;
+	font-weight:400;
+	line-height:1.2;
+	float:left;
+	padding:4px;
+	color:#c00;
+	text-shadow:0 1px 0 rgba(255,255,255,1);
+}
+
+.dpoint2 {
+	font-size:22px;
+	font-weight:400;
+	float:left;
+	padding:4px;
+	color:#000;
+	text-shadow:0 1px 0 rgba(255,255,255,1);
+}
+
+.dpoint3 {
+	font-size:18px;
+	font-weight:700;
+	display:inline;
+	color:#000;
+}
+
+.dpoint4 {
+	font-size:20px;
+	font-weight:700;
+	display:inline;
+	color:#bc360a;
+}
+
+.clearLeft {
+	clear:left;
+}
+
+.clearRight {
+	clear:right;
+}
+
+/* = TOP 物件表示
+-------------------------------------------------------------- */
+#content ul {
+	margin:0 0 20px;
+	padding-left:2px;
+}
+
+#content ul:after {
+	display:block;
+	clear:both;
+	height:5px;
+	content:'';
+}
+
+/* 高さ揃え */
+ul.syousai-content,
+ul.grid-content {
+	display:-webkit-box;
+	display:-moz-box;
+	display:-ms-box;
+	display:-webkit-flexbox;
+	display:-moz-flexbox;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:flex;
+	-webkit-box-lines:multiple;
+	-moz-box-lines:multiple;
+	-webkit-flex-wrap:wrap;
+	-moz-flex-wrap:wrap;
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+
+
+#content .grid-content li {
+	display:block;
+	float:left;
+	margin:0 8px 8px 0;
+	padding:8px;
+	list-style-type:none;
+	border: 1px solid #ccc;
+}
+
+
+/* 4列 */
+#content ul.grid-content li {
+	width: calc(25% - 10px);
+}
+
+#content .grid-content li img.box1image {
+	width: 100%;
+	height: auto;
+}
+
+
+#container #content table {
+	margin:0;
+	padding:0;
+	border:none;
+}
+
+#container #content tr td {
+	margin:0;
+	padding:0;
+	border:none;
+}
+
+.box1low {
+	margin:0 0 -5px;
+	padding:5px 0 0;
+}
+
+.box1low a {
+	text-decoration:none;
+	color:#333;
+}
+
+.top_price {
+	font-weight:700;
+	color: #c33300;
+}
+
+.top_madori {
+	font-weight:700;
+}
+
+
+
+@media screen and (max-width: 414px) {
+	#content ul.grid-content li {
+		max-width: 100%;
+		width: calc(100% - 10px);
+	}
+	#content .grid-content li img.box1image {
+		width: 100px;
+		height: auto;
+		float: left;
+		padding: 0 10px 0 0;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+/* top_slider */
+.carousel_inner {
+	width:100%!important;
+	max-width:671px!important;
+	padding: 1px !important;
+}
+
+
+#content .widget_fudo_top_slider .grid-content li {
+	width: 161px;
+}
+
+
+.widget_fudo_top_slider input {
+	border:medium none;
+}
+
+#tertiary .grid-content .carousel_inner li {
+	width:202px;
+}
+
+#secondary .grid-content .carousel_inner li {
+	width:208px;
+}
+
+.ie7 #secondary .grid-content .carousel_inner li {
+	width:230px;
+}
+
+/* ウィジェット */
+#tertiary .grid-content li,#secondary .grid-content li {
+	font-size:10px;
+	line-height:1.2;
+	display:block;
+	float:left;
+	width:190px;
+	padding:0;
+	list-style-type:none;
+}
+
+/* ウィジェット */
+#secondary .grid-content li {
+	width:auto;
+}
+
+#tertiary .box1image,#secondary .box1image {
+	float:left;
+	width:100px;
+	height: auto;
+	padding-right:5px;
+}
+
+#tertiary ul.grid-content,#secondary ul.grid-content {
+	padding:0;
+}
+
+#tertiary .grid-content li:after,#secondary .grid-content li:after {
+	display:block;
+	clear:both;
+	height:15px;
+	content:'';
+}
+
+#tertiary .widget_fudo_top_r:after {
+	display:block;
+	clear:both;
+	height:15px;
+	content:'';
+}
+
+/* = TOP 更新情報(twitter)
+-------------------------------------------------------------- */
+#content #twitter_update_list {
+	clear:both;
+	margin:0 0 20px;
+	padding:10px;
+}
+
+.widget_fudo_twitter2 ul#twitter_update_list{
+	list-style: outside none none;
+}
+
+#content #twitter_update_list a {
+	font-weight:400;
+	text-decoration:none;
+}
+
+#content #twitter_update_list li a.tw_date {
+	font-family:Arial,Helvetica,sans-serif;
+	line-height:1.6;
+	display:block;
+	float:left;
+	width:70px;
+	margin:0 20px 0 0;
+}
+
+#twitter_update_list li a.tw_date:after {
+	content:':';
+}
+
+#container #content #twitter_update_list li .tw_status {
+	line-height:1.6;
+	display:block;
+	margin:0 0 0 90px;
+}
+
+#container #content ul#twitter_update_list {
+	padding-left:15px;
+}
+
+#container #content ul#twitter_update_list li {
+	font-weight:400;
+	display:block;
+	margin:0;
+	padding:5px;
+	list-style:none;
+}
+
+#container #content ul#twitter_update_list li:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+
+/* = textwidget
+-------------------------------------------------------------- */
+#container #content .textwidget {
+	margin:0 0 20px;
+	padding:10px;
+}
+
+/* = TOP 投稿表示
+-------------------------------------------------------------- */
+#content ul#toukou_top {
+	clear:both;
+	margin:0 0 20px;
+	padding:10px;
+}
+
+#content ul.toukou_top_post_excerpt {
+	margin:0 0 10px;
+	padding:5px 0 0 0;
+}
+
+#content .toukou_top_post_title {
+	font-size:130%;
+}
+
+#content #toukou_top li {
+	display:block;
+	list-style:none;
+}
+
+#content #toukou_top img {
+	float:left;
+	width:75px;
+	margin:0 10px 0 0;
+	padding:2px;
+	height: auto;
+}
+
+/* カテゴリ ウィジェット ul/li リスト
+---------------------------------------*/
+.wp-block-categories ul,
+.widget_fudo_b_c_choumei ul,
+.widget_fudo_r_c_choumei ul,
+.widget_fudo_b_kouku_shougaku ul,
+.widget_fudo_b_kouku_chuugaku ul,
+.widget_fudo_c_kouku_shougaku ul,
+.widget_fudo_c_kouku_chuugaku ul,
+.widget_fudo_cat ul,
+.widget_fudo_b_c ul,
+.widget_fudo_r_c ul,
+.widget_fudo_r_r ul,
+.widget_fudo_b_r ul {
+	margin-left: 0 !important;
+	margin-bottom: 0 !important;
+	padding-left: 1.3em !important;
+	list-style-type: disc;
+}
+
+
+
+.wp-block-categories a,
+.widget_fudo_b_c_choumei a,
+.widget_fudo_r_c_choumei a,
+.widget_fudo_b_kouku_shougaku a,
+.widget_fudo_b_kouku_chuugaku a,
+.widget_fudo_c_kouku_shougaku a,
+.widget_fudo_c_kouku_chuugaku a,
+.widget_fudo_cat a,
+.widget_fudo_b_c a,
+.widget_fudo_r_c a,
+.widget_fudo_r_r a,
+.widget_fudo_b_r a {
+	text-decoration: none !important;
+	box-shadow: none !important;
+	border-bottom: medium none !important;
+}
+
+
+.widget_fudo_b_r_choumei ul li ul li ul li,
+.widget_fudo_b_c_choumei ul li ul li ul li,
+.widget_fudo_r_r_choumei ul li ul li ul li,
+.widget_fudo_r_c_choumei ul li ul li ul li,
+.widget_fudo_b_r ul li ul li,
+.widget_fudo_b_c ul li ul li,
+.widget_fudo_r_r ul li ul li,
+.widget_fudo_r_c ul li ul li {
+	display: inline-flex;
+	margin: 0 10px;
+	padding: 0;
+}
+
+.widget_fudou_jsearch_history ul{
+	list-style-position : inside;
+	padding: 0;
+}
+
+/* = tertiaryand secondary 投稿表示
+-------------------------------------------------------------- */
+#tertiary ul#toukou_top,#secondary ul#toukou_top {
+	clear:both;
+	margin:0;
+	padding:0;
+}
+
+#tertiary ul.toukou_top_post_excerpt,#secondary ul.toukou_top_post_excerpt {
+	margin:0!important;
+	padding:5px 0 0 10px;
+}
+
+/*	#secondary #toukou_top a , */
+#tertiary #toukou_top a {
+	color:#333;
+}
+
+#tertiary .toukou_top_post_title,#secondary .toukou_top_post_title {
+	font-weight:700;
+}
+
+#secondary .toukou_top_post_title {
+	color:#e6402a;
+}
+
+#tertiary #toukou_top li,#secondary #toukou_top li {
+	font-size:12px;
+	list-style:none;
+}
+
+#tertiary #toukou_top li:after,#secondary #toukou_top li:after {
+	display:block;
+	clear:both;
+	height:0;
+	content:'';
+}
+
+#tertiary #toukou_top img,#secondary #toukou_top img {
+	float:left;
+	width:75px;
+	height:75px;
+	padding:0 5px 0 0;
+}
+
+/* バス */
+.widget_fudo_b_bus h4,.widget_fudo_r_bus h4 {
+	font-size:110%;
+	font-weight:400;
+	margin:5px 0 0;
+}
+
+/* = NEW/UP mark
+-------------------------------------------------------------- */
+/* トップ */
+#content .grid-content li {
+	position:relative;
+}
+
+.new_mark {
+	font-family:Verdana,Geneva,sans-serif;
+	font-size:10px;
+	font-weight:700;
+	position:absolute;
+	top:12px;
+	left:10px;
+	display:block;
+	padding:2px 5px;
+	text-align:center;
+	white-space:nowrap;
+	text-transform:uppercase;
+	color:#fff;
+	border-radius:4px;
+	background:#900;
+	background:-moz-linear-gradient(top,#d20100 0%,#900 100%);
+	background:-webkit-linear-gradient(top,#d20100 0%,#900 100%)
+}
+
+/* 物件リスト・詳細 */
+.entry-title .new_mark {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+	border-radius: 4px !important;
+	color: #c00 !important;
+	display: inline !important;
+	font-family: Verdana,Geneva,sans-serif !important;
+	font-size: 18px !important;
+	font-weight: bold !important;
+	height: 20px !important;
+	padding: 0 10px !important;
+	position: static !important;
+	white-space: nowrap !important;
+}
+
+/* ウィジェット */
+#tertiary .grid-content li,#secondary .grid-content li {
+	position:relative;
+}
+
+#tertiary .new_mark,#secondary .new_mark {
+	font-family:Verdana,Geneva,sans-serif;
+	font-size:10px;
+	font-weight:700;
+	position:absolute;
+	top:3px;
+	left:2px;
+	display:block;
+	width:auto;
+	padding:2px 5px;
+	text-align:center;
+	white-space:nowrap;
+	text-transform:uppercase;
+	color:#fff;
+	border-radius:4px 4px 4px 4px;
+	background:#900;
+	background:-moz-linear-gradient(center top,#d20100 0%,#900 100%) repeat scroll 0 0 transparent;
+	text-shadow:1px 1px 0 #900;
+}
+
+/* 12= 物件リストページ #list_simplepage
+---------------------------------------------------------------------- */
+.archive-fudo .hentry{
+	padding: 0;
+}
+
+#main #content #list_simplepage span.kakakuzei {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+
+#list_simplepage .list_simple_boxtitle h2 {
+	font-size:26px;
+	padding:20px 0 5px;
+	border-bottom:3px solid #bc360a;
+}
+
+
+/* 会員 */
+#list_simplepage .entry-title span.fudo_kaiin_type_logo img {
+	float: right;
+	margin: 8px 0 0;
+}
+
+#list_simplepage .list_simple_boxtitle h2 span.fudo_kaiin_type_logo.member {
+	margin: 9px 0 0 !important;
+}
+
+#list_simplepage .list_simple_box:after {
+	display:block;
+	clear:both;
+	height:0;
+	content:'';
+}
+
+#list_simplepage .list_simple_box {
+	margin:0 0 40px;
+	padding:0;
+}
+
+#list_simplepage .list_simple_box .list_detail dt {
+	font-weight:400;
+	display:inline;
+}
+
+#list_simplepage .list_simple_box .list_detail dd {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+#list_simplepage .list_simple_box .list_picsam {
+	float:left;
+	width:215px;
+}
+
+#list_simplepage .list_simple_box .list_picsam img {
+	float:left;
+	width:100px;
+	height: auto;
+	margin:1px 7px 5px 0;
+	padding:1px;
+	border:1px solid #888;
+}
+
+#list_simplepage .list_picsam .list_picsam_img:before {
+	display:block;
+	clear:both;
+	height:0;
+	content:'';
+}
+
+#list_simplepage a:link,a:visited .list_details_button {
+	text-decoration:none;
+}
+
+#list_simplepage a:hover .list_details_button {
+	text-decoration:underline;
+	color:#39f;
+}
+
+#list_simplepage .list_simple_box .list_detail {
+	float:right;
+	margin:0 3px 0 0;
+	padding:4px;
+	width:calc(100% - 240px);
+}
+
+#list_simplepage .list_simple_box .list_detail dl {
+	margin:0;
+}
+
+#list_simplepage .list_detail table tr {
+	margin-bottom:4px;
+}
+
+#list_simplepage .list_detail table td {
+	padding:4px 0;
+}
+
+#list_simplepage .list_detail .list_price table td {
+	border:medium none;
+}
+
+#list_simplepage .list_detail .list_price table {
+	border-bottom:medium none;
+}
+
+#list_simplepage .list_detail .list_address table {
+	border-bottom:medium none;
+}
+
+.list_price_others table td{
+	width: 25%;
+}
+
+#list_simplepage .list_price {
+	padding:5px;
+	background:-moz-linear-gradient(left,#ebf6fc,#fff);
+	background:-webkit-gradient(linear,left top,right top,from(#ebf6fc),to(#fff));
+	background-color:#ebf6fc;
+}
+
+#list_simplepage .list_price.rent {
+	background:-moz-linear-gradient(left,#fdedf0,#fff);
+	background:-webkit-gradient(linear,left top,right top,from(#fdedf0),to(#fff));
+	background-color:#fdedf0;
+}
+
+#list_simplepage .list_detail .list_address dd {
+	display:block;
+}
+
+#list_simplepage .entry-excerpt {
+	padding-bottom:10px;
+	padding-left:5px;
+}
+
+/* 物件の詳細を見るボタン */
+#list_simplepage .list_simple_box .list_details_button {
+	display:inline-block;
+	width:207px;
+	padding:15px 0 10px;
+	text-align:center;
+	text-decoration:none;
+	color:#fff;
+	border-style:none none solid;
+	border-color:-moz-use-text-color -moz-use-text-color #b93207;
+	border-radius:2px 2px 2px 2px;
+	background:#b93207;
+/* Old browsers */
+	background:-moz-linear-gradient(to bottom,#e05d22 0%,#d94412 100%);
+/* FF3.6+ */
+	background:-webkit-linear-gradient(to bottom,#e05d22 0%,#d94412 100%)
+/* Chrome10+,Safari5.1+ */;
+}
+
+#list_simplepage .list_simple_box a .list_details_button {
+	text-decoration:none;
+	color:#fff;
+}
+
+
+/* 戻るリンク */
+.archive-fudo .pageback {
+	margin: 10px 0 10px;
+}
+
+
+
+
+
+/* 13= 物件詳細ページ #list_simplepage2 
+---------------------------------------------------------------------- */
+#list_simplepage2 h1.entry-title ,
+#list_simplepage2 h2.entry-title {
+/*	font-weight: bold; */
+	font-size:26px;
+	margin:0 0 15px;
+	padding:0 0 5px;
+	border-bottom:3px solid #bc360a;
+}
+
+
+/* うち消費税 */
+#main #content #list_simplepage2 span.kakakuzei {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+
+/* 会員 */
+.single-fudo .entry-title span.fudo_kaiin_type_logo img {
+	float: right;
+	margin: 8px 0 0;
+}
+
+.single-fudo .entry-title span.fudo_kaiin_type_logo.member {
+	float: right;
+	margin: 9px 0 0;
+}
+
+
+#list_simplepage2 .entry-excerpt {
+	padding-bottom:10px;
+	padding-left:5px;
+}
+
+#list_simplepage2 {
+	margin:0;
+	padding:0;
+}
+
+#list_simplepage2 .list_simple_box .list_detail dt {
+	font-weight:400;
+	display:inline;
+	color:#333;
+}
+
+#list_simplepage2 .list_simple_box .list_detail dd {
+	display:inline;
+	margin:0 .6em 0 .4em;
+	padding:0;
+	color:#333;
+}
+
+#list_simplepage2 .list_simple_box:after {
+	display:block;
+	clear:both;
+	height:0;
+	content:'';
+}
+
+#list_simplepage2 .list_detail table {
+	margin:0;
+	padding:0;
+	border:medium none;
+}
+
+#list_simplepage2 .list_detail table tr td {
+	border:medium none;
+}
+
+#list_simplepage2 .list_simple_box {
+	margin:0 0 20px;
+}
+
+#list_simplepage2 .list_simple_box .list_detail {
+	display:block;
+	float:left;
+	width:76%;
+	margin:0;
+}
+
+#list_simplepage2 .list_picsam {
+	display:block;
+	float:left;
+	width:140px;
+	margin:0 5px 0 0;
+	color:#000;
+}
+
+#list_simplepage2 .list_picsam img {
+	width:130px;
+	height: auto;
+	margin:0 0 4px;
+	padding:1px;
+	border:1px solid #999;
+	background-color:#fff;
+}
+
+#main #content #second_img {
+	padding:10px 0;
+}
+
+#main #content #second_img img {
+	width:103px;
+	height: auto;
+	margin:0 1px 0 0;
+	padding:1px;
+	border:1px solid #999;
+	background-color:#fff;
+}
+
+#list_simplepage2 .list_price {
+	line-height:2;
+	margin:0;
+	padding:0 0 4px 1em;
+	background:-moz-linear-gradient(left,#ebf6fc,#fff);
+	background:-webkit-gradient(linear,left top,right top,from(#ebf6fc),to(#fff));
+	background-color:#ebf6fc;
+}
+
+#list_simplepage2 .list_price.rent {
+	background:-moz-linear-gradient(left,#fdedf0,#fff);
+	background:-webkit-gradient(linear,left top,right top,from(#fdedf0),to(#fff));
+	background-color:#fdedf0;
+}
+
+
+#list_simplepage2 #list_add_table{
+
+}
+
+#list_simplepage2 #list_other_table{
+
+}
+
+
+
+
+#list_simplepage2 .list_simple_box .list_detail #list_add th {
+	font-weight:400;
+	line-height:1.4;
+	padding:5px;
+	text-align:left;
+	white-space:nowrap;
+	border-bottom:1px solid #eee;
+}
+
+#list_simplepage2 .list_simple_box .list_detail #list_add td {
+	line-height:1.4;
+	margin:0;
+	padding:.5em;
+	white-space:normal;
+	border-bottom:1px solid #eee;
+}
+
+#list_simplepage2 .list_simple_box .list_detail #list_other th {
+	font-weight:400;
+	line-height:1.4;
+	width:21%;
+	padding:5px;
+	text-align:left;
+	border-right:1px dotted #ccc;
+	border-bottom:1px solid #eee;
+}
+
+#main #content #list_simplepage2 .list_simple_box .list_detail #list_other th.th2 {
+	border-left:1px dotted #ccc;
+}
+
+#list_simplepage2 .list_simple_box .list_detail #list_other td {
+	line-height:1.2;
+	width:30%;
+	padding:5px;
+	white-space:normal;
+	border-bottom:1px solid #eee;
+}
+
+/* コンテント */
+#list_simplepage2 .entry-content {
+	font-size:14px;
+	margin:15px 0;
+	max-width: 859px;
+}
+
+/* 問合わせ先 */
+#toiawasesaki {
+	display:block;
+	margin:0 0 40px;
+}
+
+/* 問合わせフォーム */
+#contact_form {
+	display:block;
+	margin:0 0 40px;
+}
+
+/* 担当者コメント entry-content */
+#main #content .entry-content p {
+	font-size:14px;
+/*	line-height:1.2; */
+	margin:0;
+	padding:10px 0;
+}
+
+
+#main #content #list_add_table{
+}
+
+#main #content #list_other_table{
+	margin: 0 0 20px;
+}
+
+
+/* 表下部・現況優先但書 */
+.list_detail_bottom_info {
+	font-size:14px;
+	display:block;
+	clear:both;
+	padding:0 0 10px;
+	text-align:right;
+	margin-top: 10px;
+}
+
+/* places */
+#main #content .list_detail .places {
+	width:99%;
+	margin:0;
+	padding:5px 0;
+	border-right:1px solid #979797;
+	border-bottom:1px solid #979797;
+	border-left:1px solid #979797;
+}
+
+#main #content .list_detail .places:after {
+	display:block;
+	clear:both;
+	height:0;
+	content:'';
+}
+
+#main #content .list_detail .places label {
+	font-size:85%;
+	display:block;
+	float:left;
+	margin:0 5px;
+}
+
+/* ふきだし内 */
+#map_canvas .gm-style-iw {
+	width:auto!important;
+	height:auto!important;
+}
+
+#map_canvas table {
+	overflow:hidden;
+	margin:8px;
+	padding:0;
+	border-style:none;
+}
+
+#map_canvas table {
+	width:auto;
+}
+
+#map_canvas table {
+	border-spacing:2px;
+	border-collapse:separate;
+}
+
+#map_canvas td {
+	line-height:1.4;
+	margin:0;
+	padding:0;
+	vertical-align:middle;
+	border-width:0!important;
+	border-top:medium none!important;
+}
+
+.gmapballoon {
+	font-size:10px;
+	color:#3f3f3f;
+	border-style:none;
+}
+
+.gmapballoon img {
+	width:100px;
+	height:auto;
+	padding:2px;
+	border:1px solid #ccc;
+}
+
+.gmaptitle {
+	font-size:12px;
+	font-weight:700;
+}
+
+.gmapkakaku {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:20px;
+	font-weight:700;
+	color:#f30;
+	border-bottom:1px dotted #ccc;
+}
+
+.gmapmadori {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:20px;
+	font-weight:700;
+	color:#333;
+	border-bottom:1px dotted #ccc;
+}
+
+/* Responsive images Fluid images for posts hack*/
+.entry-content #map_canvas img {
+	max-width:none;
+	border-radius:0;
+	box-shadow:none;
+}
+
+/* 14= 物件詳細ページ関連物件  #syousai_box : 関連物件部分/slider
+---------------------------------------------------------------------- */
+.syousai_widgets ul,#syousai_box ul {
+	padding-left:0;
+}
+
+
+#syousai_box .carousel .carousel_inner{
+	max-width:521px !important;
+	width:100% !important;
+}
+
+.entry-content #syousai_box .carousel .carousel_inner{
+	max-width: 100% !important;
+}
+
+
+#syousai_box ul:after {
+	display:block;
+	clear:both;
+	height:0;
+	content:'';
+}
+
+#list_simplepage2 .widget_fudou_single_history li,
+.syousai_widgets ul.cookie_fudou_single li,
+#syousai_box ul.syousai-content li {
+	font-size: 12px !important;
+	line-height:1.4;
+	display:block;
+	float:left;
+	width:49.3% !important;
+	margin:0 5px 4px 0;
+	padding:6px;
+	list-style-type:none;
+	border:1px solid #ccc;
+}
+
+
+#list_simplepage2 .widget_fudou_single_history li.grid_count2,
+.syousai_widgets ul.cookie_fudou_single li.grid_count2,
+#syousai_box ul.syousai-content li.grid_count2,
+
+#list_simplepage2 .widget_fudou_single_history li.grid_count4,
+.syousai_widgets ul.cookie_fudou_single li.grid_count4,
+#syousai_box ul.syousai-content li.grid_count4 {
+	margin:0 0 4px 0;
+}
+
+.widget_fudo_top_slider_syousai #syousai_box ul.syousai-content li {
+	width:255px !important;
+}
+
+.entry-content .widget_fudo_top_slider_syousai #syousai_box ul.syousai-content li {
+	width:343px!important;
+}
+
+
+#list_simplepage2 .widget_fudou_single_history li span,
+.syousai_widgets ul.cookie_fudou_single li span,
+#syousai_box ul.syousai-content li span {
+/*	font-size:10px; */
+	margin-top:5px;
+}
+
+#list_simplepage2 .widget_fudou_single_history li img,
+.syousai_widgets ul.cookie_fudou_single li img,
+#syousai_box ul.syousai-content li img {
+	padding-bottom:5px;
+}
+
+#list_simplepage2 ul.cookie_fudou_single li .box1image,
+#syousai_box ul.syousai-content li .box2image {
+	width:100px!important;
+	height: auto;
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+#list_simplepage2 .widget_fudou_single_history li,
+.syousai_widgets ul.cookie_fudou_single li {
+	position:relative;
+}
+
+#list_simplepage2 .widget_fudou_single_history ul{
+	padding: 0;
+}
+
+/*
+#list_simplepage2 .widget_fudou_single_history .new_mark,
+.syousai_widgets .new_mark,#syousai_box .new_mark {
+	font-family:Verdana,Geneva,sans-serif;
+	font-size:9px;
+	font-weight:700;
+	position:absolute;
+	top:6px;
+	right:6px;
+	display:block;
+	padding:3px;
+	text-align:center;
+	white-space:nowrap;
+	text-transform:uppercase;
+	color:#fff;
+width: 32px;
+	border-radius:4px 4px 4px 4px;
+	background:#900;
+	background:-moz-linear-gradient(center top,#d20100 0%,#900 100%) repeat scroll 0 0 transparent;
+	text-shadow:1px 1px 0 #900;
+}
+*/
+.syousai_widgets dl {
+	margin:0;
+}
+
+.btns input {
+	border:none;
+}
+
+/* 物件検索 ウィジェット用
+----------------------------------------------*/
+#searchitem,searchitem_m {
+	line-height:1.2;
+}
+
+#searchitem_m div,#searchitem div {
+	line-height:1.6;
+	margin:4px 0 10px;
+}
+
+#searchitem_m .jsearch_caution1,#searchitem .jsearch_caution1 {
+	font-size:96%;
+}
+
+#searchitem_m .jsearch_caution2,#searchitem .jsearch_caution2 {
+	font-size:80%;
+}
+
+#searchitem_m input,#searchitem input {
+	margin:4px;
+}
+
+.widget-container select,
+.widget_fudo_b_k_bus_m select,.widget_fudo_b_k_bus select,.widget_fudo_b_k_m select,.widget_fudo_b_k select {
+	width:100% !important;
+	margin:2px 0;
+	padding:3px;
+	border:2px solid #d4d0ba;
+}
+
+
+.widget_fudo_b_k_m select.half_size,
+.widget_fudo_b_k_m #senyumenseki select,
+.widget_fudo_b_k_m #tochimenseki select,
+.widget_fudo_b_k_m #tsubotanka select,
+.widget_fudo_b_k_m #memseki select,
+.widget_fudo_b_k_m #kakaku_c select,
+.widget_fudo_b_k_m #kakaku_b select,
+.widget_fudo_b_k select.half_size,
+.widget_fudo_b_k #senyumenseki select,
+.widget_fudo_b_k #tochimenseki select,
+.widget_fudo_b_k #tsubotanka select,
+.widget_fudo_b_k #memseki select,
+.widget_fudo_b_k #kakaku_c select,
+.widget_fudo_b_k #kakaku_b select {
+	width:46% !important;
+}
+
+#content .widget_fudo_b_k select {
+	width:auto;
+}
+
+.widget_search form {
+	margin:0;
+}
+
+li.widget_search {
+	list-style-type:none;
+}
+
+.ie .menu-toggle,.ie input[type='submit'],.ie article.post-password-required input[type='submit'],.ie li.bypostauthor cite span {
+	padding:3px;
+}
+
+.ie .menu-toggle,.ie input[type='submit'],.ie article.post-password-required input[type='submit'],.ie li.bypostauthor cite span {
+	border:none;
+}
+
+form #searchitem_m button[disabled],form #searchitem_m input[type='button']:disabled,form #searchitem button[disabled],form #searchitem input[type='button']:disabled {
+	padding:100px;
+	color:#fff!important;
+}
+
+
+.widget_fudo_b_k .category_cb li,
+.widget_fudo_b_k .category_cb ul{
+	list-style: none !important;
+}
+.widget_fudo_b_k .category_cb ul.bukken_cat_parent{
+	padding: 0;
+        margin-left: 0;
+}
+
+
+/* 条件検索 (固定ページ) 
+-------------------------------------------------------------- */
+
+#container .jsearch .setsubi,
+#container .jsearch .menseki,
+#container .jsearch .madori,
+#container .jsearch .kakaku,
+#container .jsearch .chikunen,
+#container .jsearch .shiku,
+#container .jsearch .eki,
+#container .jsearch .shubetsu {
+	padding: 0 0 0 10px;
+}
+
+table.form_jsearch {
+	border: 1px solid #E5E5E5 !important;
+	border-collapse: collapse;
+	line-height: 18px;
+	margin: 10px 0;
+	width: 100%;
+}
+
+table.form_jsearch tr {
+	border: 0 none currentcolor;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+table.form_jsearch th {
+/*	background: #F6F6F6; */
+	border-bottom: 1px solid #E5E5E5 !important;
+	font-weight: 400;
+	padding: 10px !important;
+	text-align: left;
+	vertical-align: top;
+	width: 19%;
+	white-space: nowrap;
+	font-size: 14px !important;
+}
+
+table.form_jsearch td {
+	border-bottom: 1px solid #E5E5E5 !important;
+	border-left: 1px solid #E5E5E5 !important;
+	margin: 0;
+	padding: 10px !important;
+	font-size: 14px !important;
+}
+
+table.form_jsearch td.in_tsubotanka,
+table.form_jsearch td.in_tochimenseki,
+table.form_jsearch td.in_senyumenseki,
+table.form_jsearch td.in_rim,
+table.form_jsearch td.chikunen,
+table.form_jsearch td.kakaku,
+table.form_jsearch td.menseki {
+	padding: 10px;
+}
+
+table.form_jsearch h5 {
+	margin: 0 0 3px;
+	padding: 0 !important;
+	font-size: 14px !important;
+	font-weight: 400;
+}
+table.form_jsearch h5.j_choumei_shiku,
+table.form_jsearch h5.j_kouku_shiku {
+	margin: 0 0 3px 20px;
+	font-weight: 400;
+}
+
+table.form_jsearch ul {
+	margin: 0 0 8px 20px !important;
+	padding: 0 !important;
+}
+
+table.form_jsearch #shubetsu2 ul,
+table.form_jsearch #hof2 ul,
+table.form_jsearch #madori2 ul,
+table.form_jsearch #setsubi2 ul,
+
+table.form_jsearch #in_cat ul,
+table.form_jsearch #shubetsu ul,
+table.form_jsearch #hof ul,
+table.form_jsearch #madori ul,
+table.form_jsearch #setsubi ul {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+
+table.form_jsearch #kouku_shougaku ul:last-of-type,
+table.form_jsearch #kouku_chuugakui ul:last-of-type,
+table.form_jsearch #choumei ul:last-of-type,
+table.form_jsearch #eki ul:last-of-type {
+	margin:  0 0 0 20px !important;
+}
+
+table.form_jsearch li {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+table.form_jsearch select{
+	font-size: 14px;
+}
+
+
+table.form_jsearch input[type="checkbox"], 
+table.form_jsearch input[type="radio"]{
+	margin: 0 3px 0 0;
+}
+
+/* 17= 物件検索 固定ページ用  .jsearch
+---------------------------------------------------------------------- */
+
+#page_jsearch_page{
+	margin: 20px 0;
+}
+
+
+
+/* バス停 */
+#bus ul li ul li ul {
+	margin:0 0 10px 20px!important;
+}
+
+.jsearch #bus li {
+	float:none;
+}
+
+/* 物件検索(キーワード) 非可視
+---------------------------------------------------------------------- */
+#searchform [type='submit'] {
+	display:none;
+}
+
+/* マッチングメール
+---------------------------------------------------------------------- */
+#main #maching_mail a {
+	font-size:14px;
+	font-weight:700;
+	display:block;
+	width:auto!important;
+	margin:5px 0;
+	padding:10px 8px!important;
+	text-align:center;
+	vertical-align:middle;
+	text-decoration:none;
+	color:#fff;
+	border-radius:6px 6px 6px 6px;
+	background:#ce6166;
+	background:-moz-linear-gradient(center top,#ff9b9d 0%,#ce6166 100%) repeat scroll 0 0 transparent;
+	text-shadow:1px 1px 1px #cc5559;
+}
+
+/* 00= Fudousan Plugin Copyright
+---------------------------------------------------------------------- */
+#nendebcopy {
+	font-size:14px;
+	overflow:hidden;
+	width:100%;
+	max-width:1040px;
+	margin:-50px auto;
+	padding:0;
+	text-align:right;
+	text-decoration:none;
+	color:#666;
+}
+
+#nendebcopy a {
+	float:right;
+	text-decoration:none;
+	color:#686758;
+}
+
+/* = widget Top Slider Style
+-------------------------------------------------------------- */
+/* = sidebar only
+-------------------------------------------------------------- */
+#tertiary .carousel_inner,
+#primary .carousel_inner,
+#secondary .carousel_inner {
+/*	height: 115px; */
+	overflow:hidden;
+	width:210px;
+	margin:0;
+	padding-top:0;
+	padding-left:0;
+}
+
+#tertiary .grid-content li,
+#primary .grid-content li,
+#secondary .grid-content li {
+	line-height:1.2;
+	display:block;
+	float:left;
+	width:200px;
+	padding:8px;
+	list-style-type:none;
+}
+
+#tertiary .box1image,
+#secondary .box1image {
+	float:left;
+	width:100px;
+	height: auto;
+	padding-right:5px;
+}
+
+#primary .box1image{
+	width:150px !important;
+	height: auto;
+}
+
+.showcase #content .grid-content .carousel_inner li {
+	font-size:10px;
+	line-height:1.2;
+	overflow:hidden;
+	width:210px;
+	height:130px;
+	margin:0;
+	padding-top:0;
+	padding-left:0;
+}
+
+/* 2010 */
+#main .widget-area ul ul.grid-content {
+	margin-left:-.5em;
+}
+
+/* unpc*/
+#main .widget-area ul.grid-content {
+	padding:0;
+}
+
+.three-column.unpc .grid-content li {
+	width:175px;
+}
+
+.three-column.unpc #tertiary .grid-content li,.three-column.unpc #secondary .grid-content li {
+	width:175px;
+	margin-left:-.5em;
+}
+
+.three-column.unpc #tertiary .box1image,.three-column.unpc #secondary .box1image {
+	width:90px;
+	height: auto;
+}
+
+.three-column.unpc #tertiary .carousel_inner,.three-column.unpc #secondary .carousel_inner {
+	width:180px;
+}
+
+.two-column.unpc .grid-content li {
+	width:190px;
+}
+
+.two-column.unpc #secondary .grid-content li {
+	width:190px;
+	margin-left:-.5em;
+}
+
+.two-column.unpc #secondary .box1image {
+	width:75px;
+	height: auto;
+}
+
+.two-column.unpc #secondary .carousel_inner {
+	width:195px;
+}
+
+/* = footer only
+	-------------------------------------------------------------- */
+footer .carousel_inner,#footer .carousel_inner {
+/*	height: 115px; */
+	overflow:hidden;
+	width:210px;
+	margin:0;
+	padding-top:0;
+	padding-left:0;
+}
+
+footer .grid-content li,#footer .grid-content li {
+	font-size:10px;
+	line-height:1.2;
+	display:block;
+	float:left;
+	width:200px;
+	padding:8px;
+	list-style-type:none;
+}
+
+footer .box1image,#footer .box1image {
+	float:left;
+	width:100px;
+	height: auto;
+	padding-right:5px;
+}
+
+#footer .widget-area ul ul.grid-content {
+	margin-left:-.5em;
+}
+
+/* = NEW/UP mark
+	-------------------------------------------------------------- */
+.showcase #content .grid-content,footer .grid-content li,#footer .grid-content li,#tertiary .grid-content li,#primary .grid-content li,#secondary .grid-content li {
+	position:relative;
+}
+
+.page-template-showcase-php .new_mark,footer .new_mark,#footer .new_mark,#tertiary .new_mark,#primary .new_mark,#secondary .new_mark {
+	font-family:Verdana,Geneva,sans-serif;
+	font-size:10px;
+	font-weight:700;
+	position:absolute;
+	top:3px;
+	left:5px;
+	display:block;
+	width:auto;
+	padding:2px 5px;
+	text-align:center;
+	text-transform:uppercase;
+	color:#fff;
+	border-radius:4px;
+	background:#900;
+/* Old browsers */
+	background:-moz-linear-gradient(top,#d20100 0%,#900 100%);
+/* FF3.6+ */
+	background:-webkit-linear-gradient(top,#d20100 0%,#900 100%);
+/* Chrome10+,Safari5.1+ */
+	text-shadow:1px 1px 0 #900;
+}
+
+/* = 関連物件
+	-------------------------------------------------------------- */
+#syousai_box ul.syousai-content li {
+	position:relative;
+}
+
+#syousai_box .new_mark {
+	font-family:Verdana,Geneva,sans-serif;
+	font-size:9px;
+	font-weight:700;
+	position:absolute;
+	top:6px;
+	right:6px;
+	display:block;
+	width:auto;
+	padding:2px 5px;
+	text-align:center;
+	text-transform:uppercase;
+	color:#fff;
+	border-radius:4px;
+	background:#900;
+width: 34px;
+}
+
+
+/*------------------------------------------------------------------
+	  ページ条件検索 バス
+	----------------------------------------------------------------- */
+.jsearch table.form_jsearch td.bus ul {
+	padding:0 0 0 10px!important;
+}
+
+.jsearch table.form_jsearch td.bus ul li ul li.buscorse,.jsearch table.form_jsearch td.bus ul li.buscorp {
+	display:block;
+	clear:both;
+	margin-bottom:5px;
+}
+
+.jsearch table.form_jsearch td.bus ul li ul li.buscorse ul li.busstop {
+	float:left;
+	margin:0;
+}
+
+
+/*  = 会員登録 会員ログイン page
+---------------------------------------------------------------------- */
+/* テーブル */
+table.form_register {
+	font-size: 14.5px;
+	font-size: .95rem;
+	line-height: 18px;
+	width: 100%;
+}
+
+table.form_register input[type="text"],table.form_register input[type="email"],table.form_register input[type="url"],table.form_register input[type="password"],table.form_register input[type="search"],table.form_register input[type="tel"],table.form_register input[type="number"],table.form_register textarea {
+	padding: 5px;
+	width: 70%;
+}
+
+table.form_user_register input {
+	margin: 0 5px 5px;
+}
+
+table.form_user_register th,table.form_register th {
+	font-weight: 400;
+	width: 30%;
+	padding: 15px !important;
+	text-align: left;
+	background: #f6f6f6;
+}
+
+table.form_user_register td,table.form_register td {
+	width: 70%;
+	margin: 0;
+	padding: 15px !important;
+	font-size: 12px;
+}
+
+table.form_user_register h4,table.form_user_register h5,table.form_register h5 {
+	font-weight: 400;
+	margin: 0 !important;
+	font-size: 12px;
+}
+
+table.form_register ul {
+	margin: 0 !important;
+}
+
+table.form_register select {
+	color: #1f1f1f;
+}
+
+table.form_user_register p {
+	padding: 0 10px 10px;
+}
+
+table.form_user_register span{
+	display: inline-block;
+}
+
+table.form_user_register ul.kouku,
+table.form_user_register ul.eki,
+table.form_user_register ul.chou {
+	margin: 0 0 1.75em 1.25em !important;
+	list-style: none;
+}
+
+table.form_user_register ul.kouku li,
+table.form_user_register ul.eki li,
+table.form_user_register ul.chou li {
+	display: inline-block;
+}
+
+table.form_user_register input[type="checkbox"]{
+	margin: 0 2px 0 10px;
+}
+
+
+#kaiin_kiyaku{
+	margin: 0 0 20px 0;
+}
+
+.page_login li {
+	display: inline-block;
+}
+
+/* 強度インジケータ */
+#pass-strength-result {
+	display: none;
+	width: auto;
+	margin: 5px 0;
+	padding: 5px;
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ddd !important;
+	background-color: #eee;
+}
+
+#pass-strength-result.bad {
+	border-color: #ff853c !important;
+	background-color: #ffb78c;
+}
+
+#pass-strength-result.good {
+	border-color: #fc0 !important;
+	background-color: #ffec8b;
+}
+
+#pass-strength-result.short {
+	border-color: #f04040 !important;
+	background-color: #ffa0a0;
+}
+
+#pass-strength-result.strong {
+	border-color: #8dff1c !important;
+	background-color: #c3ff88;
+}
+
+/* ボタン */
+.page_login #maching_mail a {
+	font-size: 14px;
+	font-weight: 700;
+	display: block;
+	width: 150px;
+	margin: 5px 0;
+	padding: 5px 8px;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	color: #fff;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background: #ff9b9d;
+	text-shadow: 1px 1px 1px #cc5559;
+}
+
+.page_login #maching_mail a:hover {
+	text-decoration: underline;
+	background: #ff9b9d;
+}
+
+.page_login #maching_mail a:active {
+	text-decoration: none;
+	background: #faa8cd;
+}
+
+
+
+.page_login ul:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+
+.page_register #kaiin_users_comment {
+	margin: 10% 0 20px;
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+	font-size: 12px;
+}
+
+.page_register #kaiin_kiyaku {
+	overflow: auto;
+	width: 100%;
+	margin: 10% 0 20px;
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+	font-size: 12px;
+}
+
+.page_login .login_error,.page_register .login_error {
+	margin: 0 0 16px !important;
+	padding: 12px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #c00;
+	border-radius: 3px 3px 3px 3px;
+	background-color: #ffebe8;
+}
+
+.page_login p.message,.page_register p.message {
+	margin: 0 0 16px !important;
+	padding: 12px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #e6db55;
+	border-radius: 3px 3px 3px 3px;
+	background-color: #ffffe0;
+}
+
+.page_register #first_name,.page_register #last_name {
+	width: auto;
+}
+
+/* 物件管理 担当者 */
+#list_simplepage2 #charge {
+	clear: both;
+	background: #f7f7f7 linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) repeat scroll 0 0;
+	border: 1px solid #d1d1d1;
+	border-radius: 2px;
+	padding: 10px;
+	overflow: hidden;
+	margin-bottom: 3.5em;
+}
+
+#list_simplepage2 #charge .role_kannri_tanto_pic {
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+#list_simplepage2 #charge .role_kannri_tanto_pic img {
+	width: 100px;
+	height: auto;
+}
+
+#list_simplepage2 #charge .role_kannri_tanto_name {
+	display: block;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+#list_simplepage2 #charge .role_kannri_tanto_comment {
+	display: block;
+	line-height: 18px;
+}
+
+
+
+
+
+
+.single-fudo .edit-link{
+	margin: 10px 0;
+	text-align: right;
+	display: block;
+}
+
+
+/* Gutenberg */
+
+/* 画像はみ出し対策 IE11 */
+@media all and (-ms-high-contrast: none) {
+	*::-ms-backdrop,
+		.wp-block-image .aligncenter > figcaption,
+		.wp-block-image .alignleft > figcaption,
+		.wp-block-image .alignright > figcaption,
+		.is-resized.wp-block-image > figcaption,
+
+		.wp-block-image .aligncenter,
+		.wp-block-image .alignleft,
+		.wp-block-image .alignright,
+		.is-resized.wp-block-image{
+			display: block !important;
+		}
+}
+
+/* カバー画像内 文字位置 IE11 */
+.wp-block-cover, .wp-block-cover-image{
+/*	height: 100vh; */
+	height: 430px;
+	margin: 0 0 10px;
+}
+
+
+
+
+/* カバー画像内 aligncenter fix */
+.wp-block-cover.aligncenter {
+	display: flex;
+}
+
+
+figure{
+	margin: 0 0 1.5em;
+}
+
+blockquote {
+	border-left: 4px solid #000;
+	padding-left: 1em;
+	margin: 0;
+}
+
+figure blockquote {
+	border-left: none;
+}
+
+cite {
+	font-size: 12px;
+}
+
+.wp-block-pullquote {
+	border-bottom: 4px solid #555d66;
+	border-top: 4px solid #555d66;
+	color: #40464d;
+}
+
+
+
+/* wp58 ウィジェットブロック Fix */
+body.logged-in.wp-embed-responsive .widget{
+	margin: 0;
+}
+
+/* Fudousan Favorite
+---------------------------------------------------------------------- */
+.fudou_favorite{
+	margin: 6px 0 0 10px !important;;
+}
+.single-fudo .fudou_favorite{
+	margin: 5px 0 0 10px !important;;
+}
+
+
+.fudou_add_favorite_button,
+.fudou_del_favorite_button {
+	font-size: 13px;
+	padding: 2px 10px;
+}
+
+
+.fudou_add_favorite_button2:before,
+.fudou_del_favorite_button2:before{
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+}
+
+
+
+
+/* */

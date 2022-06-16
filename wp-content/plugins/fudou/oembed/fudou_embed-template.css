@@ -1,0 +1,94 @@
+/**
+ * Contains the post embed template css. 
+ *
+ * @package WordPress4.4
+ * @subpackage oEmbed
+ * @subpackage Fudousan Plugin Pro
+ * Version: 1.6.8
+ */
+.wp-embed-share-dialog-open .dashicons {
+	top: 0;
+}
+
+/* 物件表示 */
+.wp-embed-excerpt {
+	position: relative;
+	color: #32373c;
+}
+
+.wp-embed-excerpt:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+
+.wp-embed-excerpt .kaiin_img {
+	margin: 0 0 0 10px;
+}
+
+.wp-embed-excerpt .up_mark,.new_mark {
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 10px;
+	font-weight: 700;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	display: block;
+	width: auto !important;
+	padding: 2px 5px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 4px;
+	background: #900;
+	text-shadow: 1px 1px 0 #900;
+}
+
+.wp-embed-excerpt .box1image {
+	display: block;
+	float: left;
+	width: 150px;
+	height: auto;
+	border-right: 20px solid #fff;
+}
+
+.wp-embed-excerpt .kaiinimage {
+	width: 50px;
+}
+
+.wp-embed-excerpt .top_price {
+	font-weight: 700;
+	color: #e30;
+}
+
+.wp-embed-excerpt .top_madori {
+	font-weight: 700;
+}
+
+.wp-embed-excerpt dl dt {
+	border-bottom: 1px dashed #dcdcdc;
+	margin-bottom: 5px;
+	padding-bottom: 4px;
+}
+
+.wp-embed-excerpt dl dt:last-child {
+	border: none;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.wp-embed-excerpt dl dt span {
+	display: inline-block;
+}
+
+.wp-embed-excerpt dl dt span.top_price_koumoku,
+.wp-embed-excerpt dl dt span.top_menseki_koumoku,
+.wp-embed-excerpt dl dt span.top_shozaichi_koumoku,
+.wp-embed-excerpt dl dt span.top_kotsu_koumoku,
+.wp-embed-excerpt dl dt span.top_kotsubus_koumoku,
+.wp-embed-excerpt dl dt span.top_madori_koumoku {
+	text-align: right;
+	padding-right: 15px;
+	width: 45px;
+}

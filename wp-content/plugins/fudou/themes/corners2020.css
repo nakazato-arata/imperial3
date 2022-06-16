@@ -1,0 +1,485 @@
+@charset  "utf-8";
+/* = 
+ * Twenty Twenty
+ * widget_fudo Style
+ * corners2020.css サイトパーツの装飾
+ * @package WordPress 5.9
+ * Version: 5.9.0
+ */
+
+
+/* = widget 
+-------------------------------------------------------------- */
+.widget:after {
+	display: block;
+	clear: both;
+	height: 30px;
+	content: '';
+}
+
+/* = トップ物件表示 / 関連物件  .grid-content syousai-content
+---------------------------------------------------------------------- */
+ul.syousai-content,
+ul.grid-content {
+	margin: 0;
+	padding: 0;
+}
+
+ul.grid-content > li:after {
+	display: block;
+	clear: both;
+	height: 20px;
+	content: '';
+}
+
+/* 高さ揃え */
+ul.syousai-content,
+ul.grid-content {
+	display:-webkit-box;
+	display:-moz-box;
+	display:-ms-box;
+	display:-webkit-flexbox;
+	display:-moz-flexbox;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:flex;
+	-webkit-box-lines:multiple;
+	-moz-box-lines:multiple;
+	-webkit-flex-wrap:wrap;
+	-moz-flex-wrap:wrap;
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+
+
+/* トップ物件 表示 */
+ul.syousai-content li,
+ul.grid-content li {
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-sizing: content-box;
+	display: block;
+	float: left;
+	line-height: 1.5;
+	list-style-type: none;
+	margin: 0 10px 10px 0 !important;
+	padding: 6px !important;
+	position: relative;
+	width: calc((100% - 30px) / 4 - 15px);
+	font-size: 1.6rem; /* 18px */
+
+}
+ul.syousai-content li.grid_count4,
+ul.grid-content li.grid_count4 {
+	margin-right: 0 !important;
+}
+
+/* 画像幅 */
+ul.syousai-content li .box2image,
+ul.grid-content li .box1image {
+	width: 100%;
+	height: auto;
+	margin: 0 0 0.5em 0;
+}
+
+
+/* NEW UP マーク */
+.up_mark,
+.new_mark {
+	background: #900 none repeat scroll 0 0;
+	color: #fff;
+	display: block;
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px 5px;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+
+	left: 8px;
+	top: 8px;
+	bottom: auto;
+	min-width: 28px;
+	z-index: 2;
+}
+
+/* 価格 */
+.top_price {
+	font-weight: 700;
+	color: #c33300;
+}
+
+/* 間取り */
+.top_madori {
+	font-weight: 700;
+}
+
+/* 会員 */
+top_kaiin{
+	display: block;
+}
+
+
+
+/**
+ * 700px 以下
+ */
+@media screen and (max-width: 700px) {
+	/* 物件幅 */
+	ul.syousai-content li,
+	ul.grid-content li {
+		margin: 0 0 20px 0;
+		width: calc(100% - 10px)  !important;
+	}
+	/* 画像幅 */
+	ul.syousai-content li .box2image,
+	ul.grid-content li .box1image {
+		width: 100px;
+		height: auto;
+		float: left;
+		padding: 0 10px 0 0;
+	}
+
+	/* スライダー物件幅 */
+	.widget_fudo_top_slider_syousai .carousel li,
+	.widget_fudo_top_slider .grid-content li{
+		width: 150px !important;
+
+	}
+}
+
+
+/**
+ * footer 1000px 以下 .footer-widgets
+ */
+@media screen and (max-width: 1000px) {
+	/* 物件幅 */
+	.footer-widgets ul.syousai-content li,
+	.footer-widgets .widget_fudo_top_r ul.grid-content li {
+		margin: 0 0 20px 0;
+		width: calc(100% - 10px)  !important;
+	}
+	/* 画像幅 */
+	.footer-widgets ul.syousai-content li .box2image,
+	.footer-widgets .widget_fudo_top_r ul.grid-content li .box1image {
+		width: 100px;
+		height: auto;
+		float: left;
+		padding: 0 10px 0 0;
+	}
+
+	/* スライダー物件幅 
+	.footer-widgets .widget_fudo_top_slider_syousai .carousel li,
+	.footer-widgets .widget_fudo_top_slider .grid-content li{
+		width: 150px !important;
+
+	}*/
+}
+
+
+
+/* = 
+ トップスライダー widget_fudo_top_slider
+ 関連物件表示(物件詳細ページ)スライダー widget_fudo_top_slider_syousai
+---------------------------------------------------------------------- */
+/* 物件幅 ダイナミック */
+.widget_fudo_top_slider_syousai .carousel li,
+.widget_fudo_top_slider .grid-content li{
+	width: calc((100vw - 8rem) / 4 - 26px);
+	height: auto;
+	max-width: 168px;
+	color: #000;
+}
+
+
+/* footerウィジェット */
+footer .widget_fudo_top_slider_syousai .carousel li,
+footer .widget_fudo_top_slider .grid-content li{
+	width: 120px;
+}
+
+
+/* 画像幅 ダイナミック */
+.widget_fudo_top_slider_syousai .carousel li .box2image ,
+.widget_fudo_top_slider .grid-content li .box1image {
+	float: none;
+	height: auto;
+	width: 100%;
+}
+
+
+.widget_fudo_top_slider_syousai .carousel,
+.widget_fudo_top_slider .carousel{
+	overflow-x: hidden;
+}
+
+/* ズレ調整 
+.carousel_inner{
+	padding: 0 10px;
+}
+*/
+
+
+/* = 閲覧履歴 widget_fudou_single_history
+---------------------------------------------------------------------- */
+.cl_botton,.cl_botton2 {
+	float: right;
+}
+.cl_botton img,
+.cl_botton2 img {
+	min-height: auto;
+}
+
+/* 投稿表示(最近の記事) 
+--------------------------------------- */
+.widget_fudo_toukou_top ul#toukou_top {
+	clear: both;
+	margin: 0 0 20px;
+	padding: 0;
+}
+
+.widget_fudo_toukou_top ul.toukou_top_post_excerpt {
+	margin: 0px;
+	padding: 0;
+}
+
+.widget_fudo_toukou_top .toukou_top_post_title {
+	font-weight: bold;
+}
+
+.widget_fudo_toukou_top #toukou_top li {
+	clear: both;
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding: 0 0 5px;
+	white-space: pre-line;
+	word-wrap: break-word;
+}
+
+.widget_fudo_toukou_top #toukou_top li:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+
+.widget_fudo_toukou_top #toukou_top li ul li {
+	padding: 0;
+}
+
+.widget_fudo_toukou_top #toukou_top img {
+	float: left;
+	padding: 0 15px 0 0;
+	width: 150px;
+	height: auto;
+}
+
+.widget_fudo_toukou_top #toukou_top ul li:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 1rem;
+}
+
+
+/* = キーワード検索 ウィジェット
+-------------------------------------------------------------- */
+.widget_search input.search-field,
+.widget_fudo_search input.search-field{
+	color: #000;
+	font-size: 1.8rem;
+}
+
+
+.widget_fudo_search .search-form label{
+	width: auto;
+}
+
+
+/* = 条件検索ウィジェット
+-------------------------------------------------------------- */
+.widget_fudo_b_k_bus input,
+.widget_fudo_b_k input {
+	margin-top: 8px;
+}
+
+.widget-container select,
+.widget_fudo_b_k_bus_m select,
+.widget_fudo_b_k_bus select,
+.widget_fudo_b_k_m select,
+.widget_fudo_b_k select {
+	width: 98%;
+	margin: 2px 0;
+	padding: 1rem;
+	font-size: 1.8rem;
+}
+
+#searchitem_m div,
+#searchitem div{
+	margin: 0 0 2rem;
+}
+
+.widget_fudo_b_k_bus input[type='checkbox'],
+.widget_fudo_b_k_m input[type='checkbox'],
+.widget_fudo_b_k input[type='checkbox'] {
+	margin: 0 2px 0 0;
+}
+
+.widget_fudo_b_k_bus label,
+.widget_fudo_b_k_m label,
+.widget_fudo_b_k label {
+	margin: 0 5px 0 0;
+}
+
+.widget_fudo_b_k_m select.half_size,
+.widget_fudo_b_k_m #senyumenseki select,
+.widget_fudo_b_k_m #tochimenseki select,
+.widget_fudo_b_k_m #tsubotanka select,
+.widget_fudo_b_k_m #memseki select,
+.widget_fudo_b_k_m #kakaku_c select,
+.widget_fudo_b_k_m #kakaku_b select,
+.widget_fudo_b_k select.half_size,
+.widget_fudo_b_k #senyumenseki select,
+.widget_fudo_b_k #tochimenseki select,
+.widget_fudo_b_k #tsubotanka select,
+.widget_fudo_b_k #memseki select,
+.widget_fudo_b_k #kakaku_c select,
+.widget_fudo_b_k #kakaku_b select {
+	width: calc(50% - 15px);
+}
+
+
+.widget_fudo_b_k_bus .jsearch_caution2,
+.widget_fudo_b_k .jsearch_caution2 {
+	margin: 10px 0;
+}
+
+.widget_fudo_b_k_bus .madori_cb label,
+.widget_fudo_b_k_bus .setsubi_cb label,
+.widget_fudo_b_k_m .madori_cb label,
+.widget_fudo_b_k_m .setsubi_cb label,
+.widget_fudo_b_k .madori_cb label,
+.widget_fudo_b_k .setsubi_cb label {
+	padding: 0 8px 0 2px;
+}
+
+.widget_fudo_b_k .category_cb li,
+.widget_fudo_b_k .category_cb ul{
+	list-style: none !important;
+}
+.widget_fudo_b_k .category_cb ul.bukken_cat_parent{
+	padding: 0;
+        margin-left: 0;
+}
+
+/* = Twitter
+-------------------------------------------------------------- */
+.widget_fudo_twitter2 .tw_status{
+	float: right;
+	width: calc( 100% - 12rem );
+}
+
+.widget_fudo_twitter2 #twitter_update_list li:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 1rem;
+}
+
+.widget_fudo_twitter2 img{
+	min-height: auto;
+}
+
+
+/* = 物件ショートコード
+-------------------------------------------------------------- */
+
+.post_bukken_box ul.grid-content-s1 li,
+.post_bukken_box ul.grid-content-s2 li,
+.post_bukken_box ul.grid-content-s3 li,
+.post_bukken_box ul.grid-content-s li{
+	font-size: 1.6rem !important; /* 18px */
+	color: #000;
+
+}
+
+
+/* カテゴリ ウィジェット ul/li リスト
+---------------------------------------*/
+.wp-block-categories ul,
+.widget_fudo_b_c_choumei ul,
+.widget_fudo_r_c_choumei ul,
+.widget_fudo_b_kouku_shougaku ul,
+.widget_fudo_b_kouku_chuugaku ul,
+.widget_fudo_c_kouku_shougaku ul,
+.widget_fudo_c_kouku_chuugaku ul,
+
+.widget_fudo_cat ul,
+.widget_fudo_b_c ul,
+.widget_fudo_r_c ul,
+.widget_fudo_r_r ul,
+.widget_fudo_b_r ul {
+	margin-left: 0 !important;
+	padding-left: 1.0em !important;
+	list-style-type: disc;
+}
+
+.wp-block-categories a,
+.widget_fudo_b_c_choumei a,
+.widget_fudo_r_c_choumei a,
+.widget_fudo_b_kouku_shougaku a,
+.widget_fudo_b_kouku_chuugaku a,
+.widget_fudo_c_kouku_shougaku a,
+.widget_fudo_c_kouku_chuugaku a,
+.widget_fudo_cat a,
+.widget_fudo_b_c a,
+.widget_fudo_r_c a,
+.widget_fudo_r_r a,
+.widget_fudo_b_r a {
+	text-decoration: none;
+}
+
+
+.widget_fudo_b_r_choumei ul li ul li ul li,
+.widget_fudo_b_c_choumei ul li ul li ul li,
+.widget_fudo_r_r_choumei ul li ul li ul li,
+.widget_fudo_r_c_choumei ul li ul li ul li,
+.widget_fudo_b_r ul li ul li,
+.widget_fudo_b_c ul li ul li,
+.widget_fudo_r_r ul li ul li,
+.widget_fudo_r_c ul li ul li {
+	display: inline-flex;
+	margin: 0 10px;
+	padding: 0;
+
+}
+
+.widget_fudo_cat ul ul,
+.widget_fudo_b_kouku_shougaku ul ul,
+.widget_fudo_b_kouku_chuugaku ul ul,
+.widget_fudo_c_kouku_shougaku ul ul,
+.widget_fudo_c_kouku_chuugaku ul ul,
+.widget_fudo_b_c_choumei ul ul.children_1,
+.widget_fudo_r_c_choumei ul ul.children_2{
+	list-style-position: inside;
+	list-style-type: disc;
+}
+
+.widget_fudo_cat ul li ul li,
+.widget_fudo_b_kouku_shougaku ul li ul li ,
+.widget_fudo_b_kouku_chuugaku ul li ul li ,
+.widget_fudo_c_kouku_shougaku ul li ul li ,
+.widget_fudo_c_kouku_chuugaku ul li ul li ,
+.widget_fudo_b_r_choumei ul li ul li ,
+.widget_fudo_b_c_choumei ul li ul li ,
+.widget_fudo_r_r_choumei ul li ul li ,
+.widget_fudo_r_c_choumei ul li ul li {
+	padding: 0;
+	margin: 0 10px 3px !important;
+}
+

@@ -1,0 +1,22 @@
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /okistyle-official/realestate/imperial/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /okistyle-official/realestate/imperial/index.php [L]
+</IfModule>
+
+# END WordPress
+
+php_value upload_max_filesize 256M
+php_value post_max_size 256M
+php_value memory_limit 512M
+php_value max_execution_time 300
+php_value max_input_time 300

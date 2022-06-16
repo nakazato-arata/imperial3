@@ -1,0 +1,1476 @@
+@charset  "utf-8";
+/* = 
+ * Twenty Ten
+ * widget_fudo Style
+ * style2010.css サイト基本の装飾
+ * @package WordPress 5.6
+ * Version: 5.6.1
+-------------------------------------------------------------- */
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+#main #content table tr {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#main #content table tr td {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	border-top: none;
+}
+
+
+figure{
+	margin: 0;
+	padding: 0;
+}
+
+/* = 物件リストページ
+-------------------------------------------------------------- */
+
+.archive-fudo .hentry{
+    margin: auto;
+}
+
+
+#main #content #list_simplepage {
+	margin: 0;
+	padding: 0;
+}
+
+#main #content #list_simplepage .list_detail table {
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+
+/* 会員 */
+#list_simplepage .entry-title span.fudo_kaiin_type_logo img {
+	float: right;
+	margin: 9px 0 0;
+}
+
+#list_simplepage .list_simple_boxtitle h2 span.fudo_kaiin_type_logo.member {
+	margin: 9px 0 0 !important;
+}
+
+
+/* うち消費税 */
+#list_simplepage span.kakakuzei {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+
+#list_simplepage .list_simple_boxtitle {
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: #4a535d;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #b7b7b7;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #b7b7b7;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #b7b7b7;
+}
+
+#list_simplepage .list_simple_boxtitle h2 {
+	margin: 0 !important;
+	padding: 5px 0 !important;
+	background-color: #f8f8f8;
+	line-height: 1.8;
+
+}
+#list_simplepage .list_simple_boxtitle h2 a {
+	font-size: 18px;
+	font-weight: 700;
+	display: block;
+	padding: 4px 0 3px 12px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #fff;
+	background-color: #f8f8f8;
+	text-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+.list_simple_box:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+
+#list_simplepage .list_simple_box {
+	margin: 0 0 10px;
+	padding: 6px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background-color: #fefefe;
+}
+
+#main #content #list_simplepage .list_detail dl {
+	font-size: 12px;
+	margin: 0;
+	padding: 5px;
+}
+
+#main #content .list_detail dt {
+	font-weight: 400;
+	display: inline;
+	color: #333;
+}
+
+#main #content .list_detail dd {
+	display: inline;
+	margin: 0 .6em 0 .4em;
+	padding: 0;
+	color: #333;
+}
+
+#main #content .list_price_others table td{
+	width: 25%;
+}
+
+#main #content .list_picsam {
+	float: left;
+	width: 216px;
+	color: #000;
+}
+
+#main #content .list_picsam img {
+	float: left;
+	height: auto;
+	width: 100px;
+	margin: 1px 1px 5px;
+	padding: 1px;
+	border: 1px solid #333;
+	background-color: #fff;
+}
+
+#main #content .list_picsam .list_picsam_img:before {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+
+#list_simplepage .list_details_button {
+	font-size: 13px;
+	font-weight: 700;
+	display: block;
+	clear: both;
+	width: 208px;
+	height: 24px;
+	margin: 0 0 3px;
+	padding-top: 3px;
+	text-align: center;
+	letter-spacing: .1em;
+	color: #00329b;
+	border: 1px solid #999;
+	border-radius: 3px;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(.49,#eee),color-stop(.5,#ddd),color-stop(1,#fff));
+	background: -moz-linear-gradient(top,#fff 0%,#eee 49%,#ddd 50%,#fff 100%);
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0 1px 0 #fff;
+	-moz-box-shadow: 0 1px 0 #fff;
+	box-shadow: 0 1px 0 #fff;
+	text-shadow: 0 1px 0 rgba(255,255,255,.7);
+}
+
+#list_simplepage a:link,a:visited .list_details_button {
+	text-decoration: none;
+}
+
+#list_simplepage a:hover .list_details_button {
+	text-decoration: underline;
+	color: #39f;
+}
+
+#list_simplepage .list_detail {
+	float: right;
+	width: 63%;
+	margin: 0;
+	padding: 4px;
+	border: 1px solid #b7b7b7;
+	border-radius: 5px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 1px #bec2c6;
+	-moz-box-shadow: 0 2px 1px #bec2c6;
+	box-shadow: 0 2px 1px #bec2c6;
+}
+
+#main #content #list_simplepage .list_detail table tr {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #ccc;
+}
+
+#main #content #list_simplepage .list_price {
+	line-height: 1.4;
+	padding: 5px;
+	background: -moz-linear-gradient(left,#ebf6fc,#fff);
+	background: -webkit-gradient(linear,left top,right top,from(#ebf6fc),to(#fff));
+	background-color: #ebf6fc;
+}
+
+#main #content #list_simplepage .list_price.rent {
+	background: -moz-linear-gradient(left,#fdedf0,#fff);
+	background: -webkit-gradient(linear,left top,right top,from(#fdedf0),to(#fff));
+	background-color: #fdedf0;
+}
+
+#main #content #list_simplepage .list_detail .list_price tr {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #cae7f4;
+}
+
+#main #content #list_simplepage .list_detail .list_address dd {
+	display: block;
+}
+
+#list_simplepage .entry-excerpt {
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+#list_simplepage2 .entry-excerpt {
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+/* = 物件詳細ページ
+-------------------------------------------------------------- */
+#main #content #list_simplepage2 {
+	margin: 0;
+	padding: 0;
+}
+
+/* うち消費税 */
+#main #content #list_simplepage2 span.kakakuzei {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+#main #content #list_simplepage2 .list_detail table {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#main #container #content #list_simplepage2 .list_simple_box {
+	margin: 0 0 10px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	background: #f8f8f8;
+}
+
+#main #container #content #list_simplepage2 .list_simple_box .list_detail {
+	float: left;
+	/*width: 75%;*/
+	width: 518px;
+	margin: 0 0 0 8px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 1px #bec2c6;
+	-moz-box-shadow: 0 2px 1px #bec2c6;
+	box-shadow: 0 2px 1px #bec2c6;
+}
+
+#main #content #list_simplepage2 .list_detail table tr {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #eee;
+}
+
+#main #content #list_simplepage2 .list_picsam {
+	float: left;
+	width: 140px;
+	color: #000;
+}
+
+#main #content #list_simplepage2 .list_picsam img {
+	height: auto;
+	width: 130px;
+	margin: 0 0 4px;
+	padding: 1px;
+/*	display: block;	*/
+	border: 1px solid #999;
+	background-color: #fff;
+}
+
+#main #content #second_img {
+	padding: 10px 0;
+}
+
+#main #content #second_img img {
+	width: 97px;
+	height: auto;
+	margin: 0 1px 0 0;
+	padding: 1px;
+	border: 1px solid #999;
+	background-color: #fff;
+}
+
+#main #content #list_simplepage2 .list_price {
+	line-height: 2;
+	margin: 0;
+	padding: 0 0 4px 1em;
+	background: -moz-linear-gradient(left,#ebf6fc,#fff);
+	background: -webkit-gradient(linear,left top,right top,from(#ebf6fc),to(#fff));
+	background-color: #ebf6fc;
+}
+
+#main #content #list_simplepage2 .list_price.rent {
+	background: -moz-linear-gradient(left,#fdedf0,#fff);
+	background: -webkit-gradient(linear,left top,right top,from(#fdedf0),to(#fff));
+	background-color: #fdedf0;
+}
+
+#main #content #list_simplepage2 .list_detail table {
+	font-size: 14px;
+}
+
+#main #content #list_simplepage2 .list_simple_box .list_detail #list_add th {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4;
+	width: 88px;
+	margin: 0;
+	padding: .5em;
+	text-align: left;
+	white-space: nowrap;
+	color: #666;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+#main #content #list_simplepage2 .list_simple_box .list_detail #list_add td {
+	line-height: 1.4;
+	margin: 0;
+	padding: .5em;
+	white-space: normal;
+	color: #555;
+	border-bottom: 1px solid #eee;
+}
+
+#main #content #list_simplepage2 .list_simple_box .list_detail #list_other th {
+	line-height: 1.2;
+	width: 20%;
+	margin: 0;
+	padding: .5em;
+	text-align: left;
+	white-space: nowrap;
+	color: #444;
+	border-right: 1px dotted #ccc;
+	border-bottom: 1px solid #eee;
+}
+
+#main #content #list_simplepage2 .list_simple_box .list_detail #list_other th.th2 {
+	border-left: 1px dotted #ccc;
+}
+
+#main #content #list_simplepage2 .list_simple_box .list_detail #list_other td {
+	line-height: 1.2;
+	width: 30%;
+	margin: 0;
+	padding: .5em;
+	white-space: normal;
+	border-bottom: 1px solid #eee;
+}
+
+#main #container #content h3 {
+	margin-top: 15px;
+	border-bottom: 1px dotted #ccc;
+}
+
+#list_simplepage2 .entry-title {
+	font-weight: 700;
+	display: block;
+	margin: 0 !important;
+	padding: 8px 0 12px 12px !important;
+	border-top: 3px solid #4a535d;
+	border-right: 1px solid #b7b7b7;
+	background-color: #f8f8f8;
+	text-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+h1.page-title {
+	border-bottom: 1px dotted #ccc;
+}
+
+/* 会員 */
+.single-fudo .entry-title span.fudo_kaiin_type_logo img {
+	float: right;
+	margin: 3px 0 0;
+}
+
+.single-fudo .entry-title span.fudo_kaiin_type_logo.member {
+	float: right;
+	margin: 5px 0 0;
+}
+
+
+#main #content .entry-content p:not(.wp-block-cover-image-text){
+	font-size: 12px;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0 0 1.5em 0;
+}
+
+
+#main #content #list_add_table{
+}
+
+#main #content #list_other_table{
+	margin: 0 0 20px;
+}
+
+/* for wp3.6 youtube */
+#main #content .list_detail .entry-content p iframe {
+	max-width: 485px;
+}
+
+#toiawasesaki {
+	line-height: 1.2;
+	display: block;
+	margin: 0 0 20px;
+}
+
+#contact_form {
+	display: block;
+	margin: 0 0 20px;
+}
+
+.list_detail_bottom_info {
+	font-size: 12px;
+	float: right;
+	width: 530px;
+	text-align: right;
+	margin-top: 10px;
+
+}
+
+/* places */
+#main #content .list_detail .places {
+	width: 100%;
+	margin: 0;
+	padding: 5px 0;
+	border-right: 1px solid #979797;
+	border-bottom: 1px solid #979797;
+	border-left: 1px solid #979797;
+}
+
+#main #content .list_detail .places:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+
+#main #content .list_detail .places label {
+	color: #333;
+	display: block;
+	float: left;
+	font-size: 12px;
+	margin: 0 5px;
+	line-height: 1;
+	width: 18%;
+}
+#main #content .list_detail .places label input{
+	margin: 0 5px 5px;
+
+
+}
+
+/* Responsive images Fluid images for posts hack*/
+.entry-content #map_canvas img {
+	max-width: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+/* ふきだし内 */
+#list_simplepage2 #map_canvas .gm-style-iw {
+	width: auto !important;
+	height: auto !important;
+}
+
+#list_simplepage2 #map_canvas table {
+	overflow: hidden;
+	width: 260px !important;
+	margin: 8px;
+	padding: 0;
+	border-style: none;
+}
+
+#list_simplepage2 #map_canvas table {
+	border-spacing: 2px;
+	border-collapse: separate;
+}
+
+#list_simplepage2 #map_canvas td {
+	font-size: 10px;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	color: #3f3f3f;
+	border-width: 0 !important;
+	border-top: medium none !important;
+}
+
+#list_simplepage2 .gmapballoon img {
+	width: 75px;
+	height: auto;
+	padding: 2px;
+	border: 1px solid #ccc;
+}
+
+#list_simplepage2 .gmaptitle {
+	font-size: 12px;
+	font-weight: 700;
+}
+
+#list_simplepage2 .gmapkakaku {
+	border-bottom: 1px dotted #ccc;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 20px !important;
+	font-weight: 700;
+	color: #f30 !important;
+	border-bottom: 1px dotted #ccc;
+}
+
+#list_simplepage2 .gmapmadori {
+	border-bottom: 1px dotted #ccc;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 20px !important;
+	font-weight: 700;
+	color: #333 !important;
+	border-bottom: 1px dotted #ccc;
+}
+
+/* = topページ
+-------------------------------------------------------------- */
+#wrapper #main #container #content table tbody tr td #text-4 h3 {
+	border-bottom: 1px dotted #ccc;
+}
+
+#wrapper #main #container #content table tbody tr td #fudo_top_r-3 h3 {
+	border-bottom: 1px dotted #ccc;
+}
+
+/* = 汎用
+-------------------------------------------------------------- */
+.dpoint1 {
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 1.2;
+	float: left;
+	padding: 4px;
+	color: #c00;
+	text-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+
+.dpoint2 {
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.5;
+	float: left;
+	padding: 4px;
+	color: #000;
+	text-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+
+.dpoint3 {
+	font-size: 18px;
+	font-weight: 700;
+	display: inline;
+	color: #000;
+}
+
+.dpoint4 {
+	font-size: 20px;
+	font-weight: 700;
+	display: inline;
+	color: #000;
+}
+
+/* = home.php
+-------------------------------------------------------------- */
+#content p:not(.wp-block-cover-image-text),#content ul,#content ol,#content dd,#content pre,#content hr {
+	margin-bottom: 0;
+	font-size: 12px;
+}
+
+#content .grid-content {
+	list-style-type: none;
+}
+
+#content .grid-content li {
+	font-size: 12px;
+	line-height: 1.4;
+	display: block;
+	float: left;
+	width: 150px;
+/*	height: 260px;	*/
+	margin: 2px;
+	padding: 2px;
+}
+
+.clearLeft {
+	clear: left;
+}
+
+.clearRight {
+	clear: right;
+}
+
+#main #container #content h3 {
+	border-bottom: 1px dotted #ccc;
+}
+
+#main  #container #content table {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#main #container #content tr td {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* = side form 物件検索
+-------------------------------------------------------------- */
+#secondary .widget-container form,#primary .widget-container form {
+	line-height: 1.2;
+	padding-left: 5px;
+}
+
+#secondary .widget-container form div,#primary .widget-container form div {
+	margin-bottom: 6px;
+}
+
+/* = 物件検索
+-------------------------------------------------------------- */
+.widget_fudo_widget_search #s,.widget_fudo_search #s {
+	width: 60%;
+}
+
+/* = 物件詳細ページ・関連物件 閲覧閲覧
+-------------------------------------------------------------- */
+#syousai_box ul {
+	margin: 0;
+	padding: 0;
+}
+
+.list_detail #syousai_box ul {
+	margin: 0;
+/*	padding-left: 10px; */
+}
+
+#syousai_box ul:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+
+#list_simplepage2 .widget_fudou_single_history li,
+#syousai_box ul.syousai-content li {
+	font-size: 12px;
+	line-height: 1.2;
+	display: block;
+	float: left;
+	margin: 0 8px 8px 0;
+	list-style-type: none;
+	border: 1px solid #ccc;
+	background: #f0f0f0;
+	background: -moz-linear-gradient(top,#fff 70%,#f7f7f7 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(70%,#fff),color-stop(100%,#f7f7f7));
+
+	padding: 6px !important;
+	width: 150px;
+}
+#list_simplepage2 .widget_fudou_single_history li.grid_count4,
+#syousai_box ul.syousai-content li.grid_count4 {
+	margin: 0 0 8px 0 !important;
+}
+
+
+
+#list_simplepage2 .list_detail .widget_fudou_single_history li,
+#list_simplepage2 .list_detail ul.syousai-content li {
+	width: 107px;
+}
+
+#list_simplepage2 .widget_fudou_single_history li span,
+#syousai_box ul.syousai-content li span {
+/*	font-size: 10px; */
+}
+
+#main #container #content #list_simplepage2 .list_detail h3 {
+	font-size: 14px;
+	font-weight: 700;
+	margin: 8px 0;
+	padding: 0 0 0 8px;
+	color: #666;
+}
+
+#list_simplepage2 .widget_fudou_single_history li .box1image ,
+#syousai_box ul.syousai-content li .box2image {
+	width: 100%;
+	height: auto;
+}
+
+
+
+/* = 物件検索 個別ページ用
+-------------------------------------------------------------- */
+#container .jsearch {
+	font-size: 12px;
+	line-height: 2;
+	padding: 0 30px 30px;
+}
+
+.jsearch p {
+	margin: 0;
+	padding: 0 10px 10px 0;
+}
+
+#main #container #content.jsearch h3 {
+	font-size: 16px;
+	font-weight: 700;
+	margin: 20px 0 10px -10px;
+	padding: 5px 0 5px 10px;
+	color: #333;
+	border-bottom: 1px dotted #ccc;
+	border-left: 4px solid #ccc;
+	text-shadow: none;
+}
+
+#container .jsearch h4 {
+	font-size: 13px;
+	font-weight: 700;
+	margin: 15px 0 5px -10px;
+	padding: 0 0 0 6px;
+	color: #505050;
+	border-left: 4px solid #ccc;
+}
+/*
+#container .jsearch h5 {
+	font-size: 13px;
+	font-weight: 700;
+	margin: 0;
+	color: #666;
+}
+
+#container .jsearch ul {
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+#container .jsearch li {
+	display: block;
+	float: left;
+	margin: 0 1em 0 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+.jsearch label {
+	margin-right: 5px;
+	color: #666;
+}
+*/
+
+#container .jsearch .submit input {
+	font-weight: 700;
+	width: 160px;
+	margin: 10px 10px 20px 0;
+	padding: 3px 10px;
+	cursor: pointer;
+	color: #fff;
+	border: 1px solid #298cba;
+	border-radius: 10px;
+	background: #298cba;
+/* old browsers */
+	background: -moz-linear-gradient(top,#0298cb 0%,#247ca4 50%,#206d93 100%);
+/* firefox */
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#0298cb),color-stop(50%,#247ca4),color-stop(100%,#206d93));
+/* webkit */
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+}
+
+/* 条件検索 (固定ページ) 
+-------------------------------------------------------------- */
+
+#container .jsearch .setsubi,
+#container .jsearch .menseki,
+#container .jsearch .madori,
+#container .jsearch .kakaku,
+#container .jsearch .chikunen,
+#container .jsearch .shiku,
+#container .jsearch .eki,
+#container .jsearch .shubetsu {
+	padding: 0 0 0 10px;
+}
+
+table.form_jsearch {
+	border: 1px solid #E5E5E5 !important;
+	border-collapse: collapse;
+	line-height: 18px;
+	margin: 10px 0;
+	width: 100%;
+}
+
+table.form_jsearch tr {
+	border: 0 none currentcolor;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+table.form_jsearch th {
+/*	background: #F6F6F6; */
+	border-bottom: 1px solid #E5E5E5 !important;
+	font-weight: 400;
+	padding: 10px !important;
+	text-align: left;
+	vertical-align: top;
+	width: 19%;
+	white-space: nowrap;
+}
+
+table.form_jsearch td {
+	border-bottom: 1px solid #E5E5E5 !important;
+	border-left: 1px solid #E5E5E5 !important;
+	margin: 0;
+	padding: 10px !important;
+}
+
+table.form_jsearch td.in_tsubotanka,
+table.form_jsearch td.in_tochimenseki,
+table.form_jsearch td.in_senyumenseki,
+table.form_jsearch td.in_rim,
+table.form_jsearch td.chikunen,
+table.form_jsearch td.kakaku,
+table.form_jsearch td.menseki {
+	padding: 10px;
+}
+
+table.form_jsearch h5 {
+	margin: 0 0 3px !important;
+	padding: 0 !important;
+	font-size: 14px !important;
+	font-weight: 400;
+}
+table.form_jsearch h5.j_choumei_shiku,
+table.form_jsearch h5.j_kouku_shiku {
+	margin: 0 0 3px 20px !important;
+	font-weight: 400;
+}
+
+table.form_jsearch ul {
+	margin: 0 0 8px 20px !important;
+	padding: 0 !important;
+}
+
+table.form_jsearch #shubetsu2 ul,
+table.form_jsearch #hof2 ul,
+table.form_jsearch #madori2 ul,
+table.form_jsearch #setsubi2 ul,
+
+table.form_jsearch #in_cat ul,
+table.form_jsearch #shubetsu ul,
+table.form_jsearch #hof ul,
+table.form_jsearch #madori ul,
+table.form_jsearch #setsubi ul {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+
+table.form_jsearch #kouku_shougaku ul:last-of-type,
+table.form_jsearch #kouku_chuugakui ul:last-of-type,
+table.form_jsearch #choumei ul:last-of-type,
+table.form_jsearch #eki ul:last-of-type {
+	margin:  0 0 0 20px !important;
+}
+
+table.form_jsearch li {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+table.form_jsearch select{
+	margin: 0 !important;
+}
+
+
+table.form_jsearch input[type="checkbox"], 
+table.form_jsearch input[type="radio"]{
+	margin: 0 3px 0 0;
+}
+
+/* 17= 物件検索 固定ページ用  .jsearch 新
+---------------------------------------------------------------------- */
+
+#page_jsearch_page{
+	margin: 20px 0;
+}
+
+/*------------------------------------------------------------------
+	  ページ条件検索 バス
+----------------------------------------------------------------- */
+.jsearch table.form_jsearch td.bus ul {
+	padding: 0 0 0 10px !important;
+}
+
+.jsearch table.form_jsearch td.bus ul li ul li.buscorse,.jsearch table.form_jsearch td.bus ul li.buscorp {
+	display: block;
+	clear: both;
+	margin-bottom: 5px;
+}
+
+.jsearch table.form_jsearch td.bus ul li ul li.buscorse ul li.busstop {
+	float: left;
+	margin: 0;
+}
+
+/*  */
+
+/* = widget Top Slider Style
+-------------------------------------------------------------- */
+/* = sidebar only
+-------------------------------------------------------------- */
+#tertiary .carousel_inner,#primary .carousel_inner,#secondary .carousel_inner {
+/*	height: 115px; */
+	overflow: hidden;
+	width: 210px;
+	margin: 0;
+	padding-top: 0;
+	padding-left: 0;
+}
+
+#tertiary .grid-content li,
+#primary .grid-content li,
+#secondary .grid-content li {
+	font-size: 10px;
+	line-height: 1.2;
+	display: block;
+/*	float: left; */
+	float: none !important;
+	width: 200px;
+	padding: 8px;
+	list-style-type: none;
+}
+
+#tertiary .box1image,#primary .box1image,#secondary .box1image {
+	float: left;
+	width: 100px;
+	height: auto;
+	padding-right: 5px;
+}
+
+/* 2011 */
+.two-column #secondary .grid-content li {
+	width: 210px;
+}
+
+.showcase #content .grid-content .carousel_inner li {
+	font-size: 10px;
+	line-height: 1.2;
+	overflow: hidden;
+	width: 210px;
+	height: 130px;
+	margin: 0;
+	padding-top: 0;
+	padding-left: 0;
+}
+
+/* 2010 */
+#main .widget-area ul ul.grid-content {
+	margin-left: -.5em;
+}
+
+/* unpc*/
+#main .widget-area ul.grid-content {
+	padding: 0;
+}
+
+.three-column.unpc .grid-content li {
+	width: 175px;
+}
+
+.three-column.unpc #tertiary .grid-content li,.three-column.unpc #secondary .grid-content li {
+	width: 175px;
+	margin-left: -.5em;
+}
+
+.three-column.unpc #tertiary .box1image,.three-column.unpc #secondary .box1image {
+	width: 90px;
+	height: auto;
+}
+
+.three-column.unpc #tertiary .carousel_inner,.three-column.unpc #secondary .carousel_inner {
+	width: 180px;
+}
+
+.two-column.unpc .grid-content li {
+	width: 190px;
+}
+
+.two-column.unpc #secondary .grid-content li {
+	width: 190px;
+	margin-left: -.5em;
+}
+
+.two-column.unpc #secondary .box1image {
+	width: 75px;
+	height: auto;
+}
+
+.two-column.unpc #secondary .carousel_inner {
+	width: 195px;
+}
+
+/* = footer only
+-------------------------------------------------------------- */
+footer .carousel_inner,#footer .carousel_inner {
+/*	height: 115px; */
+	overflow: hidden;
+	width: 210px;
+	margin: 0;
+	padding-top: 0;
+	padding-left: 0;
+}
+
+footer .grid-content li,#footer .grid-content li {
+	font-size: 10px;
+	line-height: 1.2;
+	display: block;
+	float: left;
+	width: 200px;
+	padding: 8px;
+	list-style-type: none;
+}
+
+footer .box1image,#footer .box1image {
+	float: left;
+	width: 100px;
+	height: auto;
+	padding-right: 5px;
+}
+
+#footer .widget-area ul ul.grid-content {
+	margin-left: -.5em;
+}
+
+/* = NEW/UP mark
+	-------------------------------------------------------------- */
+.showcase #content .grid-content,footer .grid-content li,#footer .grid-content li,#tertiary .grid-content li,#primary .grid-content li,#secondary .grid-content li {
+	position: relative;
+}
+
+.page-template-showcase-php .new_mark,footer .new_mark,#footer .new_mark,#tertiary .new_mark,#primary .new_mark,#secondary .new_mark {
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 10px;
+	font-weight: 700;
+	position: absolute;
+	top: 3px;
+	left: 5px;
+	display: block;
+	width: 28px !important;
+	padding: 2px 5px 3px !important;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 4px;
+	background: #900;
+}
+
+/* = 関連物件
+-------------------------------------------------------------- */
+#syousai_box ul.syousai-content li {
+	position: relative;
+}
+
+#syousai_box .new_mark {
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 9px;
+	font-weight: 700;
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	display: block;
+	width: auto;
+	padding: 2px 5px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 4px;
+	background: #900;
+}
+
+/*  = 会員登録 会員ログイン page
+---------------------------------------------------------------------- */
+/* テーブル */
+table.form_register {
+	font-size: 14.5px;
+	font-size: .95rem;
+	line-height: 18px;
+	width: 100%;
+}
+
+table.form_register input[type="text"],
+table.form_register input[type="email"],
+table.form_register input[type="url"],
+table.form_register input[type="password"],
+table.form_register input[type="search"],
+table.form_register input[type="tel"],
+table.form_register input[type="number"],
+table.form_register textarea {
+	padding: 5px;
+	width: 70%;
+}
+
+
+table.form_user_register th,
+table.form_register th {
+	font-weight: 400;
+	width: 30%;
+	padding: 15px !important;
+	text-align: left;
+	background: #f6f6f6;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+table.form_user_register td,
+table.form_register td {
+	width: 70%;
+	margin: 0;
+	padding: 15px !important;
+	font-size: 12px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+table.form_user_register h4,
+table.form_user_register h5,
+table.form_register h5 {
+	font-weight: 400;
+	margin: 0 !important;
+	font-size: 12px;
+}
+
+table.form_register ul {
+	margin: 0 !important;
+}
+
+table.form_register select {
+	color: #1f1f1f;
+}
+
+table.form_user_register p {
+	padding: 0 10px 10px;
+}
+
+
+table.form_user_register span{
+	display: inline-block;
+}
+
+table.form_user_register ul.kouku,
+table.form_user_register ul.eki,
+table.form_user_register ul.chou {
+	margin: 0 0 1.75em 1.25em !important;
+	list-style: none;
+}
+
+table.form_user_register ul.kouku li,
+table.form_user_register ul.eki li,
+table.form_user_register ul.chou li {
+	display: inline-block;
+}
+
+table.form_user_register input[type="checkbox"]{
+	margin: 0 2px 0 10px;
+}
+
+
+#kaiin_kiyaku{
+	margin: 0 0 20px 0;
+}
+
+
+
+
+
+.page_login li {
+	display: inline-block;
+}
+
+/* 強度インジケータ */
+#pass-strength-result {
+	display: none;
+	width: auto;
+	margin: 5px 0;
+	padding: 5px;
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ddd !important;
+	background-color: #eee;
+}
+
+#pass-strength-result.bad {
+	border-color: #ff853c !important;
+	background-color: #ffb78c;
+}
+
+#pass-strength-result.good {
+	border-color: #fc0 !important;
+	background-color: #ffec8b;
+}
+
+#pass-strength-result.short {
+	border-color: #f04040 !important;
+	background-color: #ffa0a0;
+}
+
+#pass-strength-result.strong {
+	border-color: #8dff1c !important;
+	background-color: #c3ff88;
+}
+
+/* ボタン */
+.page_login #maching_mail a {
+	font-size: 14px;
+	font-weight: 700;
+	display: block;
+	width: 150px;
+	margin: 5px 0;
+	padding: 5px 8px;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	color: #fff;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background: #ff9b9d;
+	text-shadow: 1px 1px 1px #cc5559;
+}
+
+.page_login #maching_mail a:hover {
+	text-decoration: underline;
+	background: #ff9b9d;
+}
+
+.page_login #maching_mail a:active {
+	text-decoration: none;
+	background: #faa8cd;
+}
+
+
+
+.page_login ul:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: '';
+}
+
+.page_register #kaiin_users_comment {
+	margin: 10% 0 20px;
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+	font-size: 12px;
+}
+
+.page_register #kaiin_kiyaku {
+	overflow: auto;
+	width: 100%;
+	margin: 10% 0 20px;
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+	font-size: 12px;
+}
+
+.page_login .login_error,
+.page_register .login_error {
+	margin: 0 0 16px !important;
+	padding: 12px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #c00;
+	border-radius: 3px 3px 3px 3px;
+	background-color: #ffebe8;
+}
+
+.page_login p.message,
+.page_register p.message {
+	margin: 0 0 16px !important;
+	padding: 12px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #e6db55;
+	border-radius: 3px 3px 3px 3px;
+	background-color: #ffffe0;
+}
+
+.page_register #first_name,
+.page_register #last_name {
+	width: auto;
+}
+
+/* 物件管理 担当者 */
+#list_simplepage2 #charge {
+	clear: both;
+	background: #f7f7f7 linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) repeat scroll 0 0;
+	border: 1px solid #d1d1d1;
+	border-radius: 2px;
+	padding: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+#list_simplepage2 #charge .role_kannri_tanto_pic {
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+#list_simplepage2 #charge .role_kannri_tanto_pic img {
+	width: 100px;
+	height: auto;
+}
+
+#list_simplepage2 #charge .role_kannri_tanto_name {
+	display: block;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+#list_simplepage2 #charge .role_kannri_tanto_comment {
+	display: block;
+	line-height: 18px;
+}
+
+
+
+
+
+
+
+.single-fudo .edit-link{
+	margin: 10px 0;
+	text-align: right;
+	display: block;
+}
+
+
+/* Gutenberg */
+
+/* 画像はみ出し対策 IE11 */
+@media all and (-ms-high-contrast: none) {
+	*::-ms-backdrop,
+		.wp-block-image .aligncenter > figcaption,
+		.wp-block-image .alignleft > figcaption,
+		.wp-block-image .alignright > figcaption,
+		.is-resized.wp-block-image > figcaption,
+
+		.wp-block-image .aligncenter,
+		.wp-block-image .alignleft,
+		.wp-block-image .alignright,
+		.is-resized.wp-block-image{
+		    display: block !important;
+		}
+}
+
+/* カバー画像内 文字位置 IE11 */
+.wp-block-cover, .wp-block-cover-image{
+/*	height: 100vh; */
+	height: 430px;
+	margin: 0 0 10px;
+}
+
+
+
+
+/* カバー画像内 aligncenter fix */
+.wp-block-cover.aligncenter {
+	display: flex;
+}
+
+
+figure{
+	margin: 0 0 1.5em;
+}
+
+blockquote {
+	 border-left: 4px solid #000;
+	padding-left: 1em;
+	margin: 0 0 1.5em 0;
+}
+
+figure blockquote {
+	border-left: none;
+}
+
+cite {
+	font-size: 12px;
+}
+
+.wp-block-pullquote {
+    border-bottom: 4px solid #555d66;
+    border-top: 4px solid #555d66;
+    color: #40464d;
+}
+
+
+/* Fudousan Favorite
+---------------------------------------------------------------------- */
+.fudou_favorite{
+	margin: 4px 10px 0 10px !important;
+}
+.single-fudo .fudou_favorite{
+	margin: 0 10px 0 10px !important;
+}
+
+
+.fudou_add_favorite_button,
+.fudou_del_favorite_button {
+	font-size: 13px;
+	padding: 2px 10px;
+}
+
+
+.fudou_add_favorite_button2:before,
+.fudou_del_favorite_button2:before{
+	width: 14px;
+	height: 14px;
+	font-size: 14px;
+}
+
+
+/* */
