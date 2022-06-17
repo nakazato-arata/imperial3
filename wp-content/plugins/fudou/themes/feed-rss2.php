@@ -38,7 +38,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 >
 
 <channel>
-	<title><?php bloginfo_rss('name'); wp_title_rss(); ?></title>
+	<title><?php wp_title_rss(); ?></title>
 	<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
 	<link><?php bloginfo_rss('url') ?></link>
 	<description><?php bloginfo_rss("description") ?></description>
@@ -68,6 +68,9 @@ do_action( 'rss_tag_pre', 'rss2' );
 	 */
 	?>
 	<sy:updateFrequency><?php echo apply_filters( 'rss_update_frequency', $frequency ); ?></sy:updateFrequency>
+
+	?>
+	<sy:updateFrequency><?php echo apply_filters( 'rss_update_frequency', $frequency ); ?></sy:updateFrequency>
 	<?php
 	/**
 	 * Fires at the end of the RSS2 Feed Header.
@@ -78,6 +81,17 @@ do_action( 'rss_tag_pre', 'rss2' );
 
 	while( have_posts()) : the_post();
 	?>
+
+	<?php
+	/**
+	 * Fires at the end of the RSS2 Feed Header.
+	 *
+	 * @since 2.0.0
+	 */
+	do_action( 'rss2_head');
+
+	?>
+
 	<?php if( !get_post_meta( $post->ID, 'kaiin', true ) ){ ?>
 	<item>
 		<title><?php the_title_rss() ?></title>
@@ -88,6 +102,46 @@ do_action( 'rss_tag_pre', 'rss2' );
 		<?php the_category_rss('rss2') ?>
 
 		<guid isPermaLink="false"><?php the_guid(); ?></guid>
+
+<?php /*?>ここから追加 */?>
+<?php if ( has_post_thumbnail() ) :
+  $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium_large');
+  $thumb_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
+?>
+
+        <image><url><?php echo $image_url[0] ; ?></url></image>
+        <thumb><url><?php echo $thumb_url[0] ; ?></url></thumb>
+<?php endif; ?>
+
+<?php 
+	// すべてのカスタムフィールドの情報を配列で取得 (get_post_meta()で個別で取得するより若干早い。100件取得で0.3秒の差)
+	$fields = get_post_custom();
+	if($fields){
+		// カスタムフィールドがあれば独自に出力する項目を作成する
+
+		// sqft 配列に要素があるか確認してから取得する
+		if (array_key_exists('sqft', $fields)) {
+			echo '<sqft>' . $fields['sqft'][0] . '</sqft>';
+		}
+
+		// bedroom 配列に要素があるか確認してから取得する
+		if (array_key_exists('bedroom', $fields)) {
+			echo '<bedroom>' . $fields['bedroom'][0] . '</bedroom>';
+		}
+
+		// bathroom 配列に要素があるか確認してから取得する
+		if (array_key_exists('bathroom', $fields)) {
+			echo '<bathroom>' . $fields['bathroom'][0] . '</bathroom>';
+		}
+
+		// parking 配列に要素があるか確認してから取得する
+		if (array_key_exists('parking', $fields)) {
+			echo '<parking>' . $fields['parking'][0] . '</parking>';
+		}
+	}
+?>
+<?php /*?>ここまで追加 */?>
+
 <?php if (get_option('rss_use_excerpt')) : ?>
 		<description><![CDATA[<?php the_excerpt_rss(); ?>]]></description>
 <?php else : ?>

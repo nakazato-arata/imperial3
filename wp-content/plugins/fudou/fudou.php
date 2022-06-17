@@ -205,6 +205,83 @@ function custom_feed_rss2_fudou( $for_comments ) {
 }
 add_action('do_feed_rss2', 'custom_feed_rss2_fudou', 10, 1);
 
+
+function mysite_feed_request($vars) {
+    if ( isset( $vars['feed'] ) && !isset( $vars['post_type'] ) ) {
+        $vars['post_type'] = array(
+        'post',
+        'fudo' // 物件投稿
+        );
+    }
+    return $vars;
+}
+add_filter( 'request', 'mysite_feed_request' );
+
+// 物件カテゴリーの抽出
+function my_pre_get_posts( $query ) {
+    if ( is_feed() ) {    // フィードだったら
+
+        $ary = [];
+        if (isset($_GET['cat'])) {
+            array_push($ary, $_GET['cat']);
+
+			$tax_query = array([
+				'taxonomy' => 'bukken', // 物件カテゴリのタクソノミー名　wp-content\plugins\fudou\admin\admin_fudou.php　980行目
+				'field' => 'slug',
+				'terms' => $ary,        // カテゴリのスラッグ
+				'operator' => 'IN',
+			]);
+	
+			$query->set( 'tax_query', $tax_query );
+        }
+
+
+		// $query->set( 'posts_per_page', 23 );
+		// $query->set( 'ignore_sticky_posts', 1 );
+    }
+}
+
+add_action( 'pre_get_posts', 'my_pre_get_posts' );
+
+// 出力件数の抑制 ページングとして使用することができる　$_GETパラメータから取得部分を指定すれば制御できる
+function wpcodex_filter_main_search_post_limits( $limit) {
+ 
+    if ( is_feed()  ) {
+        return 'LIMIT 100, 150'; // sqlのlimit句を指定
+    }
+ 
+    return $limit;
+}
+// add_filter( 'post_limits', 'wpcodex_filter_main_search_post_limits', 10, 2);
+
+// カスタムキー項目から絞込(物件カテゴリーではなく所在地shozaichicode でも絞込は可能)
+// 掲載期限日を利用するなら条件に追加する必要がある
+function me_search_query($query){
+	if ( is_feed()  ) {
+		$meta_query_args = array(
+			// array( // 文字列の比較
+			// 	'key' => 'koutsubusstei1', // meta_key
+			// 	'value' => ' 北谷てすと83', // 条件
+			// ),
+			array( // 
+				'key' => 'bukkenshubetsu', // 物件種別
+				'value' => '1307',
+				'compare' => '=', // 比較演算子
+			),
+			array( // 日付の比較
+				'key' => 'keisaikigenbi', // 掲載期限日
+				'value' => '20220621',
+				'compare' => '>=', // 比較演算子
+				'type' => 'DATE' //日付の比較
+			),
+			'relation'=>'AND' // ANDで検索したい場合
+		);
+		$query->set( 'meta_query', $meta_query_args);
+	};
+}
+// add_filter( 'pre_get_posts', 'me_search_query');
+
+
 function custom_feed_atom_fudou( $for_comments ) {
 	$template_file = WP_PLUGIN_DIR . '/fudou/themes/feed-atom' . ( $for_comments ? '-comments' : '' ) . '.php';
 	load_template( $template_file );

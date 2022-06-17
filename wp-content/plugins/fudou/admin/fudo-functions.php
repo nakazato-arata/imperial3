@@ -11,33 +11,14 @@ add_action('admin_menu', 'my_custom_csvtype') ;
 add_action('save_post', 'custom_save_csvtype') ;
 
 
-// meta
-add_action('admin_menu', 'my_custom_meta') ;
-add_action('save_post', 'custom_save_meta') ;
-
-
-// 物件番号
-// 掲載期限日
-// 成約日
-add_action('admin_menu', 'my_custom_shikibesu') ;
-add_action('save_post', 'custom_save_shikibesu') ;
-
-
-// 自社物
-// 状態
-add_action('admin_menu', 'my_custom_koukai') ;
-add_action('save_post', 'custom_save_koukaijisha') ;
-
-
-// 物件種別
-add_action('admin_menu', 'my_custom_bukkenshubetsu') ;
-add_action('save_post', 'custom_save_bukkenshubetsu') ;
-
-
 // 建物名(物件名)
 // 物件名公開
 // 総戸数・総区画数 物件の総数 (部屋:総戸数 土地:総区画数)
 // 空き物件内容 部屋:空部屋の番号 土地:区画番号等
+// Square Ft(SQFT)
+// Parking
+// Bedroom(Beds)  
+// Bathroom(Baths)
 add_action('admin_menu', 'my_custom_bukkenmei') ;
 add_action('save_post', 'custom_save_bukkenmei') ;
 
@@ -56,100 +37,6 @@ add_action('admin_menu', 'my_custom_bukkenidokeido') ;
 add_action('save_post', 'custom_save_bukkenido') ;
 
 
-// 交通路線1
-// 交通駅1
-// 交通バス停名1
-// 交通バス時間1
-// 交通徒歩距離1
-add_action('admin_menu', 'my_custom_koutsu1') ;
-add_action('save_post', 'custom_save_koutsurosen1') ;
-
-
-// 交通路線2
-// 交通駅2
-// 交通バス停名2
-// 交通バス時間2
-// 交通徒歩距離2
-add_action('admin_menu', 'my_custom_koutsu2') ;
-add_action('save_post', 'custom_save_koutsurosen2') ;
-
-
-// 交通その他
-add_action('admin_menu', 'my_custom_koutsusonota') ;
-add_action('save_post', 'custom_save_koutsusonota') ;
-
-
-// 地目
-// 用途地域
-// 都市計画
-// 地勢
-// 土地面積計測方式
-// 区画面積
-// 私道負担面積
-// セットバック
-// セットバック量
-// 建ぺい率
-// 容積率
-// 接道状況
-// 接道方向1
-// 接道間口1
-// 接道種別1
-// 接道幅員1
-// 位置指定道路1
-// 接道方向2
-// 接道間口2
-// 接道種別2
-// 接道幅員2
-// 位置指定道路2
-// 土地権利(借地権種類) 
-// 国土法届出
-add_action('admin_menu', 'my_custom_tochi') ;
-add_action('save_post', 'custom_save_tochichimoku') ;
-
-
-// 建物構造
-// 建物面積計測方式
-// 建物面積・専有面積
-// 敷地全体面積
-// 延べ床面積
-// 建築面積
-// 建物階数(地上)
-// 建物階数(地下)
-// 築年月
-// 新築・未入居フラグ
-add_action('admin_menu', 'my_custom_tatemono') ;
-add_action('save_post', 'custom_save_tatemonokozo') ;
-
-
-// 管理人
-// 管理形態
-// 管理組合有無
-// 管理会社名
-add_action('admin_menu', 'my_custom_kanrininn') ;
-add_action('save_post', 'custom_save_kanrininn') ;
-
-
-// 部屋階数 部屋の所在階数
-// バルコニー面積
-// 向き
-add_action('admin_menu', 'my_custom_heya') ;
-add_action('save_post', 'custom_save_heyakaisu') ;
-
-
-// 間取部屋数
-// 間取部屋種類
-// 間取備考
-add_action('admin_menu', 'my_custom_madori') ;
-add_action('save_post', 'custom_save_madorisu') ;
-
-
-// 間取(種類)
-// 間取(畳数)
-// 間取(所在階)
-// 間取(室数)
-add_action('admin_menu', 'my_custom_madorinaiyo');  
-add_action('save_post', 'custom_save_madorinaiyo');
-
 
 // 備考	URL
 add_action('admin_menu', 'my_custom_targeturl');
@@ -163,108 +50,13 @@ add_action('save_post', 'custom_save_targeturl');
 add_action('admin_menu', 'my_custom_shanaimemo');
 add_action('save_post', 'custom_save_shanaimemo');
 
-
-// 賃料・価格
-// 価格公開
-// 価格状態
-// 税額
-// 坪単価
-// 共益費・管理費
-// 礼金・月数
-// 敷金・月数
-// 保証金・月数
-// 権利金 
-// 償却・敷引金
-// 満室時表面利回り
-// 現行利回り
-// 住宅保険料
-// 住宅保険期間 
-// 借地料
-// 契約期間(年)
-// 契約期間(月)	
-// 契約期間(区分)
-// 修繕積立金
-add_action('admin_menu', 'my_custom_kinsenmen') ;
-add_action('save_post', 'custom_save_kakaku') ;
-
-
-// 駐車場料金
-// 駐車場区分
-// 駐車場備考
-add_action('admin_menu', 'my_custom_chushajo') ;
-add_action('save_post', 'custom_save_chushajoryokin') ;
-
-
-// 現況
-// 引渡/入居時期
-// 引渡/入居年月 年月
-// 引渡/入居旬
-add_action('admin_menu', 'my_custom_nyukyo') ;
-add_action('save_post', 'custom_save_nyukyogenkyo') ;
-
-
-// 小学校名
-// 中学校名
-add_action('admin_menu', 'my_custom_shuuhen') ;
-add_action('save_post', 'custom_save_shuuhenshougaku') ;
-
-
-// 取引態様
-add_action('admin_menu', 'my_custom_torihikitaiyo') ;
-add_action('save_post', 'custom_save_torihikitaiyo') ;
-
-
 // 物件画像
 add_action('admin_menu', 'my_custom_gazo');
 add_action('save_post', 'custom_save_gazo');
 
-
-// 設備・条件
-add_action('admin_menu', 'my_custom_setsubi');
-add_action('save_post', 'custom_save_setsubi');
-
-
-// 特記事項
-add_action('admin_menu', 'my_custom_tokkinotices') ;
-add_action('save_post', 'custom_save_tokkinotices') ;
-
-
-
-
-
-
-
-
 // csvtype
 function my_custom_csvtype() {
 	add_meta_box( 'my_custom_csvtype_area', 'CSV TYPE', 'my_custom_csvtype_in', 'fudo', 'advanced' );
-}
-
-
-// meta
-function my_custom_meta() {
-	add_meta_box( 'my_custom_meta_area', 'meta', 'my_custom_meta_in', 'fudo', 'advanced' );
-}
-
-
-// 物件番号
-// 掲載期限日
-// 成約日
-function my_custom_shikibesu() {
-	add_meta_box( 'my_custom_shikibesu_area', '物件', 'my_custom_shikibesu_in', 'fudo', 'advanced' );
-}
-
-
-// 公開
-// 状態
-function my_custom_koukai() {
-	add_meta_box( 'my_custom_koukai_area', '状態', 'my_custom_koukai_in', 'fudo', 'advanced' );
-}
-
-
-// 種別
-function my_custom_bukkenshubetsu() {
-	add_meta_box( 'my_custom_bukkenshubetsu_area', '物件種別', 'my_custom_bukkenshubetsu_in', 'fudo', 'advanced' );
 }
 
 
@@ -273,7 +65,7 @@ function my_custom_bukkenshubetsu() {
 // 総戸数・総区画数 物件の総数 (部屋:総戸数 土地:総区画数) 
 // 部屋:空部屋の番号 土地:区画番号等
 function my_custom_bukkenmei() {
-	add_meta_box( 'my_custom_bukkenmei_area', '物件名', 'my_custom_bukkenmei_in', 'fudo', 'advanced' );
+	add_meta_box( 'my_custom_bukkenmei_area', '物件情報', 'my_custom_bukkenmei_in', 'fudo', 'advanced' );
 }
 
 
@@ -293,100 +85,6 @@ function my_custom_bukkenidokeido() {
 }
 
 
-// 交通路線1
-// 交通駅1
-// 交通バス停名
-// 交通バス時間1
-// 交通徒歩距離1
-function my_custom_koutsu1() {
-	add_meta_box( 'my_custom_koutsu1_area', '交通1', 'my_custom_koutsu1_in', 'fudo', 'advanced' );
-}
-
-
-// 交通路線2 
-// 交通駅2
-// 交通バス停名2
-// 交通バス時間2 
-// 交通徒歩距離2 
-function my_custom_koutsu2() {
-	add_meta_box( 'my_custom_koutsu2_area', '交通2', 'my_custom_koutsu2_in', 'fudo', 'advanced' );
-}
-
-
-// 交通その他 
-function my_custom_koutsusonota() {
-	add_meta_box( 'my_custom_koutsusonota_area', '交通 その他交通', 'my_custom_koutsusonota_in', 'fudo', 'advanced' );
-}
-
-
-// 地目
-// 用途地域
-// 都市計画
-// 地勢
-// 土地面積計測方式
-// 区画面積
-// セットバック
-// セットバック量
-// 建ぺい率
-// 容積率
-// 接道状況
-// 接道方向
-// 接道間口
-// 接道種別
-// 接道幅員
-// 位置指定道路
-// 土地権利(借地権種類)
-// 国土法届出
-function my_custom_tochi() {
-	add_meta_box( 'my_custom_tochi_area', '土地', 'my_custom_tochi_in', 'fudo', 'advanced' );
-}
-
-
-// 建物構造
-// 建物面積計測方式
-// 建物面積・専有面積
-// 建物階数(地上)
-// 建物階数(地下)
-// 築年月 
-// 新築・未入居
-function my_custom_tatemono() {
-	add_meta_box( 'my_custom_tatemono_area', '建物構造', 'my_custom_tatemono_in', 'fudo', 'advanced' );
-}
-
-
-// 管理人
-// 管理形態
-// 管理組合有無
-// 管理会社名
-function my_custom_kanrininn() {
-	add_meta_box( 'my_custom_kanrininn_area', '管理形態', 'my_custom_kanrininn_in', 'fudo', 'advanced' );
-}
-
-
-// 部屋階数 部屋の所在階数 
-// バルコニー面積
-// 向き
-function my_custom_heya() {
-	add_meta_box( 'my_custom_heya_area', '部屋', 'my_custom_heya_in', 'fudo', 'advanced' );
-}
-
-
-// 間取部屋数
-// 間取部屋種類 
-// 間取り備考
-function my_custom_madori() {
-	add_meta_box( 'my_custom_madori_area', '間取', 'my_custom_madori_in', 'fudo', 'advanced' );
-}
-
-
-// 間取(種類)
-// 間取(畳数)
-// 間取(所在階)
-// 間取(室数)
-function my_custom_madorinaiyo() {
-	add_meta_box( 'my_custom_madorinaiyo_area', '間取内容', 'my_custom_madorinaiyo_in', 'fudo', 'advanced' );
-}
-
 
 // 備考	URL
 function my_custom_targeturl() {
@@ -402,57 +100,6 @@ function my_custom_shanaimemo() {
 }
 
 
-// 賃料・価格
-// 税額
-// 坪単価
-// 共益費・管理費
-// 礼金・月数
-// 敷金・月数
-// 保証金・月数
-// 権利金
-// 償却・敷引金 
-// 満室時表面利回り
-// 現行利回り
-// 住宅保険料 
-// 住宅保険期間 
-// 借地料
-// 契約期間(年)
-// 契約期間(月)	
-// 契約期間(区分)
-// 修繕積立金
-function my_custom_kinsenmen() {
-	add_meta_box( 'my_custom_kinsenmen_area', '金銭面', 'my_custom_kinsenmen_in', 'fudo', 'advanced' );
-}
-
-
-// 駐車場料金
-// 駐車場区分
-function my_custom_chushajo() {
-	add_meta_box( 'my_custom_chushajo_area', '駐車場', 'my_custom_chushajo_in', 'fudo', 'advanced' );
-}
-
-
-// 現況
-// 引渡/入居時期
-// 引渡/入居年月 年月
-// 引渡/入居旬 
-function my_custom_nyukyo() {
-	add_meta_box( 'my_custom_nyukyo_area', '引渡/入居', 'my_custom_nyukyo_in', 'fudo', 'advanced' );
-}
-
-
-// 小学校名
-// 中学校名
-function my_custom_shuuhen() {
-	add_meta_box( 'my_custom_shuuhen_area', '周辺環境', 'my_custom_shuuhen_in', 'fudo', 'advanced' );
-}
-
-
-// 取引態様
-function my_custom_torihikitaiyo() {
-	add_meta_box( 'my_custom_torihikitaiyo_area', '取引態様', 'my_custom_torihikitaiyo_in', 'fudo', 'advanced' );
-}
-
 
 // 物件画像
 function my_custom_gazo() {
@@ -460,16 +107,7 @@ function my_custom_gazo() {
 }
 
 
-// 設備・条件
-function my_custom_setsubi() {
-	add_meta_box( 'my_custom_setsubi_area', '設備・条件', 'my_custom_setsubi_in', 'fudo', 'advanced' );
-}
 
-
-// 特記事項
-function my_custom_tokkinotices() {
-	add_meta_box( 'my_custom_tokkinotices_area', '特記事項', 'my_custom_tokkinotices_in', 'fudo', 'advanced' );
-}
 
 /*
  * csvtype
@@ -579,24 +217,16 @@ function my_custom_csvtype_in() {
 
 
 
-//meta
-function my_custom_meta_in() {
+// 建物名(物件名)
+// 物件名公開
+// Square Ft(SQFT)
+// Parking
+// Bedroom(Beds)  
+// Bathroom(Baths)
+function my_custom_bukkenmei_in() {
+	global $work_bukkenshubetsu;
 	global $post;
-	echo '<input type="hidden" name="mycustom_meta_name" id="mycustom_meta_name" value="' .wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
-
-	echo '<label for="fudokeywords">keywords 　( テキスト<font color="#ff0000">,</font> 区切り )</label> ';
-	echo '<textarea rows="2" cols="60" name="fudokeywords" id="fudokeywords" style="width:100%" >'. esc_textarea(get_post_meta($post->ID,'fudokeywords',true)) .'</textarea>';
-	echo '<br /><br />';
-	echo '<label for="fudodescription">description　( 文章のみ入力してください )</label> ';
-	echo '<textarea rows="2" cols="60" name="fudodescription" id="fudodescription" style="width:100%" >'. esc_textarea(get_post_meta($post->ID,'fudodescription',true)) .'</textarea>';
-}
-
-
-
-// 物件番号
-function my_custom_shikibesu_in() {
-	global $post;
-	echo '<input type="hidden" name="mycustom_shikibesu_name" id="mycustom_shikibesu_name" value="' .wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+	echo '<input type="hidden"  name="mycustom_bukkenmei_name" id="mycustom_bukkenmei_name" value="' .wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
 	echo '<table><tr>';
 
@@ -611,119 +241,21 @@ function my_custom_shikibesu_in() {
 
 	echo '</tr><tr>';
 
-	// 掲載期限日
+	// 建物名(物件名)
 	echo '<td>';
-	echo '<label for="keisaikigenbi">掲載期限日</label> ';
-	echo '</td>';
-	echo '<td>';
-	echo '<input type="text" name="keisaikigenbi" id="keisaikigenbi" value="'.get_post_meta($post->ID,'keisaikigenbi',true).'" size="25" /> (yyyy/mm/ddの形式)';
+	echo '<label for="bukkenmei">建物名(物件名)</label> ';
 	echo '</td>';
 
-	echo '</tr><tr>';
-
-	// 成約日
 	echo '<td>';
-	echo '<label for="seiyakubi">成約日</label> ';
-	echo '</td>';
-	echo '<td>';
-	echo '<input type="text" name="seiyakubi" id="seiyakubi" value="'.get_post_meta($post->ID,'seiyakubi',true).'" size="25" /> (yyyy/mm/ddの形式)';
-	echo '</td>';
-
-	echo '</tr></table>';
-}
-
-
-
-// 自社物
-// 状態
-function my_custom_koukai_in() {
-	global $post;
-
-	echo '<input type="hidden" name="mycustom_koukaijisha_name" id="mycustom_koukaijisha_name"  value="' .wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
-	echo '<table><tr>';
-	// 自社物フラグ 0:先物　1:自社物
-	echo '<td>';
-	echo '<label for="koukaijisha">自社物</label> ';
-	echo '</td>';
-	echo '<td>';
-	echo '<select name="koukaijisha" id="koukaijisha">';
-	echo '<option value="">自社物選択</option>';
-	echo '<option value="0"';	if(get_post_meta($post->ID,'koukaijisha',true)=="0"){ 	 echo ' selected="selected"';	}
-	echo '>先物</option>';
-	echo '<option value="1"';	if(get_post_meta($post->ID,'koukaijisha',true)=="1"){ 	 echo ' selected="selected"';	}
-	echo '>自社物</option>';
-	echo '</select>';
-	echo '</td>';
-
-
-	echo '</tr><tr>';
-
-	// 状態 1:空有/売出中 3:空無/売止 4:成約 9:削除 (1:空有/売出中 の場合に掲載されます)
-	$jyoutai_data = get_post_meta($post->ID,'jyoutai',true);
-	echo '<td>';
-	echo '<label for="jyoutai">空状態</label> ';
-	echo '</td>';
-	echo '<td>';
-	echo '<select name="jyoutai" id="jyoutai">';
-	echo '<option value="">選択</option>';
-	echo '<option value="1"';	if($jyoutai_data=="1"){ 	 echo ' selected="selected"';	}
-	echo '>空有/売出中</option>';
-	echo '<option value="3"';	if($jyoutai_data=="3"){ 	 echo ' selected="selected"';	}
-	echo '>空無/売止</option>';
-	echo '<option value="4"';	if($jyoutai_data=="4"){ 	 echo ' selected="selected"';	}
-	echo '>成約</option>';
-	echo '<option value="9"';	if($jyoutai_data=="9"){ 	 echo ' selected="selected"';	}
-	echo '>削除</option>';
-
-
-	//空状態   option_in ver5.9.0
-	do_action( 'jyoutai_option_in', $jyoutai_data );
-
-	//text
-	if($jyoutai_data !='' && !is_numeric($jyoutai_data) && apply_filters( 'jyoutai_option_text', true ) ){
-		echo '<option value="'.$jyoutai_data.'" selected="selected">'.$jyoutai_data.'</option>';
-	}
-
-
-	echo '</select>';
+	echo '<input type="text" name="bukkenmei" id="bukkenmei" value="'.get_post_meta($post->ID,'bukkenmei',true).'" size="25" /><br />';
 	echo '</td>';
 
 	echo '</tr><tr>';
 
-	// 会員 1:会員公開
-	echo '<td>';
-	echo '<label for="kaiin">会員公開</label> ';
-	echo '</td>';
-	echo '<td>';
-	echo '<select name="kaiin" id="kaiin">';
-	echo '<option value="0"';	if(get_post_meta($post->ID,'kaiin',true)=="0"){ 	 echo ' selected="selected"';	}
-	echo '>一般公開</option>';
-	echo '<option value="1"';	if(get_post_meta($post->ID,'kaiin',true)=="1"){ 	 echo ' selected="selected"';	}
-	echo '>会員公開</option>';
-
-	do_action( 'kaiin_level_in' );
-
-	echo '</select>';
-
-	echo '</td>';
-
-	echo '</tr></table>';
-}
-
-
-
-// 物件種別
-function my_custom_bukkenshubetsu_in() {
-	global $post;
-	global $work_bukkenshubetsu;
-
-	echo '<input type="hidden" name="mycustom_bukkenshubetsu_name" id="mycustom_bukkenshubetsu_name"  value="' .wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
-
-	echo '<table><tr>';
+	// 物件種別
 	echo '<td>';
 	echo '<label for="bukkenshubetsu">物件種別</label> ';
 	echo '</td>';
-
 	echo '<td>';
 	echo '<select name="bukkenshubetsu" id="bukkenshubetsu">';
 	echo '<option value="">種別選択</option>';
@@ -738,80 +270,117 @@ function my_custom_bukkenshubetsu_in() {
 	echo '</select>';
 	echo ' <font color="#ff0000">*必須</font>';
 	echo '</td>';
-	echo '</tr></table>';
-}
-
-
-
-// 建物名(物件名)
-// 物件名公開
-// 総戸数・総区画数 物件の総数 (部屋:総戸数 土地:総区画数) 
-// 部屋:空部屋の番号 土地:区画番号等
-function my_custom_bukkenmei_in() {
-	global $post;
-	echo '<input type="hidden"  name="mycustom_bukkenmei_name" id="mycustom_bukkenmei_name" value="' .wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
-
-	echo '<table><tr>';
-
-	// 建物名(物件名)
+	echo '</tr><tr>';
+		
+	// 賃料・価格 ※ 単位：円
+	$kakaku_data = get_post_meta($post->ID,'kakaku',true);
 	echo '<td>';
-	echo '<label for="bukkenmei">建物名(物件名)</label> ';
+	echo '<label for="kakaku">賃料・価格</label> ';
 	echo '</td>';
 
 	echo '<td>';
-	echo '<input type="text" name="bukkenmei" id="bukkenmei" value="'.get_post_meta($post->ID,'bukkenmei',true).'" size="25" /><br />';
+	echo '<input type="text" name="kakaku" id="kakaku" value="'. $kakaku_data .'" size="15" /> 円 (半角数値)';
+	echo ' <font color="#ff0000">*</font><br />';
+	echo '</td>';
+
+
+	//価格in ver5.8.1
+	do_action( 'kakaku_in' );
+
+
+	echo '</tr><tr>';
+	
+	// SQFT
+	echo '<td>';
+	echo '<label for="sqft">【SQFT】</label> ';
+	echo '</td>';
+
+	echo '<td>';
+	echo '<input type="text" name="sqft" id="sqft" value="'.get_post_meta($post->ID,'sqft',true).'" size="25" />SQFT';
 	echo '</td>';
 
 	echo '</tr><tr>';
 
-
-	// 物件名公開 0:非公開 1:公開 (空物件内容の表示も同時に制御) 2:物件名のみ公開
+	// Bedroom、
 	echo '<td>';
-	echo '<label for="bukkenmeikoukai">物件名公開</label> ';
+	echo '<label for="bedroom">【Bedroom】or 【Building Coverage Ratio】:</label> ';
 	echo '</td>';
 
 	echo '<td>';
-	echo '<select name="bukkenmeikoukai" id="bukkenmeikoukai">';
-	echo '<option value="">公開選択</option>';
-	echo '<option value="1"';  if(get_post_meta($post->ID,'bukkenmeikoukai',true)=="1"){  	 echo ' selected="selected"';  }
-	echo '>公開</option>';
-	echo '<option value="2"';  if(get_post_meta($post->ID,'bukkenmeikoukai',true)=="2"){  	 echo ' selected="selected"';  }
-	echo '>物件名のみ公開</option>';
-	echo '<option value="0"';  if(get_post_meta($post->ID,'bukkenmeikoukai',true)=="0"){  	 echo ' selected="selected"';  }
-	echo '>非公開</option>';
-	echo '</select>';
+	echo ' <input type="text" name="bedroom" id="bedroom" value="'.get_post_meta($post->ID,'bedroom',true).'" size="25" />';
 	echo '</td>';
+	echo '</tr><tr>';
+	
+	// Bathroom
+	echo '<td>';
+	echo '<label for="bathroom">【Bathroom】or【Floor Area Ratio】:</label> ';
+	echo '</td>';
+	echo '<td>';
+	echo ' <input type="text" name="bathroom" id="bathroom" value="'.get_post_meta($post->ID,'bathroom',true).'" size="25" />';
+	echo '</td>';
+	echo '</tr><tr>';
 
 	echo '</tr><tr>';
+
+	// Parking
+	echo '<td>';
+	echo '<label for="parking">【Parking】: </label> ';
+	echo '</td>';
+
+	echo '<td>';
+	echo '<input type="text" name="parking" id="parking" value="'.get_post_meta($post->ID,'parking',true).'" size="25" />';
+
+	echo '</td>';
+
+	echo '</tr><tr>';	
+
+	// // 物件名公開 0:非公開 1:公開 (空物件内容の表示も同時に制御) 2:物件名のみ公開
+	// echo '<td>';
+	// echo '<label for="bukkenmeikoukai">物件名公開</label> ';
+	// echo '</td>';
+
+	// echo '<td>';
+	// echo '<select name="bukkenmeikoukai" id="bukkenmeikoukai">';
+	// echo '<option value="">公開選択</option>';
+	// echo '<option value="1"';  if(get_post_meta($post->ID,'bukkenmeikoukai',true)=="1"){  	 echo ' selected="selected"';  }
+	// echo '>公開</option>';
+	// echo '<option value="2"';  if(get_post_meta($post->ID,'bukkenmeikoukai',true)=="2"){  	 echo ' selected="selected"';  }
+	// echo '>物件名のみ公開</option>';
+	// echo '<option value="0"';  if(get_post_meta($post->ID,'bukkenmeikoukai',true)=="0"){  	 echo ' selected="selected"';  }
+	// echo '>非公開</option>';
+	// echo '</select>';
+	// echo '</td>';
+
+	// echo '</tr><tr>';
 
 	// 空き物件内容 部屋:空部屋の番号 土地:区画番号等
-	echo '<td>';
-	echo '<label for="bukkennaiyo">部屋番号/区画番号</label> ';
-	echo '</td>';
+	// echo '<td>';
+	// echo '<label for="bukkennaiyo">部屋番号/区画番号</label> ';
+	// echo '</td>';
 
-	echo '<td>';
-	echo '<input type="text" name="bukkennaiyo" id="bukkennaiyo" value="'.get_post_meta($post->ID,'bukkennaiyo',true).'" size="25" /> (部屋:空部屋の番号 土地:区画番号等)<br />';
-	echo '</td>';
+	// echo '<td>';
+	// echo '<input type="text" name="bukkennaiyo" id="bukkennaiyo" value="'.get_post_meta($post->ID,'bukkennaiyo',true).'" size="25" /> (部屋:空部屋の番号 土地:区画番号等)<br />';
+	// echo '</td>';
 
-	echo '</tr><tr>';
+	// echo '</tr><tr>';
 
-	echo '<td>';
-	echo '<hr>';
-	echo '</td>';
-	echo '<td>';
-	echo '<hr>';
-	echo '</td>';
+	// echo '<td>';
+	// echo '<hr>';
+	// echo '</td>';
+	// echo '<td>';
+	// echo '<hr>';
+	// echo '</td>';
 
-	echo '</tr><tr>';
+	// echo '</tr><tr>';
 
 	// 総戸数・総区画数 物件の総数 (部屋:総戸数 土地:総区画数)
-	echo '<td>';
-	echo '<label for="bukkensoukosu">総戸(区画)数</label> ';
-	echo '</td>';
+	// echo '<td>';
+	// echo '<label for="bukkensoukosu">総戸(区画)数</label> ';
+	// echo '</td>';
 
-	echo '<td>';
-	echo '<input type="text" name="bukkensoukosu" id="bukkensoukosu" value="'.get_post_meta($post->ID,'bukkensoukosu',true).'" size="25" /> (部屋:総戸数 土地:総区画数) *非公開対象外<br />';
-	echo '</td>';
+	// echo '<td>';
+	// echo '<input type="text" name="bukkensoukosu" id="bukkensoukosu" value="'.get_post_meta($post->ID,'bukkensoukosu',true).'" size="25" /> (部屋:総戸数 土地:総区画数) *非公開対象外<br />';
+	// echo '</td>';
 
 	echo '</tr></table>';
 }
@@ -1001,6 +570,29 @@ function my_custom_shozaichi_in() {
 	echo '<td>';
 	echo '<input type="text" name="shozaichimeisho3" id="shozaichimeisho3" value="'.get_post_meta($post->ID,'shozaichimeisho3',true).'" size="25" /> (非公開)';
 	echo '</td>';
+	echo '</tr><tr>';
+	
+
+	// 所在地(英語表記)
+	echo '<td>';
+	echo '<label for="shozaichimeishoen">所在地(英語表記)</label> ';
+	echo '</td>';
+
+	echo '<td>';
+	echo '<input type="text" name="shozaichimeishoen" id="shozaichimeishoen" value="'.get_post_meta($post->ID,'shozaichimeishoen',true).'" size="25" /> ';
+	echo '</td>';
+	echo '</tr><tr>';
+
+	// 最寄りの基地
+	echo '<td>';
+	echo '<label for="moyorikiti">最寄りの基地</label> ';
+	echo '</td>';
+
+	echo '<td>';
+	echo '<input type="text" name="moyorikiti" id="moyorikiti" value="'.get_post_meta($post->ID,'moyorikiti',true).'" size="25" /> から';
+	echo '<input type="text" name="moyorikititime" id="moyorikititime" value="'.get_post_meta($post->ID,'moyorikititime',true).'" size="25" /> 分';
+	echo '</td>';
+	
 	echo '</tr></table>';
 }
 
@@ -3452,42 +3044,6 @@ function my_custom_shuuhen_in() {
 
 
 
-// 取引態様 【改REINS】1:売主/貸主 2:代理 3:専属 4: 専任 5:一般 6:仲介 9:その他
-function my_custom_torihikitaiyo_in() {
-	global $post;
-
-	$torihikitaiyo_data = get_post_meta($post->ID,'torihikitaiyo',true);
-	echo '<input type="hidden" name="mycustom_torihikitaiyo_name" id="mycustom_torihikitaiyo_name" value="' .wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
-	echo '<label for="torihikitaiyo">取引態様</label> ';
-	echo '<select name="torihikitaiyo" id="torihikitaiyo">';
-	echo '<option value="">取引態様選択</option>';
-	echo '<option value="1"';  if($torihikitaiyo_data=="1"){  	 echo ' selected="selected"';  }
-	echo '>売主/貸主</option>';
-	echo '<option value="2"';  if($torihikitaiyo_data=="2"){  	 echo ' selected="selected"';  }
-	echo '>代理</option>';
-	echo '<option value="3"';  if($torihikitaiyo_data=="3"){  	 echo ' selected="selected"';  }
-	echo '>専属</option>';
-	echo '<option value="4"';  if($torihikitaiyo_data=="4"){  	 echo ' selected="selected"';  }
-	echo '>専任</option>';
-	echo '<option value="5"';  if($torihikitaiyo_data=="5"){  	 echo ' selected="selected"';  }
-	echo '>一般</option>';
-	echo '<option value="6"';  if($torihikitaiyo_data=="6"){  	 echo ' selected="selected"';  }
-	echo '>仲介</option>';
-	echo '<option value="9"';  if($torihikitaiyo_data=="9"){  	 echo ' selected="selected"';  }
-	echo '>その他</option>';
-
-	//取引態様 option_in ver5.4.0
-	do_action( 'torihikitaiyo_option_in', $torihikitaiyo_data );
-
-	//for option textdata ver5.4.0
-	if( $torihikitaiyo_data != '' &&  !is_numeric( $torihikitaiyo_data ) && apply_filters( 'torihikitaiyo_option_text', true ) ){
-		echo '<option value="'.$torihikitaiyo_data.'" selected="selected">'.$torihikitaiyo_data.'</option>';
-	}
-
-	echo '</select>';
-}
-
-
 
 /*
  * 物件画像サムネイル生成
@@ -3814,51 +3370,10 @@ function custom_save_csvtype ( $post_id ) {
 }
 
 
-//meta
-function custom_save_meta ( $post_id ) {
-	if ( isset($_POST['mycustom_meta_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_meta_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
+// 物件情報　建物名(物件名)
+function custom_save_bukkenmei ( $post_id ) {
 
-		$my_custom_fudokeywords_data = isset($_POST['fudokeywords']) ? esc_attr( stripslashes( $_POST['fudokeywords'] )): '';
-		$my_custom_fudokeywords_data = str_replace( array("\r\n", "\r", "\n"), '', $my_custom_fudokeywords_data );	//改行
-
-		if( strcmp($my_custom_fudokeywords_data,get_post_meta($post_id, 'fudokeywords', true)) != 0 )
-			update_post_meta($post_id, 'fudokeywords',$my_custom_fudokeywords_data);
-		elseif($my_custom_fudokeywords_data == "")
-			delete_post_meta($post_id, 'fudokeywords',get_post_meta($post_id,'fudokeywords',true));
-
-
-		$my_custom_fudodescription_data = isset($_POST['fudodescription']) ? esc_attr( stripslashes( $_POST['fudodescription'] )) : '';
-		$my_custom_fudodescription_data = str_replace( array("\r\n", "\r", "\n"), '', $my_custom_fudodescription_data );	//改行
-
-		if( strcmp($my_custom_fudodescription_data,get_post_meta($post_id, 'fudodescription', true)) != 0 )
-			update_post_meta($post_id, 'fudodescription',$my_custom_fudodescription_data);
-		elseif($my_custom_fudodescription_data == "")
-			delete_post_meta($post_id, 'fudodescription',get_post_meta($post_id,'fudodescription',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 物件番号 v1.7.11
-function custom_save_shikibesu ( $post_id ) {
-	if ( isset($_POST['mycustom_shikibesu_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_shikibesu_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
+	if ( isset($_POST['mycustom_bukkenmei_name']) ){
 
 		// 自社管理物件番号 v5.7.2
 		$my_custom_shikibesu_data = isset($_POST['shikibesu']) ? esc_attr( stripslashes( $_POST['shikibesu'] )): '';
@@ -3869,91 +3384,6 @@ function custom_save_shikibesu ( $post_id ) {
 			delete_post_meta($post_id, 'shikibesu',get_post_meta($post_id,'shikibesu',true));
 
 
-		// 掲載期限日 v5.7.2
-		$my_custom_keisaikigenbi_data = isset($_POST['keisaikigenbi']) ? esc_attr( stripslashes( $_POST['keisaikigenbi'] )) : '';
-		if( strcmp($my_custom_keisaikigenbi_data,get_post_meta($post_id, 'keisaikigenbi', true)) != 0 )
-			update_post_meta($post_id, 'keisaikigenbi',$my_custom_keisaikigenbi_data);
-		elseif($my_custom_keisaikigenbi_data == "")
-			delete_post_meta($post_id, 'keisaikigenbi',get_post_meta($post_id,'keisaikigenbi',true));
-
-		// 成約日 v5.7.2
-		$my_custom_seiyakubi_data = isset($_POST['seiyakubi']) ? esc_attr( stripslashes( $_POST['seiyakubi'] )) : '';
-		if( strcmp($my_custom_seiyakubi_data,get_post_meta($post_id, 'seiyakubi', true)) != 0 )
-			update_post_meta($post_id, 'seiyakubi',$my_custom_seiyakubi_data);
-		elseif($my_custom_seiyakubi_data == "")
-			//delete_post_meta($post_id, 'seiyakubi',get_post_meta($post_id,'seiyakubi',true));
-			update_post_meta($post_id, 'seiyakubi',$my_custom_seiyakubi_data);
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 自社物  v1.7.11
-function custom_save_koukaijisha ( $post_id ) {
-	if ( isset($_POST['mycustom_koukaijisha_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_koukaijisha_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 自社物フラグ v5.7.2
-		$my_custom_koukaijisha_data = isset($_POST['koukaijisha']) ? esc_attr( stripslashes( $_POST['koukaijisha'] )): '';
-		if( strcmp($my_custom_koukaijisha_data,get_post_meta($post_id, 'koukaijisha', true)) != 0 )
-			update_post_meta($post_id, 'koukaijisha',$my_custom_koukaijisha_data);
-		elseif($my_custom_koukaijisha_data == "")
-			delete_post_meta($post_id, 'koukajishai',get_post_meta($post_id,'koukaijisha',true));
-
-		// 状態 v5.7.2
-		$my_custom_jyoutai_data = isset($_POST['jyoutai']) ? esc_attr( stripslashes( $_POST['jyoutai'] )): '';
-		if( strcmp($my_custom_jyoutai_data,get_post_meta($post_id, 'jyoutai', true)) != 0 )
-			update_post_meta($post_id, 'jyoutai',$my_custom_jyoutai_data);
-		elseif($my_custom_jyoutai_data == "")
-			delete_post_meta($post_id, 'jyoutai',get_post_meta($post_id,'jyoutai',true));
-
-		// 会員 v5.7.2
-		$my_custom_kaiin_data = isset($_POST['kaiin']) ? esc_attr( stripslashes( $_POST['kaiin'] )): '';
-		if( strcmp($my_custom_kaiin_data,get_post_meta($post_id, 'kaiin', true)) != 0 )
-			update_post_meta($post_id, 'kaiin',$my_custom_kaiin_data);
-		elseif($my_custom_kaiin_data == "")
-			//delete_post_meta($post_id, 'kaiin',get_post_meta($post_id,'kaiin',true));
-			update_post_meta($post_id, 'kaiin',$my_custom_kaiin_data);
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 物件種別 v5.7.2
-function custom_save_bukkenshubetsu ( $post_id ) {
-	if ( isset($_POST['mycustom_bukkenshubetsu_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_bukkenshubetsu_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		$my_custom_bukkenshubetsu_data = isset($_POST['bukkenshubetsu']) ? esc_attr( stripslashes( $_POST['bukkenshubetsu'] )) : '';
-		if( strcmp($my_custom_bukkenshubetsu_data,get_post_meta($post_id, 'bukkenshubetsu', true)) != 0 )
-			update_post_meta($post_id, 'bukkenshubetsu',$my_custom_bukkenshubetsu_data);
-		elseif($my_custom_bukkenshubetsu_data == "")
-			delete_post_meta($post_id, 'bukkenshubetsu',get_post_meta($post_id,'bukkenshubetsu',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 建物名(物件名)
-function custom_save_bukkenmei ( $post_id ) {
-	if ( isset($_POST['mycustom_bukkenmei_name']) ){
 		if ( !wp_verify_nonce( $_POST['mycustom_bukkenmei_name'], plugin_basename(__FILE__) )) {
 			return $post_id;
 		}
@@ -3970,26 +3400,77 @@ function custom_save_bukkenmei ( $post_id ) {
 		elseif($my_custom_bukkenmei_data == "")
 			delete_post_meta($post_id, 'bukkenmei',get_post_meta($post_id,'bukkenmei',true));
 
-		// 物件名公開 v5.7.2
-		$my_custom_bukkenmeikoukai_data = isset($_POST['bukkenmeikoukai']) ? esc_attr( stripslashes( $_POST['bukkenmeikoukai'] )): '';
-		if( strcmp($my_custom_bukkenmeikoukai_data,get_post_meta($post_id, 'bukkenmeikoukai', true)) != 0 )
-			update_post_meta($post_id, 'bukkenmeikoukai',$my_custom_bukkenmeikoukai_data);
-		elseif($my_custom_bukkenmeikoukai_data == "")
-			delete_post_meta($post_id, 'bukkenmeikoukai',get_post_meta($post_id,'bukkenmeikoukai',true));
+		$my_custom_bukkenshubetsu_data = isset($_POST['bukkenshubetsu']) ? esc_attr( stripslashes( $_POST['bukkenshubetsu'] )) : '';
+		if( strcmp($my_custom_bukkenshubetsu_data,get_post_meta($post_id, 'bukkenshubetsu', true)) != 0 )
+			update_post_meta($post_id, 'bukkenshubetsu',$my_custom_bukkenshubetsu_data);
+		elseif($my_custom_bukkenshubetsu_data == "")
+			delete_post_meta($post_id, 'bukkenshubetsu',get_post_meta($post_id,'bukkenshubetsu',true));
 
-		// 総戸数・総区画数 v5.7.2 
-		$my_custom_bukkensoukosu_data = isset($_POST['bukkensoukosu']) ? esc_attr( stripslashes( $_POST['bukkensoukosu'] )): '';
-		if( strcmp($my_custom_bukkensoukosu_data,get_post_meta($post_id, 'bukkensoukosu', true)) != 0 )
-			update_post_meta($post_id, 'bukkensoukosu',$my_custom_bukkensoukosu_data);
-		elseif($my_custom_bukkensoukosu_data == "")
-			delete_post_meta($post_id, 'bukkensoukosu',get_post_meta($post_id,'bukkensoukosu',true));
+		// 賃料・価格 v5.7.2
+		$my_custom_kakaku_data = isset($_POST['kakaku']) ? $_POST['kakaku'] : '';
+		$my_custom_kakaku_data = mb_convert_kana($my_custom_kakaku_data,"a","UTF-8" );
+		$my_custom_kakaku_data = str_replace(",","",$my_custom_kakaku_data);
+		$my_custom_kakaku_data = str_replace("\\","",$my_custom_kakaku_data);
+		$my_custom_kakaku_data = str_replace("￥","",$my_custom_kakaku_data);
+		$my_custom_kakaku_data = myIsNum_f( $my_custom_kakaku_data );
 
-		// 部屋:空部屋の番号 土地:区画番号 v5.7.2
-		$my_custom_bukkennaiyo_data = isset($_POST['bukkennaiyo']) ? esc_attr( stripslashes( $_POST['bukkennaiyo'] )): '';
-		if( strcmp($my_custom_bukkennaiyo_data,get_post_meta($post_id, 'bukkennaiyo', true)) != 0 )
-			update_post_meta($post_id, 'bukkennaiyo',$my_custom_bukkennaiyo_data);
-		elseif($my_custom_bukkennaiyo_data == "")
-			delete_post_meta($post_id, 'bukkennaiyo',get_post_meta($post_id,'bukkennaiyo',true));
+		if($my_custom_kakaku_data !=get_post_meta($post_id, 'kakaku', true))
+			update_post_meta($post_id, 'kakaku',$my_custom_kakaku_data);
+		elseif($my_custom_kakaku_data == "")
+			update_post_meta($post_id, 'kakaku','');
+
+		// sqft
+		$my_custom_sqft_data = isset($_POST['sqft']) ? esc_attr( stripslashes( $_POST['sqft'] )) : '';
+		if( strcmp($my_custom_sqft_data,get_post_meta($post_id, 'sqft', true)) != 0 )
+			update_post_meta($post_id, 'sqft', $my_custom_sqft_data);
+
+		elseif($my_custom_sqft_data=="")
+			delete_post_meta($post_id, 'sqft',get_post_meta($post_id,'sqft',true));
+
+		// bedroom
+		$my_custom_bedroom_data = isset($_POST['sqft']) ? esc_attr( stripslashes( $_POST['bedroom'] )) : '';
+		if( strcmp($my_custom_bedroom_data,get_post_meta($post_id, 'bedroom', true)) != 0 )
+			update_post_meta($post_id, 'bedroom', $my_custom_bedroom_data);
+
+		elseif($my_custom_bedroom_data=="")
+			delete_post_meta($post_id, 'bedroom',get_post_meta($post_id,'bedroom',true));
+
+		// bathroom
+		$my_custom_bathroom_data = isset($_POST['bathroom']) ? esc_attr( stripslashes( $_POST['bathroom'] )) : '';
+		if( strcmp($my_custom_bathroom_data,get_post_meta($post_id, 'bathroom', true)) != 0 )
+			update_post_meta($post_id, 'bathroom', $my_custom_bathroom_data);
+
+		elseif($my_custom_bedroom_data=="")
+			delete_post_meta($post_id, 'bedroom',get_post_meta($post_id,'bedroom',true));
+
+		// parking
+		$my_custom_parking_data = isset($_POST['parking']) ? esc_attr( stripslashes( $_POST['parking'] )) : '';
+		if( strcmp($my_custom_parking_data,get_post_meta($post_id, 'parking', true)) != 0 )
+			update_post_meta($post_id, 'parking', $my_custom_parking_data);
+
+		elseif($my_custom_parking_data=="")
+			delete_post_meta($post_id, 'parking',get_post_meta($post_id,'parking',true));
+
+		// // 物件名公開 v5.7.2
+		// $my_custom_bukkenmeikoukai_data = isset($_POST['bukkenmeikoukai']) ? esc_attr( stripslashes( $_POST['bukkenmeikoukai'] )): '';
+		// if( strcmp($my_custom_bukkenmeikoukai_data,get_post_meta($post_id, 'bukkenmeikoukai', true)) != 0 )
+		// 	update_post_meta($post_id, 'bukkenmeikoukai',$my_custom_bukkenmeikoukai_data);
+		// elseif($my_custom_bukkenmeikoukai_data == "")
+		// 	delete_post_meta($post_id, 'bukkenmeikoukai',get_post_meta($post_id,'bukkenmeikoukai',true));
+
+		// // 総戸数・総区画数 v5.7.2 
+		// $my_custom_bukkensoukosu_data = isset($_POST['bukkensoukosu']) ? esc_attr( stripslashes( $_POST['bukkensoukosu'] )): '';
+		// if( strcmp($my_custom_bukkensoukosu_data,get_post_meta($post_id, 'bukkensoukosu', true)) != 0 )
+		// 	update_post_meta($post_id, 'bukkensoukosu',$my_custom_bukkensoukosu_data);
+		// elseif($my_custom_bukkensoukosu_data == "")
+		// 	delete_post_meta($post_id, 'bukkensoukosu',get_post_meta($post_id,'bukkensoukosu',true));
+
+		// // 部屋:空部屋の番号 土地:区画番号 v5.7.2
+		// $my_custom_bukkennaiyo_data = isset($_POST['bukkennaiyo']) ? esc_attr( stripslashes( $_POST['bukkennaiyo'] )): '';
+		// if( strcmp($my_custom_bukkennaiyo_data,get_post_meta($post_id, 'bukkennaiyo', true)) != 0 )
+		// 	update_post_meta($post_id, 'bukkennaiyo',$my_custom_bukkennaiyo_data);
+		// elseif($my_custom_bukkennaiyo_data == "")
+		// 	delete_post_meta($post_id, 'bukkennaiyo',get_post_meta($post_id,'bukkennaiyo',true));
 	}else{
 			return $post_id;
 	}
@@ -4050,6 +3531,28 @@ function custom_save_shozaichiken ( $post_id ) {
 			update_post_meta($post_id, 'shozaichimeisho3',$my_custom_shozaichimeisho3_data);
 		elseif($my_custom_shozaichimeisho3_data == "")
 			delete_post_meta($post_id, 'shozaichimeisho3',get_post_meta($post_id,'shozaichimeisho3',true));
+
+		// 所在地(英語表記)
+		$my_custom_shozaichimeishoen_data = isset($_POST['shozaichimeishoen']) ? esc_attr( stripslashes( $_POST['shozaichimeishoen'] )): '';
+		if( strcmp($my_custom_shozaichimeishoen_data,get_post_meta($post_id, 'shozaichimeishoen', true)) != 0 )
+			update_post_meta($post_id, 'shozaichimeishoen',$my_custom_shozaichimeishoen_data);
+		elseif($my_custom_shozaichimeishoen_data == "")
+			delete_post_meta($post_id, 'shozaichimeishoen',get_post_meta($post_id,'shozaichimeishoen',true));
+
+		// 最寄りの基地　地名
+		$my_custom_moyorikiti_data = isset($_POST['moyorikiti']) ? esc_attr( stripslashes( $_POST['moyorikiti'] )): '';
+		if( strcmp($my_custom_moyorikiti_data,get_post_meta($post_id, 'moyorikiti', true)) != 0 )
+			update_post_meta($post_id, 'moyorikiti',$my_custom_moyorikiti_data);
+		elseif($my_custom_moyorikiti_data == "")
+			delete_post_meta($post_id, 'moyorikiti',get_post_meta($post_id,'moyorikiti',true));
+
+		// 最寄りの基地　時間
+		$my_custom_moyorikititime_data = isset($_POST['moyorikititime']) ? esc_attr( stripslashes( $_POST['moyorikititime'] )): '';
+		if( strcmp($my_custom_moyorikititime_data,get_post_meta($post_id, 'moyorikititime', true)) != 0 )
+			update_post_meta($post_id, 'moyorikititime',$my_custom_moyorikititime_data);
+		elseif($my_custom_moyorikititime_data == "")
+			delete_post_meta($post_id, 'moyorikititime',get_post_meta($post_id,'moyorikititime',true));
+
 	}else{
 			return $post_id;
 	}
@@ -4086,590 +3589,6 @@ function custom_save_bukkenido ( $post_id ) {
 	}
 }
 
-
-// 交通路線1
-function custom_save_koutsurosen1 ( $post_id ) {
-	if ( isset($_POST['mycustom_koutsurosen1_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_koutsurosen1_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 交通路線1 v5.7.2
-		$my_custom_koutsurosen1_data = isset($_POST['koutsurosen1']) ? esc_attr( stripslashes( $_POST['koutsurosen1'] )): '';
-		if($my_custom_koutsurosen1_data !=get_post_meta($post_id, 'koutsurosen1', true))
-			update_post_meta($post_id, 'koutsurosen1',$my_custom_koutsurosen1_data);
-		elseif($my_custom_koutsurosen1_data == "")
-			delete_post_meta($post_id, 'koutsurosen1',get_post_meta($post_id,'koutsurosen1',true));
-
-		// 交通駅1 v5.7.2
-		$my_custom_koutsueki1_data = isset($_POST['koutsueki1']) ? esc_attr( stripslashes( $_POST['koutsueki1'] )): '';
-		if($my_custom_koutsueki1_data !=get_post_meta($post_id, 'koutsueki1', true))
-			update_post_meta($post_id, 'koutsueki1',$my_custom_koutsueki1_data);
-		elseif($my_custom_koutsueki1_data == "")
-			delete_post_meta($post_id, 'koutsueki1',get_post_meta($post_id,'koutsueki1',true));
-
-		// 交通バス停名1 v5.7.2
-		$my_custom_koutsubusstei1_data = isset($_POST['koutsubusstei1']) ? esc_attr( stripslashes( $_POST['koutsubusstei1'] )): '';
-		if( strcmp($my_custom_koutsubusstei1_data,get_post_meta($post_id, 'koutsubusstei1', true)) != 0 )
-			update_post_meta($post_id, 'koutsubusstei1',$my_custom_koutsubusstei1_data);
-		elseif($my_custom_koutsubusstei1_data == "")
-			delete_post_meta($post_id, 'koutsubusstei1',get_post_meta($post_id,'koutsubusstei1',true));
-
-		// 交通バス時間1 v5.7.2
-		$my_custom_koutsubussfun1_data = isset($_POST['koutsubussfun1']) ? esc_attr( stripslashes( $_POST['koutsubussfun1'] )): '';
-		if($my_custom_koutsubussfun1_data !=get_post_meta($post_id, 'koutsubussfun1', true))
-			update_post_meta($post_id, 'koutsubussfun1',$my_custom_koutsubussfun1_data);
-		elseif($my_custom_koutsubussfun1_data == "")
-			delete_post_meta($post_id, 'koutsubussfun1',get_post_meta($post_id,'koutsubussfun1',true));
-
-		// 交通徒歩距離1 v5.7.2
-		$my_custom_koutsutoho1_data = isset($_POST['koutsutoho1']) ? esc_attr( stripslashes( $_POST['koutsutoho1'] )): '';
-		if($my_custom_koutsutoho1_data !=get_post_meta($post_id, 'koutsutoho1', true))
-			update_post_meta($post_id, 'koutsutoho1',$my_custom_koutsutoho1_data);
-		elseif($my_custom_koutsutoho1_data == "")
-			delete_post_meta($post_id, 'koutsutoho1',get_post_meta($post_id,'koutsutoho1',true));
-
-		// 交通徒歩 v5.7.2
-		$my_custom_koutsutoho1f_data = isset($_POST['koutsutoho1f']) ? esc_attr( stripslashes( $_POST['koutsutoho1f'] )): '';
-		if($my_custom_koutsutoho1f_data !=get_post_meta($post_id, 'koutsutoho1f', true))
-			update_post_meta($post_id, 'koutsutoho1f',$my_custom_koutsutoho1f_data);
-		elseif($my_custom_koutsutoho1f_data == "")
-			delete_post_meta($post_id, 'koutsutoho1f',get_post_meta($post_id,'koutsutoho1f',true));
-
-		// バス停交通徒歩時間 v5.7.2
-		$my_custom_koutsutohob1f_data = isset($_POST['koutsutohob1f'] ) ? esc_attr( stripslashes( $_POST['koutsutohob1f'] )): '';
-		if($my_custom_koutsutohob1f_data !=get_post_meta($post_id, 'koutsutohob1f', true))
-			update_post_meta($post_id, 'koutsutohob1f',$my_custom_koutsutohob1f_data);
-		elseif($my_custom_koutsutohob1f_data == "")
-			delete_post_meta($post_id, 'koutsutohob1f',get_post_meta($post_id,'koutsutohob1f',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 交通路線2
-function custom_save_koutsurosen2 ( $post_id ) {
-	if ( isset($_POST['mycustom_koutsurosen2_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_koutsurosen2_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 交通路線2 v5.7.2
-		$my_custom_koutsurosen2_data = isset($_POST['koutsurosen2']) ? esc_attr( stripslashes( $_POST['koutsurosen2'] )): '';
-		if($my_custom_koutsurosen2_data !=get_post_meta($post_id, 'koutsurosen2', true))
-			update_post_meta($post_id, 'koutsurosen2',$my_custom_koutsurosen2_data);
-		elseif($my_custom_koutsurosen2_data == "")
-			delete_post_meta($post_id, 'koutsurosen2',get_post_meta($post_id,'koutsurosen2',true));
-
-		// 交通駅2 v5.7.2
-		$my_custom_koutsueki2_data = isset($_POST['koutsueki2']) ? esc_attr( stripslashes( $_POST['koutsueki2'] )): '';
-		if($my_custom_koutsueki2_data !=get_post_meta($post_id, 'koutsueki2', true))
-			update_post_meta($post_id, 'koutsueki2',$my_custom_koutsueki2_data);
-		elseif($my_custom_koutsueki2_data == "")
-			delete_post_meta($post_id, 'koutsueki2',get_post_meta($post_id,'koutsueki2',true));
-
-		// 交通バス停名2 v5.7.2
-		$my_custom_koutsubusstei2_data = isset($_POST['koutsubusstei2']) ? esc_attr( stripslashes( $_POST['koutsubusstei2'] )): '';
-		if( strcmp($my_custom_koutsubusstei2_data,get_post_meta($post_id, 'koutsubusstei2', true)) != 0 )
-			update_post_meta($post_id, 'koutsubusstei2',$my_custom_koutsubusstei2_data);
-		elseif($my_custom_koutsubusstei2_data == "")
-			delete_post_meta($post_id, 'koutsubusstei2',get_post_meta($post_id,'koutsubusstei2',true));
-
-		// 交通バス時間2 v5.7.2
-		$my_custom_koutsubussfun2_data = isset($_POST['koutsubussfun2']) ? esc_attr( stripslashes( $_POST['koutsubussfun2'] )): '';
-		if($my_custom_koutsubussfun2_data !=get_post_meta($post_id, 'koutsubussfun2', true))
-			update_post_meta($post_id, 'koutsubussfun2',$my_custom_koutsubussfun2_data);
-		elseif($my_custom_koutsubussfun2_data == "")
-			delete_post_meta($post_id, 'koutsubussfun2',get_post_meta($post_id,'koutsubussfun2',true));
-
-		// 交通徒歩距離2 v5.7.2
-		$my_custom_koutsutoho2_data = isset($_POST['koutsutoho2']) ? esc_attr( stripslashes( $_POST['koutsutoho2'] )): '';
-		if($my_custom_koutsutoho2_data !=get_post_meta($post_id, 'koutsutoho2', true))
-			update_post_meta($post_id, 'koutsutoho2',$my_custom_koutsutoho2_data);
-		elseif($my_custom_koutsutoho2_data == "")
-			delete_post_meta($post_id, 'koutsutoho2',get_post_meta($post_id,'koutsutoho2',true));
-
-		// 交通徒歩2 v5.7.2
-		$my_custom_koutsutoho2f_data = isset($_POST['koutsutoho2f']) ? esc_attr( stripslashes( $_POST['koutsutoho2f'] )): '';
-		if($my_custom_koutsutoho2f_data !=get_post_meta($post_id, 'koutsutoho2f', true))
-			update_post_meta($post_id, 'koutsutoho2f',$my_custom_koutsutoho2f_data);
-		elseif($my_custom_koutsutoho2f_data == "")
-			delete_post_meta($post_id, 'koutsutoho2f',get_post_meta($post_id,'koutsutoho2f',true));
-
-		// バス停交通徒歩時間 v5.7.2
-		$my_custom_koutsutohob2f_data = isset($_POST['koutsutohob2f']) ? esc_attr( stripslashes( $_POST['koutsutohob2f'] )): '';
-		if($my_custom_koutsutohob2f_data !=get_post_meta($post_id, 'koutsutohob2f', true))
-			update_post_meta($post_id, 'koutsutohob2f',$my_custom_koutsutohob2f_data);
-		elseif($my_custom_koutsutohob2f_data == "")
-			delete_post_meta($post_id, 'koutsutohob2f',get_post_meta($post_id,'koutsutohob2f',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 交通その他 TexaArea v5.7.2 
-function custom_save_koutsusonota ( $post_id ) {
-	if ( isset($_POST['mycustom_koutsusonota_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_koutsusonota_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		$my_custom_koutsusonota_data = isset($_POST['koutsusonota']) ? $_POST['koutsusonota'] : '';
-		$my_custom_koutsusonota_data = wp_kses( $my_custom_koutsusonota_data, wp_kses_allowed_html( 'post' ));
-
-		if( strcmp($my_custom_koutsusonota_data,get_post_meta($post_id, 'koutsusonota', true)) != 0 )
-			update_post_meta($post_id, 'koutsusonota',$my_custom_koutsusonota_data);
-		elseif($my_custom_koutsusonota_data == "")
-			delete_post_meta($post_id, 'koutsusonota',get_post_meta($post_id,'koutsusonota',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 地目
-function custom_save_tochichimoku ( $post_id ) {
-	if ( isset($_POST['mycustom_tochichimoku_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_tochichimoku_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 地目 v5.7.2
-		$my_custom_tochichimoku_data = isset($_POST['tochichimoku']) ? esc_attr( stripslashes( $_POST['tochichimoku'] )): '';
-		if($my_custom_tochichimoku_data !=get_post_meta($post_id, 'tochichimoku', true))
-			update_post_meta($post_id, 'tochichimoku',$my_custom_tochichimoku_data);
-		elseif($my_custom_tochichimoku_data == "")
-			delete_post_meta($post_id, 'tochichimoku',get_post_meta($post_id,'tochichimoku',true));
-
-		// 用途地域 v5.7.2
-		$my_custom_tochiyouto_data = isset($_POST['tochiyouto'] ) ? esc_attr( stripslashes( $_POST['tochiyouto'] )): '';
-		if($my_custom_tochiyouto_data !=get_post_meta($post_id, 'tochiyouto', true))
-			update_post_meta($post_id, 'tochiyouto',$my_custom_tochiyouto_data);
-		elseif($my_custom_tochiyouto_data == "")
-			delete_post_meta($post_id, 'tochiyouto',get_post_meta($post_id,'tochiyouto',true));
-
-		// 都市計画 v5.7.2
-		$my_custom_tochikeikaku_data = isset($_POST['tochikeikaku']) ? esc_attr( stripslashes( $_POST['tochikeikaku'] )): '';
-		if($my_custom_tochikeikaku_data !=get_post_meta($post_id, 'tochikeikaku', true))
-			update_post_meta($post_id, 'tochikeikaku',$my_custom_tochikeikaku_data);
-		elseif($my_custom_tochikeikaku_data == "")
-			delete_post_meta($post_id, 'tochikeikaku',get_post_meta($post_id,'tochikeikaku',true));
-
-		// 地勢 v5.7.2
-		$my_custom_tochichisei_data = isset($_POST['tochichisei']) ? esc_attr( stripslashes( $_POST['tochichisei'] )): '';
-		if($my_custom_tochichisei_data !=get_post_meta($post_id, 'tochichisei', true))
-			update_post_meta($post_id, 'tochichisei',$my_custom_tochichisei_data);
-		elseif($my_custom_tochichisei_data == "")
-			delete_post_meta($post_id, 'tochichisei',get_post_meta($post_id,'tochichisei',true));
-
-		// 土地面積計測方式 v5.7.2
-		$my_custom_tochisokutei_data = isset($_POST['tochisokutei']) ? esc_attr( stripslashes( $_POST['tochisokutei'] )): '';
-		if($my_custom_tochisokutei_data !=get_post_meta($post_id, 'tochisokutei', true))
-			update_post_meta($post_id, 'tochisokutei',$my_custom_tochisokutei_data);
-		elseif($my_custom_tochisokutei_data == "")
-			delete_post_meta($post_id, 'tochisokutei',get_post_meta($post_id,'tochisokutei',true));
-
-		// 区画面積 v5.7.2
-		$my_custom_tochikukaku_data = isset($_POST['tochikukaku']) ? myIsNum_f( $_POST['tochikukaku'] ): '';
-		if($my_custom_tochikukaku_data !=get_post_meta($post_id, 'tochikukaku', true))
-			update_post_meta($post_id, 'tochikukaku',$my_custom_tochikukaku_data);
-		elseif($my_custom_tochikukaku_data == "")
-			update_post_meta($post_id, 'tochikukaku','');
-
-		// 私道負担面積 v5.7.2
-		$my_custom_tochishido_data = isset($_POST['tochishido']) ? myIsNum_f( $_POST['tochishido'] ): '';
-		if($my_custom_tochishido_data !=get_post_meta($post_id, 'tochishido', true))
-			update_post_meta($post_id, 'tochishido',$my_custom_tochishido_data);
-		elseif($my_custom_tochishido_data == "")
-			delete_post_meta($post_id, 'tochishido',get_post_meta($post_id,'tochishido',true));
-
-		// セットバック v5.7.2
-		$my_custom_tochisetback_data = isset($_POST['tochisetback']) ? myIsNum_f( $_POST['tochisetback'] ): '';
-		if($my_custom_tochisetback_data !=get_post_meta($post_id, 'tochisetback', true))
-			update_post_meta($post_id, 'tochisetback',$my_custom_tochisetback_data);
-		elseif($my_custom_tochisetback_data == "")
-			delete_post_meta($post_id, 'tochisetback',get_post_meta($post_id,'tochisetback',true));
-
-		// セットバック量 v5.7.2
-		$my_custom_tochisetback2_data = isset($_POST['tochisetback2']) ? myIsNum_f( $_POST['tochisetback2'] ): '';
-		if($my_custom_tochisetback2_data !=get_post_meta($post_id, 'tochisetback2', true))
-			update_post_meta($post_id, 'tochisetback2',$my_custom_tochisetback2_data);
-		elseif($my_custom_tochisetback2_data == "")
-			delete_post_meta($post_id, 'tochisetback2',get_post_meta($post_id,'tochisetback2',true));
-
-		// 建ぺい率 v5.7.2
-		$my_custom_tochikenpei_data = isset($_POST['tochikenpei']) ? myIsNum_f( $_POST['tochikenpei'] ) : '';
-		if($my_custom_tochikenpei_data !=get_post_meta($post_id, 'tochikenpei', true))
-			update_post_meta($post_id, 'tochikenpei',$my_custom_tochikenpei_data);
-		elseif($my_custom_tochikenpei_data == "")
-			delete_post_meta($post_id, 'tochikenpei',get_post_meta($post_id,'tochikenpei',true));
-
-		// 容積率 v5.7.2	
-		$my_custom_tochiyoseki_data = isset($_POST['tochiyoseki']) ? myIsNum_f( $_POST['tochiyoseki'] ) : '';
-		if($my_custom_tochiyoseki_data !=get_post_meta($post_id, 'tochiyoseki', true))
-			update_post_meta($post_id, 'tochiyoseki',$my_custom_tochiyoseki_data);
-		elseif($my_custom_tochiyoseki_data == "")
-			delete_post_meta($post_id, 'tochiyoseki',get_post_meta($post_id,'tochiyoseki',true));
-
-		// 接道状況 v5.7.2
-		$my_custom_tochisetsudo_data = isset($_POST['tochisetsudo']) ? esc_attr( stripslashes( $_POST['tochisetsudo'] )): '';
-		if($my_custom_tochisetsudo_data !=get_post_meta($post_id, 'tochisetsudo', true))
-			update_post_meta($post_id, 'tochisetsudo',$my_custom_tochisetsudo_data);
-		elseif($my_custom_tochisetsudo_data == "")
-			delete_post_meta($post_id, 'tochisetsudo',get_post_meta($post_id,'tochisetsudo',true));
-
-		// 接道方向1 v5.7.2
-		$my_custom_tochisetsudohouko1_data = isset($_POST['tochisetsudohouko1']) ? esc_attr( stripslashes( $_POST['tochisetsudohouko1'] )): '';
-		if($my_custom_tochisetsudohouko1_data !=get_post_meta($post_id, 'tochisetsudohouko1', true))
-			update_post_meta($post_id, 'tochisetsudohouko1',$my_custom_tochisetsudohouko1_data);
-		elseif($my_custom_tochisetsudohouko1_data == "")
-			delete_post_meta($post_id, 'tochisetsudohouko1',get_post_meta($post_id,'tochisetsudohouko1',true));
-
-		// 接道間口1 v5.7.2
-		$my_custom_tochisetsudomaguchi1_data = isset($_POST['tochisetsudomaguchi1']) ? myIsNum_f( $_POST['tochisetsudomaguchi1'] ): '';
-		if($my_custom_tochisetsudomaguchi1_data !=get_post_meta($post_id, 'tochisetsudomaguchi1', true))
-			update_post_meta($post_id, 'tochisetsudomaguchi1',$my_custom_tochisetsudomaguchi1_data);
-		elseif($my_custom_tochisetsudomaguchi1_data == "")
-			delete_post_meta($post_id, 'tochisetsudomaguchi1',get_post_meta($post_id,'tochisetsudomaguchi1',true));
-
-		// 接道種別1 v5.7.2
-		$my_custom_tochisetsudoshurui1_data = isset($_POST['tochisetsudoshurui1']) ? esc_attr( stripslashes( $_POST['tochisetsudoshurui1'] )) : '';
-		if($my_custom_tochisetsudoshurui1_data !=get_post_meta($post_id, 'tochisetsudoshurui1', true))
-			update_post_meta($post_id, 'tochisetsudoshurui1',$my_custom_tochisetsudoshurui1_data);
-		elseif($my_custom_tochisetsudoshurui1_data == "")
-			delete_post_meta($post_id, 'tochisetsudoshurui1',get_post_meta($post_id,'tochisetsudoshurui1',true));
-
-		// 接道幅員1 v5.7.2
-		$my_custom_tochisetsudofukuin1_data = isset($_POST['tochisetsudofukuin1']) ? myIsNum_f( $_POST['tochisetsudofukuin1'] ): '';
-		if($my_custom_tochisetsudofukuin1_data !=get_post_meta($post_id, 'tochisetsudofukuin1', true))
-			update_post_meta($post_id, 'tochisetsudofukuin1',$my_custom_tochisetsudofukuin1_data);
-		elseif($my_custom_tochisetsudofukuin1_data == "")
-			delete_post_meta($post_id, 'tochisetsudofukuin1',get_post_meta($post_id,'tochisetsudofukuin1',true));
-
-		// 位置指定道路1 v5.7.2
-		$my_custom_tochisetsudoichishitei1_data = isset($_POST['tochisetsudoichishitei1']) ? esc_attr( stripslashes( $_POST['tochisetsudoichishitei1'] )): '';
-		if($my_custom_tochisetsudoichishitei1_data !=get_post_meta($post_id, 'tochisetsudoichishitei1', true))
-			update_post_meta($post_id, 'tochisetsudoichishitei1',$my_custom_tochisetsudoichishitei1_data);
-		elseif($my_custom_tochisetsudoichishitei1_data == "")
-			delete_post_meta($post_id, 'tochisetsudoichishitei1',get_post_meta($post_id,'tochisetsudoichishitei1',true));
-
-		// 接道方向2 v5.7.2
-		$my_custom_tochisetsudohouko2_data = isset($_POST['tochisetsudohouko2']) ? esc_attr( stripslashes( $_POST['tochisetsudohouko2'] )): '';
-		if($my_custom_tochisetsudohouko2_data !=get_post_meta($post_id, 'tochisetsudohouko2', true))
-			update_post_meta($post_id, 'tochisetsudohouko2',$my_custom_tochisetsudohouko2_data);
-		elseif($my_custom_tochisetsudohouko2_data == "")
-			delete_post_meta($post_id, 'tochisetsudohouko2',get_post_meta($post_id,'tochisetsudohouko2',true));
-
-		// 接道間口2 v5.7.2
-		$my_custom_tochisetsudomaguchi2_data = isset($_POST['tochisetsudomaguchi2']) ? myIsNum_f( $_POST['tochisetsudomaguchi2'] ): '';
-		if($my_custom_tochisetsudomaguchi2_data !=get_post_meta($post_id, 'tochisetsudomaguchi2', true))
-			update_post_meta($post_id, 'tochisetsudomaguchi2',$my_custom_tochisetsudomaguchi2_data);
-		elseif($my_custom_tochisetsudomaguchi2_data == "")
-			delete_post_meta($post_id, 'tochisetsudomaguchi2',get_post_meta($post_id,'tochisetsudomaguchi2',true));
-
-		// 接道種別2 v5.7.2
-		$my_custom_tochisetsudoshurui2_data = isset($_POST['tochisetsudoshurui2']) ? esc_attr( stripslashes( $_POST['tochisetsudoshurui2'] )): '';
-		if($my_custom_tochisetsudoshurui2_data !=get_post_meta($post_id, 'tochisetsudoshurui2', true))
-			update_post_meta($post_id, 'tochisetsudoshurui2',$my_custom_tochisetsudoshurui2_data);
-		elseif($my_custom_tochisetsudoshurui2_data == "")
-			delete_post_meta($post_id, 'tochisetsudoshurui2',get_post_meta($post_id,'tochisetsudoshurui2',true));
-
-		// 接道幅員2 v5.7.2
-		$my_custom_tochisetsudofukuin2_data = isset($_POST['tochisetsudofukuin2']) ? myIsNum_f( $_POST['tochisetsudofukuin2'] ): '';
-		if($my_custom_tochisetsudofukuin2_data !=get_post_meta($post_id, 'tochisetsudofukuin2', true))
-			update_post_meta($post_id, 'tochisetsudofukuin2',$my_custom_tochisetsudofukuin2_data);
-		elseif($my_custom_tochisetsudofukuin2_data == "")
-			delete_post_meta($post_id, 'tochisetsudofukuin2',get_post_meta($post_id,'tochisetsudofukuin2',true));
-
-		// 位置指定道路2 v5.7.2
-		$my_custom_tochisetsudoichishitei2_data = isset($_POST['tochisetsudoichishitei2']) ? esc_attr( stripslashes( $_POST['tochisetsudoichishitei2'] )): '';
-		if($my_custom_tochisetsudoichishitei2_data !=get_post_meta($post_id, 'tochisetsudoichishitei2', true))
-			update_post_meta($post_id, 'tochisetsudoichishitei2',$my_custom_tochisetsudoichishitei2_data);
-		elseif($my_custom_tochisetsudoichishitei2_data == "")
-			delete_post_meta($post_id, 'tochisetsudoichishitei2',get_post_meta($post_id,'tochisetsudoichishitei2',true));
-
-		// 土地権利 v5.7.2
-		$my_custom_tochikenri_data = isset($_POST['tochikenri']) ? esc_attr( stripslashes( $_POST['tochikenri'] )): '';
-		if($my_custom_tochikenri_data !=get_post_meta($post_id, 'tochikenri', true))
-			update_post_meta($post_id, 'tochikenri',$my_custom_tochikenri_data);
-		elseif($my_custom_tochikenri_data == "")
-			delete_post_meta($post_id, 'tochikenri',get_post_meta($post_id,'tochikenri',true));
-
-		// 国土法届 v5.7.2
-		$my_custom_tochikokudohou_data = isset($_POST['tochikokudohou']) ? esc_attr( stripslashes( $_POST['tochikokudohou'] )): '';
-		if($my_custom_tochikokudohou_data !=get_post_meta($post_id, 'tochikokudohou', true))
-			update_post_meta($post_id, 'tochikokudohou',$my_custom_tochikokudohou_data);
-		elseif($my_custom_tochikokudohou_data == "")
-			delete_post_meta($post_id, 'tochikokudohou',get_post_meta($post_id,'tochikokudohou',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 建物構造
-function custom_save_tatemonokozo ( $post_id ) {
-	if ( isset($_POST['mycustom_tatemonokozo_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_tatemonokozo_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 建物構造 v5.7.2
-		$my_custom_tatemonokozo_data = isset($_POST['tatemonokozo']) ? esc_attr( stripslashes( $_POST['tatemonokozo'] )): '';
-		if($my_custom_tatemonokozo_data !=get_post_meta($post_id, 'tatemonokozo', true))
-			update_post_meta($post_id, 'tatemonokozo',$my_custom_tatemonokozo_data);
-		elseif($my_custom_tatemonokozo_data == "")
-			delete_post_meta($post_id, 'tatemonokozo',get_post_meta($post_id,'tatemonokozo',true));
-
-		// 面積計測方式 v5.7.2
-		$my_custom_tatemonohosiki_data = isset($_POST['tatemonohosiki']) ? esc_attr( stripslashes( $_POST['tatemonohosiki'] )): '';
-		if($my_custom_tatemonohosiki_data !=get_post_meta($post_id, 'tatemonohosiki', true))
-			update_post_meta($post_id, 'tatemonohosiki',$my_custom_tatemonohosiki_data);
-		elseif($my_custom_tatemonohosiki_data == "")
-			delete_post_meta($post_id, 'tatemonohosiki',get_post_meta($post_id,'tatemonohosiki',true));
-
-		// 建物面積・専有面積 v5.7.2
-		$my_custom_tatemonomenseki_data = isset($_POST['tatemonomenseki']) ? myIsNum_f( $_POST['tatemonomenseki'] ) : '';
-		if($my_custom_tatemonomenseki_data !=get_post_meta($post_id, 'tatemonomenseki', true))
-			update_post_meta($post_id, 'tatemonomenseki',$my_custom_tatemonomenseki_data);
-		elseif($my_custom_tatemonomenseki_data == "")
-			update_post_meta($post_id, 'tatemonomenseki','');
-
-		// 敷地全体面積 v5.7.2
-		$my_custom_tatemonozentaimenseki_data = isset($_POST['tatemonozentaimenseki']) ? myIsNum_f( $_POST['tatemonozentaimenseki'] ): '';
-		if($my_custom_tatemonozentaimenseki_data !=get_post_meta($post_id, 'tatemonozentaimenseki', true))
-			update_post_meta($post_id, 'tatemonozentaimenseki',$my_custom_tatemonozentaimenseki_data);
-		elseif($my_custom_tatemonozentaimenseki_data == "")
-			update_post_meta($post_id, 'tatemonozentaimenseki','');
-
-		// 延床面積 v5.7.2
-		$my_custom_tatemononobeyukamenseki_data = isset($_POST['tatemononobeyukamenseki']) ? myIsNum_f( $_POST['tatemononobeyukamenseki'] ) : '';
-		if($my_custom_tatemononobeyukamenseki_data !=get_post_meta($post_id, 'tatemononobeyukamenseki', true))
-			update_post_meta($post_id, 'tatemononobeyukamenseki',$my_custom_tatemononobeyukamenseki_data);
-		elseif($my_custom_tatemononobeyukamenseki_data == "")
-			delete_post_meta($post_id, 'tatemononobeyukamenseki',get_post_meta($post_id,'tatemononobeyukamenseki',true));
-
-		// 建築面積 v5.7.2
-		$my_custom_tatemonokentikumenseki_data = isset($_POST['tatemonokentikumenseki']) ? myIsNum_f( $_POST['tatemonokentikumenseki'] ): '';
-		if($my_custom_tatemonokentikumenseki_data !=get_post_meta($post_id, 'tatemonokentikumenseki', true))
-			update_post_meta($post_id, 'tatemonokentikumenseki',$my_custom_tatemonokentikumenseki_data);
-		elseif($my_custom_tatemonokentikumenseki_data == "")
-			update_post_meta($post_id, 'tatemonokentikumenseki','');
-
-		// 建物階数(地上)  v5.7.2
-		$my_custom_tatemonokaisu1_data = isset($_POST['tatemonokaisu1']) ? esc_attr( stripslashes($_POST['tatemonokaisu1'] )): '';
-		if($my_custom_tatemonokaisu1_data !=get_post_meta($post_id, 'tatemonokaisu1', true))
-			update_post_meta($post_id, 'tatemonokaisu1',$my_custom_tatemonokaisu1_data);
-		elseif($my_custom_tatemonokaisu1_data == "")
-			delete_post_meta($post_id, 'tatemonokaisu1',get_post_meta($post_id,'tatemonokaisu1',true));
-
-		// 建物階数(地下) v5.7.2
-		$my_custom_tatemonokaisu2_data = isset($_POST['tatemonokaisu2']) ? esc_attr( stripslashes($_POST['tatemonokaisu2'] )): '';
-		if($my_custom_tatemonokaisu2_data !=get_post_meta($post_id, 'tatemonokaisu2', true))
-			update_post_meta($post_id, 'tatemonokaisu2',$my_custom_tatemonokaisu2_data);
-		elseif($my_custom_tatemonokaisu2_data == "")
-			delete_post_meta($post_id, 'tatemonokaisu2',get_post_meta($post_id,'tatemonokaisu2',true));
-
-		// 築年月 v5.7.2 
-		$my_custom_tatemonochikunenn_data = isset($_POST['tatemonochikunenn']) ? esc_attr( stripslashes($_POST['tatemonochikunenn'] )): '';
-		if( strcmp($my_custom_tatemonochikunenn_data,get_post_meta($post_id, 'tatemonochikunenn', true)) != 0 )
-			update_post_meta($post_id, 'tatemonochikunenn',$my_custom_tatemonochikunenn_data);
-		elseif($my_custom_tatemonochikunenn_data == "")
-			update_post_meta($post_id, 'tatemonochikunenn','');
-
-		// 新築・未入居 v5.7.2
-		$my_custom_tatemonoshinchiku_data = isset($_POST['tatemonoshinchiku']) ? esc_attr( stripslashes( $_POST['tatemonoshinchiku'] )): '';
-		if($my_custom_tatemonoshinchiku_data !=get_post_meta($post_id, 'tatemonoshinchiku', true))
-			update_post_meta($post_id, 'tatemonoshinchiku',$my_custom_tatemonoshinchiku_data);
-		elseif($my_custom_tatemonoshinchiku_data == "")
-			delete_post_meta($post_id, 'tatemonoshinchiku',get_post_meta($post_id,'tatemonoshinchiku',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 管理人
-function custom_save_kanrininn ( $post_id ) {
-
-	if ( isset($_POST['mycustom_kanrininn_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_kanrininn_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		//管理人 v5.7.2
-		$my_custom_kanrininn_data = isset($_POST['kanrininn']) ? esc_attr( stripslashes( $_POST['kanrininn'] )): '';
-		if($my_custom_kanrininn_data !=get_post_meta($post_id, 'kanrininn', true))
-			update_post_meta($post_id, 'kanrininn',$my_custom_kanrininn_data);
-		elseif($my_custom_kanrininn_data == "")
-			delete_post_meta($post_id, 'kanrininn',get_post_meta($post_id,'kanrininn',true));
-
-		// 管理形態 v5.7.2
-		$my_custom_kanrikeitai_data = isset($_POST['kanrikeitai']) ? esc_attr( stripslashes( $_POST['kanrikeitai'] )): '';
-		if($my_custom_kanrikeitai_data !=get_post_meta($post_id, 'kanrikeitai', true))
-			update_post_meta($post_id, 'kanrikeitai',$my_custom_kanrikeitai_data);
-		elseif($my_custom_kanrikeitai_data == "")
-			delete_post_meta($post_id, 'kanrikeitai',get_post_meta($post_id,'kanrikeitai',true));
-
-		// 管理組合有無 v5.7.2
-		$my_custom_kanrikumiai_data = isset($_POST['kanrikumiai']) ? esc_attr( stripslashes( $_POST['kanrikumiai'] )): '';
-		if($my_custom_kanrikumiai_data !=get_post_meta($post_id, 'kanrikumiai', true))
-			update_post_meta($post_id, 'kanrikumiai',$my_custom_kanrikumiai_data);
-		elseif($my_custom_kanrikumiai_data == "")
-			delete_post_meta($post_id, 'kanrikumiai',get_post_meta($post_id,'kanrikumiai',true));
-
-		// 管理会社名 v5.7.2
-		$my_custom_kanrikaisha_data = isset($_POST['kanrikaisha']) ? esc_attr( stripslashes($_POST['kanrikaisha'] )): '';
-		if($my_custom_kanrikaisha_data !=get_post_meta($post_id, 'kanrikaisha', true))
-			update_post_meta($post_id, 'kanrikaisha',$my_custom_kanrikaisha_data);
-		elseif($my_custom_kanrikaisha_data == "")
-			delete_post_meta($post_id, 'kanrikaisha',get_post_meta($post_id,'kanrikaisha',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 部屋階数
-function custom_save_heyakaisu ( $post_id ) {
-	if ( isset($_POST['mycustom_heyakaisu_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_heyakaisu_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 部屋階数 v5.7.2
-		$my_custom_heyakaisu_data = isset($_POST['heyakaisu']) ? esc_attr( stripslashes($_POST['heyakaisu'] )): '';
-		if($my_custom_heyakaisu_data !=get_post_meta($post_id, 'heyakaisu', true))
-			update_post_meta($post_id, 'heyakaisu',$my_custom_heyakaisu_data);
-		elseif($my_custom_heyakaisu_data == "")
-			delete_post_meta($post_id, 'heyakaisu',get_post_meta($post_id,'heyakaisu',true));
-
-		// バルコニー面積 v5.7.2
-		$my_custom_heyabarukoni_data = isset($_POST['heyabarukoni']) ? myIsNum_f($_POST['heyabarukoni'] ): '';
-		if($my_custom_heyabarukoni_data !=get_post_meta($post_id, 'heyabarukoni', true))
-			update_post_meta($post_id, 'heyabarukoni',$my_custom_heyabarukoni_data);
-		elseif($my_custom_heyabarukoni_data == "")
-			delete_post_meta($post_id, 'heyabarukoni',get_post_meta($post_id,'heyabarukoni',true));
-
-		// 向き v5.7.2
-		$my_custom_heyamuki_data = isset($_POST['heyamuki']) ? esc_attr( stripslashes( $_POST['heyamuki'] )): '';
-		if($my_custom_heyamuki_data !=get_post_meta($post_id, 'heyamuki', true))
-			update_post_meta($post_id, 'heyamuki',$my_custom_heyamuki_data);
-		elseif($my_custom_heyamuki_data == "")
-			delete_post_meta($post_id, 'heyamuki',get_post_meta($post_id,'heyamuki',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 間取り間取部屋数
-function custom_save_madorisu ( $post_id ) {
-	if ( isset($_POST['mycustom_madorisu_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_madorisu_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 間取り v5.7.2
-		$my_custom_madorisu_data = isset($_POST['madorisu']) ? esc_attr( stripslashes( $_POST['madorisu'] )): '';
-		$my_custom_madorisu_data = mb_convert_kana($my_custom_madorisu_data,"a","UTF-8" );
-		if($my_custom_madorisu_data !=get_post_meta($post_id, 'madorisu', true))
-			update_post_meta($post_id, 'madorisu',$my_custom_madorisu_data);
-		elseif($my_custom_madorisu_data == "")
-			update_post_meta($post_id, 'madorisu','');
-
-		// 間取部屋種類 v5.7.2
-		$my_custom_madorisyurui_data = isset($_POST['madorisyurui']) ? esc_attr( stripslashes( $_POST['madorisyurui'] )): '';
-		if($my_custom_madorisyurui_data !=get_post_meta($post_id, 'madorisyurui', true))
-			update_post_meta($post_id, 'madorisyurui',$my_custom_madorisyurui_data);
-		elseif($my_custom_madorisyurui_data == "")
-			update_post_meta($post_id, 'madorisyurui','');
-
-		// 間取り備考 madoribiko v5.7.2
-		$my_custom_madoribiko_data = isset($_POST['madoribiko']) ? esc_attr( stripslashes( $_POST['madoribiko'] )): '';
-		if( strcmp($my_custom_madoribiko_data,get_post_meta($post_id, 'madoribiko', true)) != 0 )
-			update_post_meta($post_id, 'madoribiko',$my_custom_madoribiko_data);
-		elseif($my_custom_madoribiko_data == "")
-			delete_post_meta($post_id, 'madoribiko',get_post_meta($post_id,'madoribiko',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 90間取り 間取(種類)1 
-// 91間取り 間取(畳数)1 
-// 92間取り 間取(所在階)1 
-// 93間取り 間取(室数)1 v5.7.2
-function custom_save_madorinaiyo( $post_id ) {
-	global $post, $work_madorinaiyo;
-	if ( isset($_POST['mycustom_madorinaiyo_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_madorinaiyo_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id ))
-			return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id ))
-			return $post_id;
-		}
-
-		foreach($work_madorinaiyo as $meta_box) {
-			$data = isset($_POST[$meta_box['name']]) ? esc_attr( stripslashes( $_POST[$meta_box['name']] )): '';
-			if(get_post_meta($post_id, $meta_box['name']) == "")
-				add_post_meta($post_id, $meta_box['name'], $data, true);
-			elseif($data != get_post_meta($post_id, $meta_box['name'], true))
-				update_post_meta($post_id, $meta_box['name'], $data);
-			elseif($data == "")
-				delete_post_meta($post_id, $meta_box['name'], get_post_meta($post_id, $meta_box['name'], true));
-		}
-	}else{
-			return $post_id;
-	}
-}
 
 
 // URL v5.7.2
@@ -4750,413 +3669,6 @@ function custom_save_shanaimemo ( $post_id ) {
 }
 
 
-// 賃料・価格 ver1.9.3
-function custom_save_kakaku ( $post_id ) {
-	if ( isset($_POST['mycustom_kakaku_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_kakaku_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-
-		// 賃料・価格 v5.7.2
-		$my_custom_kakaku_data = isset($_POST['kakaku']) ? $_POST['kakaku'] : '';
-		$my_custom_kakaku_data = mb_convert_kana($my_custom_kakaku_data,"a","UTF-8" );
-		$my_custom_kakaku_data = str_replace(",","",$my_custom_kakaku_data);
-		$my_custom_kakaku_data = str_replace("\\","",$my_custom_kakaku_data);
-		$my_custom_kakaku_data = str_replace("￥","",$my_custom_kakaku_data);
-		$my_custom_kakaku_data = myIsNum_f( $my_custom_kakaku_data );
-
-		if($my_custom_kakaku_data !=get_post_meta($post_id, 'kakaku', true))
-			update_post_meta($post_id, 'kakaku',$my_custom_kakaku_data);
-		elseif($my_custom_kakaku_data == "")
-			update_post_meta($post_id, 'kakaku','');
-
-		// 価格公開 v5.7.2
-		$my_custom_kakakukoukai_data = isset($_POST['kakakukoukai']) ? esc_attr( stripslashes( $_POST['kakakukoukai'] )): '';
-		if($my_custom_kakakukoukai_data !=get_post_meta($post_id, 'kakakukoukai', true))
-			update_post_meta($post_id, 'kakakukoukai',$my_custom_kakakukoukai_data);
-		elseif($my_custom_kakakukoukai_data == "")
-			delete_post_meta($post_id, 'kakakukoukai',get_post_meta($post_id,'kakakukoukai',true));
-
-		// 価格状態 v5.7.2
-		$my_custom_kakakujoutai_data = isset($_POST['kakakujoutai']) ? esc_attr( stripslashes( $_POST['kakakujoutai'] )): '';
-			if($my_custom_kakakujoutai_data !=get_post_meta($post_id, 'kakakujoutai', true))
-			update_post_meta($post_id, 'kakakujoutai',$my_custom_kakakujoutai_data);
-		elseif($my_custom_kakakujoutai_data == "")
-			delete_post_meta($post_id, 'kakakujoutai',get_post_meta($post_id,'kakakujoutai',true));
-
-		// うち税額 v5.7.2
-		$my_custom_kakakuzei_data = isset($_POST['kakakuzei']) ? $_POST['kakakuzei'] : '';
-		$my_custom_kakakuzei_data = mb_convert_kana($my_custom_kakakuzei_data,"a","UTF-8" );
-		$my_custom_kakakuzei_data = str_replace(",","",$my_custom_kakakuzei_data);
-		$my_custom_kakakuzei_data = str_replace("\\","",$my_custom_kakakuzei_data);
-		$my_custom_kakakuzei_data = str_replace("￥","",$my_custom_kakakuzei_data);
-		$my_custom_kakakuzei_data = myIsNum_f( $my_custom_kakakuzei_data );
-
-		if($my_custom_kakakuzei_data !=get_post_meta($post_id, 'kakakuzei', true))
-			update_post_meta($post_id, 'kakakuzei',$my_custom_kakakuzei_data);
-		elseif($my_custom_kakakuzei_data == "")
-			delete_post_meta($post_id, 'kakakuzei',get_post_meta($post_id,'kakakuzei',true));
-
-		// 坪単価 v5.7.2
-		$my_custom_kakakutsubo_data = isset($_POST['kakakutsubo']) ? $_POST['kakakutsubo'] : '';
-		$my_custom_kakakutsubo_data = mb_convert_kana($my_custom_kakakutsubo_data,"a","UTF-8" );
-		$my_custom_kakakutsubo_data = str_replace(",","",$my_custom_kakakutsubo_data);
-		$my_custom_kakakutsubo_data = str_replace("\\","",$my_custom_kakakutsubo_data);
-		$my_custom_kakakutsubo_data = str_replace("￥","",$my_custom_kakakutsubo_data);
-		$my_custom_kakakutsubo_data = myIsNum_f( $my_custom_kakakutsubo_data );
-
-		/*
-		 * 坪単価 計算
-		 * ver1.9.3
-		 */
-		$my_custom_kakakutsubo_data =  apply_filters( 'tsubotanka_calculate', $my_custom_kakakutsubo_data, $post_id );
-
-		if($my_custom_kakakutsubo_data !=get_post_meta($post_id, 'kakakutsubo', true))
-			update_post_meta($post_id, 'kakakutsubo',$my_custom_kakakutsubo_data);
-		elseif($my_custom_kakakutsubo_data == "")
-			delete_post_meta($post_id, 'kakakutsubo',get_post_meta($post_id,'kakakutsubo',true));
-
-		// 共益費・管理費 v5.7.2
-		$my_custom_kakakukyouekihi_data = isset($_POST['kakakukyouekihi']) ? $_POST['kakakukyouekihi'] : '';
-		$my_custom_kakakukyouekihi_data = mb_convert_kana($my_custom_kakakukyouekihi_data,"a","UTF-8" );
-		$my_custom_kakakukyouekihi_data = str_replace(",","",$my_custom_kakakukyouekihi_data);
-		$my_custom_kakakukyouekihi_data = str_replace("\\","",$my_custom_kakakukyouekihi_data);
-		$my_custom_kakakukyouekihi_data = str_replace("￥","",$my_custom_kakakukyouekihi_data);
-		$my_custom_kakakukyouekihi_data = myIsNum_f( $my_custom_kakakukyouekihi_data );
-
-		if($my_custom_kakakukyouekihi_data !=get_post_meta($post_id, 'kakakukyouekihi', true))
-			update_post_meta($post_id, 'kakakukyouekihi',$my_custom_kakakukyouekihi_data);
-		elseif($my_custom_kakakukyouekihi_data == "")
-			delete_post_meta($post_id, 'kakakukyouekihi',get_post_meta($post_id,'kakakukyouekihi',true));
-
-		// 礼金 v5.7.2
-		$my_custom_kakakureikin_data = isset($_POST['kakakureikin']) ? $_POST['kakakureikin'] : '';
-		$my_custom_kakakureikin_data = mb_convert_kana($my_custom_kakakureikin_data,"a","UTF-8" );
-		$my_custom_kakakureikin_data = str_replace(",","",$my_custom_kakakureikin_data);
-		$my_custom_kakakureikin_data = str_replace("\\","",$my_custom_kakakureikin_data);
-		$my_custom_kakakureikin_data = str_replace("￥","",$my_custom_kakakureikin_data);
-		$my_custom_kakakureikin_data = myIsNum_f( $my_custom_kakakureikin_data );
-
-		if($my_custom_kakakureikin_data !=get_post_meta($post_id, 'kakakureikin', true))
-			update_post_meta($post_id, 'kakakureikin',$my_custom_kakakureikin_data);
-		elseif($my_custom_kakakureikin_data == "")
-			delete_post_meta($post_id, 'kakakureikin',get_post_meta($post_id,'kakakureikin',true));
-
-		// 敷金 v5.7.2
-		$my_custom_kakakushikikin_data = isset($_POST['kakakushikikin']) ? $_POST['kakakushikikin'] : '';
-		$my_custom_kakakushikikin_data = mb_convert_kana($my_custom_kakakushikikin_data,"a","UTF-8" );
-		$my_custom_kakakushikikin_data = str_replace(",","",$my_custom_kakakushikikin_data);
-		$my_custom_kakakushikikin_data = str_replace("\\","",$my_custom_kakakushikikin_data);
-		$my_custom_kakakushikikin_data = str_replace("￥","",$my_custom_kakakushikikin_data);
-		$my_custom_kakakushikikin_data = myIsNum_f( $my_custom_kakakushikikin_data );
-
-		if($my_custom_kakakushikikin_data !=get_post_meta($post_id, 'kakakushikikin', true))
-			update_post_meta($post_id, 'kakakushikikin',$my_custom_kakakushikikin_data);
-		elseif($my_custom_kakakushikikin_data == "")
-			delete_post_meta($post_id, 'kakakushikikin',get_post_meta($post_id,'kakakushikikin',true));
-
-		// 保証金 v5.7.2
-		$my_custom_kakakuhoshoukin_data = isset($_POST['kakakuhoshoukin']) ? $_POST['kakakuhoshoukin'] : '';
-		$my_custom_kakakuhoshoukin_data = mb_convert_kana($my_custom_kakakuhoshoukin_data,"a","UTF-8" );
-		$my_custom_kakakuhoshoukin_data = str_replace(",","",$my_custom_kakakuhoshoukin_data);
-		$my_custom_kakakuhoshoukin_data = str_replace("\\","",$my_custom_kakakuhoshoukin_data);
-		$my_custom_kakakuhoshoukin_data = str_replace("￥","",$my_custom_kakakuhoshoukin_data);
-		$my_custom_kakakuhoshoukin_data = myIsNum_f( $my_custom_kakakuhoshoukin_data);
-
-		if($my_custom_kakakuhoshoukin_data !=get_post_meta($post_id, 'kakakuhoshoukin', true))
-			update_post_meta($post_id, 'kakakuhoshoukin',$my_custom_kakakuhoshoukin_data);
-		elseif($my_custom_kakakuhoshoukin_data == "")
-			delete_post_meta($post_id, 'kakakuhoshoukin',get_post_meta($post_id,'kakakuhoshoukin',true));
-
-		// 権利金 v5.7.2
-		$my_custom_kakakukenrikin_data = isset($_POST['kakakukenrikin']) ? $_POST['kakakukenrikin'] : '';
-		$my_custom_kakakukenrikin_data = mb_convert_kana($my_custom_kakakukenrikin_data,"a","UTF-8" );
-		$my_custom_kakakukenrikin_data = str_replace(",","",$my_custom_kakakukenrikin_data);
-		$my_custom_kakakukenrikin_data = str_replace("\\","",$my_custom_kakakukenrikin_data);
-		$my_custom_kakakukenrikin_data = str_replace("￥","",$my_custom_kakakukenrikin_data);
-		$my_custom_kakakukenrikin_data = myIsNum_f( $my_custom_kakakukenrikin_data );
-
-		if($my_custom_kakakukenrikin_data !=get_post_meta($post_id, 'kakakukenrikin', true))
-			update_post_meta($post_id, 'kakakukenrikin',$my_custom_kakakukenrikin_data);
-		elseif($my_custom_kakakukenrikin_data == "")
-			delete_post_meta($post_id, 'kakakukenrikin',get_post_meta($post_id,'kakakukenrikin',true));
-
-
-		// 償却・敷引金 v5.7.2 
-		$my_custom_kakakushikibiki_data = isset($_POST['kakakushikibiki']) ? $_POST['kakakushikibiki'] : '';
-		$my_custom_kakakushikibiki_data = mb_convert_kana($my_custom_kakakushikibiki_data,"a","UTF-8" );
-		$my_custom_kakakushikibiki_data = str_replace(",","",$my_custom_kakakushikibiki_data);
-		$my_custom_kakakushikibiki_data = str_replace("\\","",$my_custom_kakakushikibiki_data);
-		$my_custom_kakakushikibiki_data = str_replace("￥","",$my_custom_kakakushikibiki_data);
-		$my_custom_kakakushikibiki_data = myIsNum_f( $my_custom_kakakushikibiki_data );
-
-		if($my_custom_kakakushikibiki_data !=get_post_meta($post_id, 'kakakushikibiki', true))
-			update_post_meta($post_id, 'kakakushikibiki',$my_custom_kakakushikibiki_data);
-		elseif($my_custom_kakakushikibiki_data == "")
-			delete_post_meta($post_id, 'kakakushikibiki',get_post_meta($post_id,'kakakushikibiki',true));
-
-
-		// 更新料 v5.7.2
-		$my_custom_kakakukoushin_data = isset($_POST['kakakukoushin']) ? $_POST['kakakukoushin'] : '';
-		$my_custom_kakakukoushin_data = mb_convert_kana($my_custom_kakakukoushin_data,"a","UTF-8" );
-		$my_custom_kakakukoushin_data = str_replace(",","",$my_custom_kakakukoushin_data);
-		$my_custom_kakakukoushin_data = str_replace("\\","",$my_custom_kakakukoushin_data);
-		$my_custom_kakakukoushin_data = str_replace("￥","",$my_custom_kakakukoushin_data);
-		$my_custom_kakakukoushin_data = myIsNum_f( $my_custom_kakakukoushin_data );
-
-		if($my_custom_kakakukoushin_data !=get_post_meta($post_id, 'kakakukoushin', true))
-			update_post_meta($post_id, 'kakakukoushin',$my_custom_kakakukoushin_data);
-		elseif($my_custom_kakakukoushin_data == "")
-			delete_post_meta($post_id, 'kakakukoushin',get_post_meta($post_id,'kakakukoushin',true));
-
-
-		// 満室時表面利回り v5.7.2
-		$my_custom_kakakuhyorimawari_data =isset($_POST['kakakuhyorimawari']) ? $_POST['kakakuhyorimawari'] : '';
-		$my_custom_kakakuhyorimawari_data = mb_convert_kana($my_custom_kakakuhyorimawari_data,"a","UTF-8" );
-		$my_custom_kakakuhyorimawari_data = myIsNum_f( $my_custom_kakakuhyorimawari_data );
-
-		if($my_custom_kakakuhyorimawari_data !=get_post_meta($post_id, 'kakakuhyorimawari', true))
-			update_post_meta($post_id, 'kakakuhyorimawari',$my_custom_kakakuhyorimawari_data);
-		elseif($my_custom_kakakuhyorimawari_data == "")
-			delete_post_meta($post_id, 'kakakuhyorimawari',get_post_meta($post_id,'kakakuhyorimawari',true));
-
-		// 現行利回り v5.7.2
-		$my_custom_kakakurimawari_data = isset($_POST['kakakurimawari']) ? $_POST['kakakurimawari'] : '';
-		$my_custom_kakakurimawari_data = mb_convert_kana($my_custom_kakakurimawari_data,"a","UTF-8" );
-		$my_custom_kakakurimawari_data = myIsNum_f( $my_custom_kakakurimawari_data );
-
-		if($my_custom_kakakurimawari_data !=get_post_meta($post_id, 'kakakurimawari', true))
-			update_post_meta($post_id, 'kakakurimawari',$my_custom_kakakurimawari_data);
-		elseif($my_custom_kakakurimawari_data == "")
-			delete_post_meta($post_id, 'kakakurimawari',get_post_meta($post_id,'kakakurimawari',true));
-
-		// 住宅保険料 v5.7.2
-		$my_custom_kakakuhoken_data = isset($_POST['kakakuhoken']) ? $_POST['kakakuhoken'] : '';
-		$my_custom_kakakuhoken_data = mb_convert_kana($my_custom_kakakuhoken_data,"a","UTF-8" );
-		$my_custom_kakakuhoken_data = str_replace(",","",$my_custom_kakakuhoken_data);
-		$my_custom_kakakuhoken_data = str_replace("\\","",$my_custom_kakakuhoken_data);
-		$my_custom_kakakuhoken_data = str_replace("￥","",$my_custom_kakakuhoken_data);
-		$my_custom_kakakuhoken_data = myIsNum_f( $my_custom_kakakuhoken_data );
-
-		if($my_custom_kakakuhoken_data !=get_post_meta($post_id, 'kakakuhoken', true))
-			update_post_meta($post_id, 'kakakuhoken',$my_custom_kakakuhoken_data);
-		elseif($my_custom_kakakuhoken_data == "")
-			delete_post_meta($post_id, 'kakakuhoken',get_post_meta($post_id,'kakakuhoken',true));
-
-		// 住宅保険期間 v5.7.2
-		$my_custom_kakakuhokenkikan_data = isset($_POST['kakakuhokenkikan']) ? esc_attr( stripslashes( $_POST['kakakuhokenkikan'] )): '';
-		if($my_custom_kakakuhokenkikan_data !=get_post_meta($post_id, 'kakakuhokenkikan', true))
-			update_post_meta($post_id, 'kakakuhokenkikan',$my_custom_kakakuhokenkikan_data);
-		elseif($my_custom_kakakuhokenkikan_data == "")
-			delete_post_meta($post_id, 'kakakuhokenkikan',get_post_meta($post_id,'kakakuhokenkikan',true));
-
-		// 借地料 v5.7.2
-		$my_custom_shakuchiryo_data = isset($_POST['shakuchiryo']) ? $_POST['shakuchiryo'] : '';
-		$my_custom_shakuchiryo_data = mb_convert_kana($my_custom_shakuchiryo_data,"a","UTF-8" );
-		$my_custom_shakuchiryo_data = str_replace(",","",$my_custom_shakuchiryo_data);
-		$my_custom_shakuchiryo_data = str_replace("\\","",$my_custom_shakuchiryo_data);
-		$my_custom_shakuchiryo_data = str_replace("￥","",$my_custom_shakuchiryo_data);
-		$my_custom_shakuchiryo_data = myIsNum_f( $my_custom_shakuchiryo_data );
-
-		if($my_custom_shakuchiryo_data !=get_post_meta($post_id, 'shakuchiryo', true))
-			update_post_meta($post_id, 'shakuchiryo',$my_custom_shakuchiryo_data);
-		elseif($my_custom_shakuchiryo_data == "")
-			delete_post_meta($post_id, 'shakuchiryo',get_post_meta($post_id,'shakuchiryo',true));
-
-		// 契約期間(年)
-		// 契約期間(月)	 v5.7.2
-		$my_custom_shakuchikikan_data = isset($_POST['shakuchikikan']) ? esc_attr( stripslashes( $_POST['shakuchikikan'] )) : '';
-		if( strcmp($my_custom_shakuchikikan_data,get_post_meta($post_id, 'shakuchikikan', true)) != 0 )
-			update_post_meta($post_id, 'shakuchikikan',$my_custom_shakuchikikan_data);
-		elseif($my_custom_shakuchikikan_data == "")
-			delete_post_meta($post_id, 'shakuchikikan',get_post_meta($post_id,'shakuchikikan',true));
-
-		// 契約期間(区分) v5.7.2
-		$my_custom_shakuchikubun_data = isset($_POST['shakuchikubun']) ? esc_attr( stripslashes( $_POST['shakuchikubun'] )): '';
-		if($my_custom_shakuchikubun_data !=get_post_meta($post_id, 'shakuchikubun', true))
-			update_post_meta($post_id, 'shakuchikubun',$my_custom_shakuchikubun_data);
-		elseif($my_custom_shakuchikubun_data == "")
-			delete_post_meta($post_id, 'shakuchikubun',get_post_meta($post_id,'shakuchikubun',true));
-
-		// 修繕積立金 v5.7.2	
-		$my_custom_kakakutsumitate_data = isset($_POST['kakakutsumitate']) ? $_POST['kakakutsumitate'] : '';
-		$my_custom_kakakutsumitate_data = mb_convert_kana($my_custom_kakakutsumitate_data,"a","UTF-8" );
-		$my_custom_kakakutsumitate_data = str_replace(",","",$my_custom_kakakutsumitate_data);
-		$my_custom_kakakutsumitate_data = str_replace("\\","",$my_custom_kakakutsumitate_data);
-		$my_custom_kakakutsumitate_data = str_replace("￥","",$my_custom_kakakutsumitate_data);
-		$my_custom_kakakutsumitate_data = myIsNum_f( $my_custom_kakakutsumitate_data );
-
-		if($my_custom_kakakutsumitate_data !=get_post_meta($post_id, 'kakakutsumitate', true))
-			update_post_meta($post_id, 'kakakutsumitate',$my_custom_kakakutsumitate_data);
-		elseif($my_custom_kakakutsumitate_data == "")
-			delete_post_meta($post_id, 'kakakutsumitate',get_post_meta($post_id,'kakakutsumitate',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 駐車場料金 
-function custom_save_chushajoryokin ( $post_id ) {
-	if ( isset($_POST['mycustom_chushajoryokin_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_chushajoryokin_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 駐車場料金 v5.7.2
-		$my_custom_chushajoryokin_data = isset($_POST['chushajoryokin']) ? $_POST['chushajoryokin'] : '';
-		$my_custom_chushajoryokin_data = mb_convert_kana($my_custom_chushajoryokin_data,"a","UTF-8" );
-		$my_custom_chushajoryokin_data = str_replace(",","",$my_custom_chushajoryokin_data);
-		$my_custom_chushajoryokin_data = str_replace("\\","",$my_custom_chushajoryokin_data);
-		$my_custom_chushajoryokin_data = str_replace("￥","",$my_custom_chushajoryokin_data);
-		$my_custom_chushajoryokin_data = myIsNum_f( $my_custom_chushajoryokin_data );
-
-		if($my_custom_chushajoryokin_data !=get_post_meta($post_id, 'chushajoryokin', true))
-			update_post_meta($post_id, 'chushajoryokin',$my_custom_chushajoryokin_data);
-		elseif($my_custom_chushajoryokin_data == "")
-			delete_post_meta($post_id, 'chushajoryokin',get_post_meta($post_id,'chushajoryokin',true));
-
-		// 駐車場区分 v5.7.2
-		$my_custom_chushajokubun_data = isset($_POST['chushajokubun']) ? esc_attr( stripslashes( $_POST['chushajokubun'] )): '';
-		if($my_custom_chushajokubun_data !=get_post_meta($post_id, 'chushajokubun', true))
-			update_post_meta($post_id, 'chushajokubun',$my_custom_chushajokubun_data);
-		elseif($my_custom_chushajokubun_data == "")
-			delete_post_meta($post_id, 'chushajokubun',get_post_meta($post_id,'chushajokubun',true));
-
-		// 駐車場備考 TexaArea v5.7.2
-		$my_custom_chushajobiko_data = isset($_POST['chushajobiko']) ? $_POST['chushajobiko']: '';
-		$my_custom_chushajobiko_data= wp_kses( $my_custom_chushajobiko_data, wp_kses_allowed_html( 'post' ));
-
-		if($my_custom_chushajobiko_data !=get_post_meta($post_id, 'chushajobiko', true))
-			update_post_meta($post_id, 'chushajobiko',$my_custom_chushajobiko_data);
-		elseif($my_custom_chushajobiko_data == "")
-			delete_post_meta($post_id, 'chushajobiko',get_post_meta($post_id,'chushajobiko',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 現況 
-function custom_save_nyukyogenkyo ( $post_id ) {
-	if ( isset($_POST['mycustom_nyukyogenkyo_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_nyukyogenkyo_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 現況 v5.7.2
-		$my_custom_nyukyogenkyo_data = isset($_POST['nyukyogenkyo']) ? esc_attr( stripslashes( $_POST['nyukyogenkyo'] )): '';
-		if($my_custom_nyukyogenkyo_data !=get_post_meta($post_id, 'nyukyogenkyo', true))
-			update_post_meta($post_id, 'nyukyogenkyo',$my_custom_nyukyogenkyo_data);
-		elseif($my_custom_nyukyogenkyo_data == "")
-			delete_post_meta($post_id, 'nyukyogenkyo',get_post_meta($post_id,'nyukyogenkyo',true));
-
-		// 引渡/入居時期 v5.7.2
-		$my_custom_nyukyojiki_data = isset($_POST['nyukyojiki']) ? esc_attr( stripslashes( $_POST['nyukyojiki'] )): '';
-		if($my_custom_nyukyojiki_data !=get_post_meta($post_id, 'nyukyojiki', true))
-			update_post_meta($post_id, 'nyukyojiki',$my_custom_nyukyojiki_data);
-		elseif($my_custom_nyukyojiki_data == "")
-			delete_post_meta($post_id, 'nyukyojiki',get_post_meta($post_id,'nyukyojiki',true));
-
-		// 引渡/入居年月 v5.7.2
-		$my_custom_nyukyonengetsu_data = isset($_POST['nyukyonengetsu']) ? esc_attr( stripslashes( $_POST['nyukyonengetsu'] )): '';
-		if($my_custom_nyukyonengetsu_data !=get_post_meta($post_id, 'nyukyonengetsu', true))
-			update_post_meta($post_id, 'nyukyonengetsu',$my_custom_nyukyonengetsu_data);
-		elseif($my_custom_nyukyonengetsu_data == "")
-			delete_post_meta($post_id, 'nyukyonengetsu',get_post_meta($post_id,'nyukyonengetsu',true));
-
-		// 引渡/入居旬 v5.7.2
-		$my_custom_nyukyosyun_data = isset($_POST['nyukyosyun']) ? esc_attr( stripslashes( $_POST['nyukyosyun'] )): '';
-		if($my_custom_nyukyosyun_data !=get_post_meta($post_id, 'nyukyosyun', true))
-			update_post_meta($post_id, 'nyukyosyun',$my_custom_nyukyosyun_data);
-		elseif($my_custom_nyukyosyun_data == "")
-			delete_post_meta($post_id, 'nyukyosyun',get_post_meta($post_id,'nyukyosyun',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 周辺環境
-function custom_save_shuuhenshougaku ( $post_id ) {
-	if ( isset($_POST['mycustom_shuuhenshougaku_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_shuuhenshougaku_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 小学校名 v5.7.2
-		$my_custom_shuuhenshougaku_data = isset($_POST['shuuhenshougaku'] ) ? esc_attr( stripslashes( $_POST['shuuhenshougaku'] )): '';
-		if( strcmp($my_custom_shuuhenshougaku_data,get_post_meta($post_id, 'shuuhenshougaku', true)) != 0 )
-			update_post_meta($post_id, 'shuuhenshougaku',$my_custom_shuuhenshougaku_data);
-		elseif($my_custom_shuuhenshougaku_data == "")
-			delete_post_meta($post_id, 'shuuhenshougaku',get_post_meta($post_id,'shuuhenshougaku',true));
-
-		// 中学校名 v5.7.2
-		$my_custom_shuuhenchuugaku_data = isset($_POST['shuuhenchuugaku']) ? esc_attr( stripslashes( $_POST['shuuhenchuugaku'] )): '';
-		if( strcmp($my_custom_shuuhenchuugaku_data,get_post_meta($post_id, 'shuuhenchuugaku', true)) != 0 )
-			update_post_meta($post_id, 'shuuhenchuugaku',$my_custom_shuuhenchuugaku_data);
-		elseif($my_custom_shuuhenchuugaku_data == "")
-			delete_post_meta($post_id, 'shuuhenchuugaku',get_post_meta($post_id,'shuuhenchuugaku',true));
-
-
-		// その他周辺環境 TexaArea v5.7.2
-		$my_custom_shuuhensonota_data = isset($_POST['shuuhensonota']) ? $_POST['shuuhensonota'] : '';
-		$my_custom_shuuhensonota_data = wp_kses( $my_custom_shuuhensonota_data, wp_kses_allowed_html( 'post' ));
-
-		if( strcmp($my_custom_shuuhensonota_data,get_post_meta($post_id, 'shuuhensonota', true)) != 0 )
-			update_post_meta($post_id, 'shuuhensonota',$my_custom_shuuhensonota_data);
-		elseif($my_custom_shuuhensonota_data == "")
-			delete_post_meta($post_id, 'shuuhensonota',get_post_meta($post_id,'shuuhensonota',true));
-
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 取引態様 v5.7.2
-function custom_save_torihikitaiyo ( $post_id ) {
-	if ( isset($_POST['mycustom_torihikitaiyo_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_torihikitaiyo_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		$my_custom_torihikitaiyo_data = isset($_POST['torihikitaiyo']) ? esc_attr( stripslashes( $_POST['torihikitaiyo'] )): '';
-		if($my_custom_torihikitaiyo_data !=get_post_meta($post_id, 'torihikitaiyo', true))
-			update_post_meta($post_id, 'torihikitaiyo',$my_custom_torihikitaiyo_data);
-		elseif($my_custom_torihikitaiyo_data == "")
-			delete_post_meta($post_id, 'torihikitaiyo',get_post_meta($post_id,'torihikitaiyo',true));
-	}else{
-			return $post_id;
-	}
-}
-
 
 // 物件画像 v5.7.2
 function custom_save_gazo( $post_id ) {
@@ -5193,71 +3705,6 @@ function custom_save_gazo( $post_id ) {
 	}
 }
 
-
-// 設備・条件 v5.7.2
-function custom_save_setsubi( $post_id ) {
-	global $post, $work_setsubi;
-
-	if ( isset($_POST['mycustom_setsubi_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_setsubi_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		$my_custom_setsubi_data = "99900";
-
-		foreach($work_setsubi as $meta_box){
-			$work_pos_namet="setsubi".$meta_box['code'];
-			$my_custom_setsubi_data .= isset($_POST[$work_pos_namet]) ? esc_attr( stripslashes( $_POST[$work_pos_namet] )): '';
-		}
-		if( strcmp($my_custom_setsubi_data,get_post_meta($post_id, 'setsubi', true)) != 0 )
-			update_post_meta($post_id, 'setsubi',$my_custom_setsubi_data);
-		elseif($my_custom_setsubi_data == "")
-			delete_post_meta($post_id, 'setsubi',get_post_meta($post_id,'setsubi',true));
-
-		// 設備・条件その他 TexaArea v5.7.2
-		$my_custom_setsubisonota_data = isset($_POST['setsubisonota']) ? $_POST['setsubisonota'] : '';
-		$my_custom_setsubisonota_data = wp_kses( $my_custom_setsubisonota_data, wp_kses_allowed_html( 'post' ));
-
-		if($my_custom_setsubisonota_data !=get_post_meta($post_id, 'setsubisonota', true))
-			update_post_meta($post_id, 'setsubisonota',$my_custom_setsubisonota_data);
-		elseif($my_custom_setsubisonota_data == "")
-			delete_post_meta($post_id, 'setsubisonota',get_post_meta($post_id,'setsubisonota',true));
-	}else{
-			return $post_id;
-	}
-}
-
-
-// 特記事項 tokkinotices
-function custom_save_tokkinotices ( $post_id ) {
-	if ( isset($_POST['mycustom_tokkinotices_name']) ){
-		if ( !wp_verify_nonce( $_POST['mycustom_tokkinotices_name'], plugin_basename(__FILE__) )) {
-			return $post_id;
-		}
-		if ( isset($_POST['post_type']) && 'fudo' == $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id )) return $post_id;
-		} else {
-			if ( !current_user_can( 'edit_post', $post_id )) return $post_id;
-		}
-
-		// 特記事項 TexaArea v5.7.2
-		$my_custom_tokkinotices_data = isset($_POST['tokkinotices'] ) ? $_POST['tokkinotices'] : '';
-		$my_custom_tokkinotices_data = wp_kses( $my_custom_tokkinotices_data, wp_kses_allowed_html( 'post' ));
-
-		if( strcmp($my_custom_tokkinotices_data,get_post_meta($post_id, 'tokkinotices', true)) != 0 )
-			update_post_meta($post_id, 'tokkinotices',$my_custom_tokkinotices_data);
-		elseif($my_custom_tokkinotices_data == "")
-			delete_post_meta($post_id, 'tokkinotices',get_post_meta($post_id,'tokkinotices',true));
-
-	}else{
-			return $post_id;
-	}
-}
 
 
 /**

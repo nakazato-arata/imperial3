@@ -744,4 +744,4 @@ function custom_feed_rss2(){
   $template_file = '/feed-rss2.php';
   load_template(get_template_directory() . $template_file);
 }
-add_action('do_feed_rss2', 'custom_feed_rss2', 10);
+//add_action('do_feed_rss2', 'custom_feed_rss2', 10);

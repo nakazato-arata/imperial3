@@ -276,6 +276,11 @@ class fudo_widget_top_r extends WP_Widget {
 		$seiyaku   = isset($instance['seiyaku']) 	? esc_attr($instance['seiyaku']) : '';		//成約物件
 		$button_text = isset( $instance['button_text'] ) ? esc_attr( $instance['button_text'] ) : '';
 
+		$view_sqft = isset( $instance['sqft'] ) ? esc_attr( $instance['sqft'] ) : '';
+		$view_bedroom = isset( $instance['bedroom'] ) ? esc_attr( $instance['bedroom'] ) : '';
+		$view_bathroom = isset( $instance['bathroom'] ) ? esc_attr( $instance['bathroom'] ) : '';
+		$view_parking = isset( $instance['parking'] ) ? esc_attr( $instance['parking'] ) : '';
+
 		if($item=='') $item = 4;
 
 		?>
@@ -346,22 +351,11 @@ class fudo_widget_top_r extends WP_Widget {
 			<option value="2"<?php if($view2 == 2){echo ' selected="selected"';} ?>>表示しない</option>
 		</select></label></p>
 
-		<p><label for="<?php echo $this->get_field_id('view3'); ?>">
-		間取り・土地面積 <select class="widefat" id="<?php echo $this->get_field_id('view3'); ?>" name="<?php echo $this->get_field_name('view3'); ?>">
-			<option value="1"<?php if($view3 == 1){echo ' selected="selected"';} ?>>表示する</option>
-			<option value="2"<?php if($view3 == 2){echo ' selected="selected"';} ?>>表示しない</option>
-		</select></label></p>
 
 		<p><label for="<?php echo $this->get_field_id('view4'); ?>">
-		地域 <select class="widefat" id="<?php echo $this->get_field_id('view4'); ?>" name="<?php echo $this->get_field_name('view4'); ?>">
+		地域(英語表記) <select class="widefat" id="<?php echo $this->get_field_id('view4'); ?>" name="<?php echo $this->get_field_name('view4'); ?>">
 			<option value="1"<?php if($view4 == 1){echo ' selected="selected"';} ?>>表示する</option>
 			<option value="2"<?php if($view4 == 2){echo ' selected="selected"';} ?>>表示しない</option>
-		</select></label></p>
-
-		<p><label for="<?php echo $this->get_field_id('view5'); ?>">
-		路線・駅 <select class="widefat" id="<?php echo $this->get_field_id('view5'); ?>" name="<?php echo $this->get_field_name('view5'); ?>">
-			<option value="1"<?php if($view5 == 1){echo ' selected="selected"';} ?>>表示する</option>
-			<option value="2"<?php if($view5 == 2){echo ' selected="selected"';} ?>>表示しない</option>
 		</select></label></p>
 
 
@@ -374,19 +368,36 @@ class fudo_widget_top_r extends WP_Widget {
 		</select></label></p>
 	<?php } ?>
 
-	<!-- v5.3.0 -->
-		<p><label for="<?php echo $this->get_field_id('seiyaku'); ?>">
-		成約物件 <select class="widefat" id="<?php echo $this->get_field_id('seiyaku'); ?>" name="<?php echo $this->get_field_name('seiyaku'); ?>">
-			<option value=""<?php if( !$seiyaku ){echo ' selected="selected"';} ?>>全て表示する</option>
-			<option value="1"<?php if($seiyaku == 1){echo ' selected="selected"';} ?>>成約物件を表示しない</option>
-			<option value="2"<?php if($seiyaku == 2){echo ' selected="selected"';} ?>>成約物件だけ表示</option>
-		</select></label></p>
-
 
 	<!-- v5.9.0 -->
 		<p><label for="<?php echo $this->get_field_id('button_text'); ?>">
 		物件詳細リンクテキスト <input class="widefat" id="<?php echo $this->get_field_id('button_text'); ?>" name="<?php echo $this->get_field_name('button_text'); ?>" type="text" value="<?php echo $button_text; ?>" />
 		※空欄の場合「→物件詳細」と 表示されます</label></p>
+
+		<!-- quare Ft(SQFT) :  Bedroom(Beds) :  Bathroom(Baths)を追加してみる -->
+		<p><label for="<?php echo $this->get_field_id('sqft'); ?>">
+		quare Ft <select class="widefat" id="<?php echo $this->get_field_id('sqft'); ?>" name="<?php echo $this->get_field_name('sqft'); ?>">
+			<option value="1"<?php if($view_sqft == 1){echo ' selected="selected"';} ?>>表示する</option>
+			<option value="2"<?php if($view_sqft == 2){echo ' selected="selected"';} ?>>表示しない</option>
+		</select></label></p>
+
+		<p><label for="<?php echo $this->get_field_id('Beds'); ?>">
+		Bedroom <select class="widefat" id="<?php echo $this->get_field_id('beds'); ?>" name="<?php echo $this->get_field_name('beds'); ?>">
+			<option value="1"<?php if($view_bedroom == 1){echo ' selected="selected"';} ?>>表示する</option>
+			<option value="2"<?php if($view_bedroom == 2){echo ' selected="selected"';} ?>>表示しない</option>
+		</select></label></p>
+
+		<p><label for="<?php echo $this->get_field_id('bathroom'); ?>">
+		Bathroom <select class="widefat" id="<?php echo $this->get_field_id('bathroom'); ?>" name="<?php echo $this->get_field_name('bathroom'); ?>">
+			<option value="1"<?php if($view_bathroom == 1){echo ' selected="selected"';} ?>>表示する</option>
+			<option value="2"<?php if($view_bathroom == 2){echo ' selected="selected"';} ?>>表示しない</option>
+		</select></label></p>
+
+		<p><label for="<?php echo $this->get_field_id('parking'); ?>">
+		Parking <select class="widefat" id="<?php echo $this->get_field_id('parking'); ?>" name="<?php echo $this->get_field_name('parking'); ?>">
+			<option value="1"<?php if($view_parking == 1){echo ' selected="selected"';} ?>>表示する</option>
+			<option value="2"<?php if($view_parking == 2){echo ' selected="selected"';} ?>>表示しない</option>
+		</select></label></p>
 
 		<?php 
 	}
@@ -854,19 +865,25 @@ class fudo_widget_top_r extends WP_Widget {
 
 				do_action( 'fodou_top_bukken1', $post_id, $kaiin, $kaiin2 );
 
+				//所在地 v5.9.0
+				if ( my_custom_kaiin_view('kaiin_shozaichi',$kaiin,$kaiin2) ){
 
-				//会員2
-				if ( !my_custom_kaiin_view( 'kaiin_kakaku',$kaiin,$kaiin2 ) 
-					&& !my_custom_kaiin_view( 'kaiin_madori', $kaiin, $kaiin2 )
-					&& !my_custom_kaiin_view( 'kaiin_menseki', $kaiin, $kaiin2 )
-					&& !my_custom_kaiin_view( 'kaiin_shozaichi', $kaiin, $kaiin2 )
-					&& !my_custom_kaiin_view( 'kaiin_kotsu', $kaiin, $kaiin2) ){
-					echo '<span class="top_kaiin">この物件は 会員様限定で公開している物件です</span>';
+					if($view4=="1"){
+
+
+						$shozaichi = get_post_meta($post_id,'shozaichimeishoen',true);
+
+						if( $shozaichi ){
+							echo '<span class="top_shozaichi">' . $shozaichi . '</span>';
+						}
+
+						//ver5.3.3
+						// do_action( 'fodou_top_bukken_view4b', $post_id, $kaiin, $kaiin2 );
+					}
 				}
 
 
-				do_action( 'fodou_top_bukken2', $post_id, $kaiin, $kaiin2 );
-
+				do_action( 'fodou_top_bukken5', $post_id, $kaiin, $kaiin2 );
 
 				//価格 v1.7.12
 				if ( my_custom_kaiin_view('kaiin_kakaku',$kaiin,$kaiin2) ){
@@ -876,33 +893,20 @@ class fudo_widget_top_r extends WP_Widget {
 						//ver5.3.3
 						do_action( 'fodou_top_bukken_view2a', $post_id, $kaiin, $kaiin2 );
 
-						echo '<span class="top_price">';
-						if( get_post_meta($post_id, 'seiyakubi', true) != "" ){
-							echo 'ご成約済　';
-						}else{
-							//非公開の場合
-							if(get_post_meta($post_id,'kakakukoukai',true) == "0"){
-								$kakakujoutai_data = get_post_meta($post_id,'kakakujoutai',true);
-								if($kakakujoutai_data=="1")	echo '相談';
-								if($kakakujoutai_data=="2")	echo '確定';
-								if($kakakujoutai_data=="3")	echo '入札';
+						echo '<br/><span class="top_price">';
 
-								//価格状態 v1.9.0
-								do_action( 'fudou_add_kakakujoutai', $kakakujoutai_data, $post_id );
-								echo '　';
+
+						$kakaku_data = get_post_meta($post_id,'kakaku',true);
+						if( is_numeric( $kakaku_data ) ){
+							if ( function_exists( 'fudou_money_format_ja' ) ) {
+								// Money Format 億万円 表示
+								echo apply_filters( 'fudou_money_format_ja', $kakaku_data );
 							}else{
-								$kakaku_data = get_post_meta($post_id,'kakaku',true);
-								if( is_numeric( $kakaku_data ) ){
-									if ( function_exists( 'fudou_money_format_ja' ) ) {
-										// Money Format 億万円 表示
-										echo apply_filters( 'fudou_money_format_ja', $kakaku_data );
-									}else{
-										echo floatval($kakaku_data)/10000;
-										echo "万円";
-									}
-								}
+								echo floatval($kakaku_data)/10000;
+								echo "万円";
 							}
 						}
+
 						echo '</span>';
 
 						//ver5.3.3
@@ -910,171 +914,31 @@ class fudo_widget_top_r extends WP_Widget {
 					}
 				}
 
+				$sqft = get_post_meta($post_id,'sqft',true);
 
-				do_action( 'fodou_top_bukken3', $post_id, $kaiin, $kaiin2 );
-
-
-				//間取り・土地面積
-				if($view3=="1"){
-
-					//ver5.3.3
-					do_action( 'fodou_top_bukken_view3a', $post_id, $kaiin, $kaiin2 );
-
-					//間取り v5.9.0
-					if ( my_custom_kaiin_view('kaiin_madori',$kaiin,$kaiin2) ){
-
-						$madori = get_post_meta($post_id,'madorisu',true);
-						$madorisyurui_data = get_post_meta($post_id,'madorisyurui',true);
-						if($madorisyurui_data=="10")	$madori .= 'R ';
-						if($madorisyurui_data=="20")	$madori .= 'K ';
-						if($madorisyurui_data=="25")	$madori .= 'SK ';
-						if($madorisyurui_data=="30")	$madori .= 'DK ';
-						if($madorisyurui_data=="35")	$madori .= 'SDK ';
-						if($madorisyurui_data=="40")	$madori .= 'LK ';
-						if($madorisyurui_data=="45")	$madori .= 'SLK ';
-						if($madorisyurui_data=="50")	$madori .= 'LDK ';
-						if($madorisyurui_data=="55")	$madori .= 'SLDK ';
-
-						if( $madori ){
-							echo ' <span class="top_madori">' . $madori . '</span>';
-						}
-					}
-
-					//ver5.3.3
-					do_action( 'fodou_top_bukken_view3b', $post_id, $kaiin, $kaiin2 );
-
-					//土地面積 v5.9.0
-					if ( my_custom_kaiin_view('kaiin_menseki',$kaiin,$kaiin2) ){
-						if ( get_post_meta($post_id,'bukkenshubetsu',true) < 1200 ) {
-							if( get_post_meta($post_id, 'tochikukaku', true) !="" ) 
-								echo ' <span class="top_menseki">'. get_post_meta( $post_id, 'tochikukaku', true ) . 'm&sup2;</span>';
-						}
-					}
-
-					//ver5.3.3
-					do_action( 'fodou_top_bukken_view3c', $post_id, $kaiin, $kaiin2 );
+				if( $sqft ){
+					echo '<br><span class="sqft">SQFT :' . $sqft . '</span>';
 				}
 
+				$bedroom = get_post_meta($post_id,'bedroom',true);
 
-				do_action( 'fodou_top_bukken4', $post_id, $kaiin, $kaiin2 );
-
-
-				//所在地 v5.9.0
-				if ( my_custom_kaiin_view('kaiin_shozaichi',$kaiin,$kaiin2) ){
-
-					if($view4=="1"){
-
-						//ver5.3.3
-						do_action( 'fodou_top_bukken_view4a', $post_id, $kaiin, $kaiin2 );
-
-						$shozaichi = '';
-						$shozaichiken_data = get_post_meta($post_id,'shozaichicode',true);
-						$shozaichiken_data = myLeft($shozaichiken_data,2);
-						$shozaichicode_data = get_post_meta($post_id,'shozaichicode',true);
-						$shozaichicode_data = myLeft($shozaichicode_data,5);
-						$shozaichicode_data = myRight($shozaichicode_data,3);
-
-						if($shozaichiken_data !="" && $shozaichicode_data !=""){
-							$sql = "SELECT narrow_area_name FROM " . $wpdb->prefix . DB_SHIKU_TABLE . " WHERE middle_area_id=".$shozaichiken_data." and narrow_area_id =".$shozaichicode_data."";
-						//	$sql = $wpdb->prepare($sql,'');
-							$metas = $wpdb->get_row( $sql );
-							if( !empty($metas) ) {
-								$shozaichi .= $metas->narrow_area_name;
-							}
-						}
-						$shozaichi .= get_post_meta($post_id, 'shozaichimeisho', true);
-
-						if( $shozaichi ){
-							echo '<br><span class="top_shozaichi">' . $shozaichi . '</span>';
-						}
-
-						//ver5.3.3
-						do_action( 'fodou_top_bukken_view4b', $post_id, $kaiin, $kaiin2 );
-					}
+				if( $bedroom ){
+					echo '<br><span class="bedroom">Beds :' . $bedroom . '</span>';
 				}
 
+				$bathroom = get_post_meta($post_id,'bathroom',true);
 
-				do_action( 'fodou_top_bukken5', $post_id, $kaiin, $kaiin2 );
-
-
-				//交通路線 v5.9.0
-				if ( my_custom_kaiin_view('kaiin_kotsu',$kaiin,$kaiin2) ){
-
-					if($view5=="1"){
-
-						//ver5.3.3
-						do_action( 'fodou_top_bukken_view5a', $post_id, $kaiin, $kaiin2 );
-
-						$koutsurosen = '';
-						$koutsurosen_data = get_post_meta($post_id, 'koutsurosen1', true);
-						$koutsueki_data = get_post_meta($post_id, 'koutsueki1', true);
-						$shozaichiken_data = get_post_meta($post_id,'shozaichicode',true);
-						$shozaichiken_data = myLeft($shozaichiken_data,2);
-
-						if($koutsurosen_data !=""){
-							$sql = "SELECT rosen_name FROM " . $wpdb->prefix . DB_ROSEN_TABLE . " WHERE rosen_id = ".$koutsurosen_data."";
-						//	$sql = $wpdb->prepare($sql,'');
-							$metas = $wpdb->get_row( $sql );
-							if( !empty( $metas ) ){
-								if( $metas->rosen_name == 'バス' ){
-									$rosen_bus = true;
-								}
-								$koutsurosen .= $metas->rosen_name;
-							}
-						}
-
-						//交通駅
-						if( $koutsurosen_data && $koutsueki_data && !$rosen_bus ){
-							$sql = "SELECT DTS.station_name";
-							$sql .= " FROM " . $wpdb->prefix . DB_ROSEN_TABLE . " AS DTR";
-							$sql .= " INNER JOIN " . $wpdb->prefix . DB_EKI_TABLE . " AS DTS ON DTR.rosen_id = DTS.rosen_id";
-							$sql .= " WHERE DTS.station_id=".$koutsueki_data." AND DTS.rosen_id=".$koutsurosen_data."";
-						//	$sql = $wpdb->prepare($sql,'');
-							$metas = $wpdb->get_row( $sql );
-							if( !empty($metas) ){
-								if($metas->station_name != '＊＊＊＊'){
-									$koutsurosen .= $metas->station_name.'駅';
-								}
-							}
-						}
-
-						if( $koutsurosen ){
-							echo '<br><span class="top_kotsu">'. $koutsurosen . '</span>';
-						}
-
-						//ver5.3.3
-						do_action( 'fodou_top_bukken_view5b', $post_id, $kaiin, $kaiin2 );
-					}
+				if( $bathroom ){
+					echo '<span class="bathroom">Baths :' . $bathroom . '</span>';
 				}
 
+				// $parking = get_post_meta($post_id,'parking',true);
 
-				do_action( 'fodou_top_bukken6', $post_id, $kaiin, $kaiin2 );
-
-
-				do_action( 'fodou_top_bukken7', $post_id, $kaiin, $kaiin2 );
-
-				/*
-				echo '<br>更新日:';
-				echo $post_modified_date;
-				*/
-
-				echo '<div>';
-				//会員ロゴ
-				if( get_post_meta( $post_id, 'kaiin', true ) == 1 ) {
-					$kaiin_logo = '<span class="fudo_kaiin_type_logo"><img ' . $fudou_lazy_loading . ' src="' . plugins_url() . '/fudou/img/kaiin_s.jpg" alt="会員物件" width="40" height="20"></span>';
-					echo apply_filters( 'fudou_kaiin_logo_view', $kaiin_logo );
-				}
-				do_action( 'fudo_kaiin_type_logo', $post_id );	//会員ロゴ
-
-
-				do_action( 'fodou_top_bukken8', $post_id, $kaiin, $kaiin2 );
-
+				// if( $parking ){
+				// 	echo '<br><span class="parking">' . $parking . '</span>';
+				// }
 
 				echo '<span style="float:right;" class="box1low"><a href="' . $post_url . '" ' . $target_link . '>' . $button_text . '</a></span>';
-				echo '</div>';
-
-
-				do_action( 'fodou_top_bukken9', $post_id, $kaiin, $kaiin2 );
 
 				echo '</li>';
 
@@ -1084,6 +948,9 @@ class fudo_widget_top_r extends WP_Widget {
 			echo '</div>';
 
 			echo $args['after_widget'];
+
+
+
 
 		}	//!empty( $metas )
 	}

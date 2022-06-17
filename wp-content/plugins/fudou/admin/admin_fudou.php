@@ -1172,23 +1172,7 @@ function my_fudo_columns($columns){
 		$datek_url = esc_url(add_query_arg($arr_params, $_SERVER['REQUEST_URI']));
 		$datek_img = '<img src="../wp-content/plugins/fudou/img/sortbtm_'.$columns_mds2.'.png" border="0">';
 
-	//掲載期限日
-	if ( $columns_kds == 'asc'){
-		$arr_params = array ('title' => '','mds' => '','mds2' => '','kkk' => '','no' => '','kds' => 'desc','siy' => '','sik' => '');
-	}else{
-		$arr_params = array ('title' => '','mds' => '','mds2' => '','kkk' => '','no' => '','kds' => 'asc','siy' => '','sik' => '');
-	}
-		$date2_url = esc_url(add_query_arg($arr_params, $_SERVER['REQUEST_URI']));
-		$date2_img = '<img src="../wp-content/plugins/fudou/img/sortbtm_'.$columns_kds.'.png" border="0">';
 
-	//成約日
-	if ( $columns_siy == 'asc'){
-		$arr_params = array ('title' => '','mds' => '','mds2' => '','kkk' => '','no' => '','kds' => '','siy' => 'desc','sik' => '');
-	}else{
-		$arr_params = array ('title' => '','mds' => '','mds2' => '','kkk' => '','no' => '','kds' => '','siy' => 'asc','sik' => '');
-	}
-		$date3_url = esc_url(add_query_arg($arr_params, $_SERVER['REQUEST_URI']));
-		$date3_img = '<img src="../wp-content/plugins/fudou/img/sortbtm_'.$columns_siy.'.png" border="0">';
 
 	//市区
 	if ( $columns_sik == 'asc'){
@@ -1209,23 +1193,21 @@ function my_fudo_columns($columns){
 			'cb' => '<input type="checkbox"/>',
 			'title' => '</a>タイトル<a href="#" onclick="location.href=\''.$title_url.'\'">'.$title_img.'</a>',
 			'image' => '画像',
-			'bukken' => '物件番号<a href="#" onclick="location.href=\''.$no_url.'\'">'.$no_img.'</a> <br />市区<a href="#" onclick="location.href=\''.$sik_url.'\'">'.$sik_img.'</a> 路線駅',
+			'bukken' => '物件番号<a href="#" onclick="location.href=\''.$no_url.'\'">'.$no_img.'</a> <br />市区<a href="#" onclick="location.href=\''.$sik_url.'\'">'.$sik_img.'</a> ',
 			'kakaku' => '種別　価格<a href="#" onclick="location.href=\''.$kakaku_url.'\'">'.$kakaku_img.'</a> <br />間取 地図',
 			'bukken_tag' => '物件カテゴリ<br />物件投稿タグ',
 			'newdate' => '</a>公開日<a href="#" onclick="location.href=\''.$date_url.'\'">'.$date_img.'</a> <br />更新日<a href="#" onclick="location.href=\''.$datek_url.'\'">'.$datek_img.'</a>',
-			'keisaikigenbi' => '掲載期限日<a href="#" onclick="location.href=\''.$date2_url.'\'">'.$date2_img.'</a><br />成約日<a href="#" onclick="location.href=\''.$date3_url.'\'">'.$date3_img.'</a>',
 			'comments' => __('Comments'), 
 		);
 	}else{
 		$columns = array(
 			'cb' => '<input type="checkbox"/>',
-			'title' => '</a>タイトル<a href="#" onclick="location.href=\''.$title_url.'\'">'.$title_img.'</a>',
+			'title' => '</a>タイトル2<a href="#" onclick="location.href=\''.$title_url.'\'">'.$title_img.'</a>',
 			'image' => '画像',
-			'bukken' => '物件番号<a href="#" onclick="location.href=\''.$no_url.'\'">'.$no_img.'</a> <br />市区<a href="#" onclick="location.href=\''.$sik_url.'\'">'.$sik_img.'</a> 路線駅',
+			'bukken' => '物件番号<a href="#" onclick="location.href=\''.$no_url.'\'">'.$no_img.'</a> <br />市区<a href="#" onclick="location.href=\''.$sik_url.'\'">'.$sik_img.'</a> ',
 			'kakaku' => '種別　価格<a href="#" onclick="location.href=\''.$kakaku_url.'\'">'.$kakaku_img.'</a> <br />間取　地図',
 			'bukken_tag' => '物件カテゴリ <br />物件投稿タグ',
 			'newdate' => '</a>公開日<a href="#" onclick="location.href=\''.$date_url.'\'">'.$date_img.'</a> <br />更新日<a href="#" onclick="location.href=\''.$datek_url.'\'">'.$datek_img.'</a>',
-			'keisaikigenbi' => '掲載期限日<a href="#" onclick="location.href=\''.$date2_url.'\'">'.$date2_img.'</a> <br />成約日<a href="#" onclick="location.href=\''.$date3_url.'\'">'.$date3_img.'</a>',
 		);
 	}	
 	return $columns;
@@ -1501,13 +1483,6 @@ function my_fudo_column($column){
 		echo "\n";
 	}
 
-	//掲載期限日
-	elseif ("keisaikigenbi" == $column){
-		echo get_post_meta($post->ID,'keisaikigenbi',true).'<br />';
-			echo '<hr />';
-		echo get_post_meta($post->ID,'seiyakubi',true);
-		echo "\n";
-	}
 
 	//日付カラム
 	elseif ("newdate" == $column){
@@ -1605,21 +1580,7 @@ function wp_order_by_order_fudou($orderby) {
 			$orderby = "PM.meta_value DESC";
 		}
 
-		//掲載期限日
-		if ( isset($_GET['kds']) && $_GET['kds'] == 'asc' ){
-			$orderby = "PM.meta_value ASC";
-		}
-		if ( isset($_GET['kds']) && $_GET['kds'] == 'desc' ){
-			$orderby = "PM.meta_value DESC";
-		}
 
-		//成約日
-		if ( isset($_GET['siy']) && $_GET['siy'] == 'asc' ){
-			$orderby = "PM.meta_value ASC";
-		}
-		if ( isset($_GET['siy']) && $_GET['siy'] == 'desc' ){
-			$orderby = "PM.meta_value DESC";
-		}
 
 		//市区
 		if ( isset($_GET['sik']) && $_GET['sik'] == 'asc' ){
@@ -1662,14 +1623,6 @@ function wp_order_by_where_fudou( $where ){
 		if( isset($_GET['no']) && $_GET['no'] != ''){
 			$where .= " AND PM.meta_key = 'shikibesu'";
 		}
-		//掲載期限日
-		if( isset($_GET['kds']) && $_GET['kds'] != ''){
-			$where .= " AND PM.meta_key = 'keisaikigenbi'";
-		}
-		//成約日
-		if( isset($_GET['siy']) && $_GET['siy'] != ''){
-			$where .= " AND PM.meta_key = 'seiyakubi' ";
-		}
 		//市区
 		if( isset($_GET['sik']) && $_GET['sik'] != ''){
 			$where .= " AND PM.meta_key = 'shozaichicode' ";
@@ -1696,14 +1649,6 @@ function admin_search_distinct_fudou( $distinct, $query ){
 	}
 	//物件番号
 	if( isset($_GET['no']) && $_GET['no'] != ''){
-		$distinct_type = true;
-	}
-	//掲載期限日
-	if( isset($_GET['kds']) && $_GET['kds'] != ''){
-		$distinct_type = true;
-	}
-	//成約日
-	if( isset($_GET['siy']) && $_GET['siy'] != ''){
 		$distinct_type = true;
 	}
 	//市区
